@@ -1,0 +1,32 @@
+spieltag,tore,punkte,gegner,heim_auswaerts,ergebnis,punkte_gesamt,punkte_schnitt
+1,0,4,VfB Stuttgart,h,2:1,58,3.87
+2,0,6,Borussia Dortmund,a,3:0,26,1.62
+3,0,0,TSG Hoffenheim,h,2:4,31,2.07
+4,0,-1,Eintracht Frankfurt,a,3:4,62,4.13
+5,0,4,Hamburger SV,h,0:0,48,3.43
+6,0,6,Bayer 04 Leverkusen,a,2:0,31,1.94
+7,0,3,Borussia M'gladbach,h,3:1,69,4.60
+8,0,4,SV Werder Bremen,a,1:0,44,2.75
+9,0,7,Sport-Club Freiburg,h,0:0,49,3.27
+10,0,5,FC Bayern München,h,2:2,50,3.12
+11,0,7,FC St. Pauli,a,0:1,54,3.38
+12,0,-1,1. FC Heidenheim,h,1:2,34,2.12
+13,0,8,VfL Wolfsburg,a,3:1,46,2.88
+14,0,6,RB Leipzig,h,3:1,70,4.38
+15,0,8,1. FC Köln,a,0:1,56,3.50
+16,0,3,1. FSV Mainz 05,h,2:2,59,3.69
+17,0,4,FC Augsburg,a,1:1,56,3.50
+18,0,5,VfB Stuttgart,a,1:1,58,4.14
+19,0,4,Borussia Dortmund,h,0:3,32,2.13
+20,0,2,TSG Hoffenheim,a,3:1,35,2.19
+21,0,10,Eintracht Frankfurt,h,1:1,42,2.80
+22,0,8,Hamburger SV,a,3:2,48,3.00
+23,0,3,Bayer 04 Leverkusen,h,1:0,59,4.21
+24,0,4,Borussia M'gladbach,a,1:0,39,2.60
+25,0,-1,SV Werder Bremen,h,1:4,1,0.07
+27,0,-1,FC Bayern München,a,4:0,19,1.19
+28,0,4,FC St. Pauli,h,1:1,54,3.86
+29,1,8,1. FC Heidenheim,a,3:1,29,1.81
+30,0,5,VfL Wolfsburg,h,1:2,52,3.71
+31,0,2,RB Leipzig,a,3:1,41,2.56
+34,0,,FC Augsburg,h,4:0,88,5.87

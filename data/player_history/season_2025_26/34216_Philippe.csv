@@ -1,0 +1,29 @@
+spieltag,tore,punkte,gegner,heim_auswaerts,ergebnis,punkte_gesamt,punkte_schnitt
+1,0,1,Borussia M'gladbach,a,0:0,50,3.57
+2,0,2,FC St. Pauli,h,0:2,43,2.69
+3,0,4,FC Bayern München,a,5:0,18,1.12
+4,1,8,1. FC Heidenheim,h,2:1,72,4.80
+5,0,6,1. FC Union Berlin,a,0:0,60,4.00
+6,2,17,1. FSV Mainz 05,h,4:0,93,5.81
+7,0,2,RB Leipzig,a,2:1,55,3.44
+8,0,4,VfL Wolfsburg,h,0:1,56,4.00
+9,0,2,1. FC Köln,a,4:1,18,1.12
+10,0,-1,Borussia Dortmund,h,1:1,53,3.79
+11,0,4,FC Augsburg,a,1:0,50,3.57
+12,0,1,VfB Stuttgart,h,2:1,51,3.40
+13,0,1,SV Werder Bremen,h,3:2,75,5.00
+14,1,5,TSG Hoffenheim,a,4:1,33,2.20
+15,0,2,Eintracht Frankfurt,h,1:1,53,3.79
+17,0,1,Bayer 04 Leverkusen,h,0:1,38,2.38
+18,0,1,Borussia M'gladbach,h,0:0,70,4.38
+19,0,2,FC St. Pauli,a,0:0,55,3.44
+20,0,2,FC Bayern München,h,2:2,61,3.81
+21,1,9,1. FC Heidenheim,a,0:2,69,4.31
+23,0,2,1. FSV Mainz 05,a,1:1,53,3.79
+24,0,,RB Leipzig,h,1:2,42,2.80
+27,0,,Borussia Dortmund,a,3:2,47,3.36
+28,0,2,FC Augsburg,h,1:1,45,3.21
+29,0,3,VfB Stuttgart,a,4:0,31,2.07
+31,0,,TSG Hoffenheim,h,1:2,51,3.64
+33,0,0,Sport-Club Freiburg,h,3:2,67,4.79
+34,0,4,Bayer 04 Leverkusen,a,1:1,64,4.00

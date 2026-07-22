@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Comunio-Analyse</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Comunio-Analyse</h1>
+  </header>
+
+  <nav class="tabs">
+    <button id="tab-uebersicht" class="active" data-view="uebersicht">Übersicht</button>
+    <button id="tab-team" data-view="team">Mein Team</button>
+  </nav>
+
+  <main>
+    <section id="view-uebersicht" class="view active">
+      <div class="filter-bar">
+        <div class="filter-group">
+          <label for="filter-verein">Verein</label>
+          <select id="filter-verein"><option value="alle">Alle Vereine</option></select>
+        </div>
+        <div class="filter-group">
+          <label for="filter-position">Position</label>
+          <select id="filter-position"><option value="alle">Alle Positionen</option></select>
+        </div>
+      </div>
+
+      <div id="section-watch" class="section-block">
+        <h2 class="section-title">Players to Watch</h2>
+        <p class="section-subtitle">Marktwert unter 8 Mio € - unabhängig von der Kategorie <span class="section-count" id="count-watch"></span></p>
+        <div class="table-scroll">
+          <table class="player-table" data-section="watch"></table>
+        </div>
+      </div>
+
+      <div id="section-stars" class="section-block">
+        <h2 class="section-title">Stars</h2>
+        <p class="section-subtitle">Marktwert über 6,5 Mio € <span class="section-count" id="count-stars"></span></p>
+        <div class="table-scroll">
+          <table class="player-table" data-section="stars"></table>
+        </div>
+      </div>
+
+      <div id="section-punktehamster" class="section-block">
+        <h2 class="section-title">Punktehamster</h2>
+        <p class="section-subtitle">Marktwert 3 - 6,5 Mio € <span class="section-count" id="count-punktehamster"></span></p>
+        <div class="table-scroll">
+          <table class="player-table" data-section="punktehamster"></table>
+        </div>
+      </div>
+
+      <div id="section-schnaeppchen" class="section-block">
+        <h2 class="section-title">Schnäppchen</h2>
+        <p class="section-subtitle">Marktwert unter 3 Mio € <span class="section-count" id="count-schnaeppchen"></span></p>
+        <div class="table-scroll">
+          <table class="player-table" data-section="schnaeppchen"></table>
+        </div>
+      </div>
+    </section>
+
+    <section id="view-team" class="view">
+      <div class="section-block">
+        <h2 class="section-title">Mein Team</h2>
+        <p class="section-subtitle">Stelle deinen Kader zusammen und wähle deine Startelf.</p>
+
+        <div class="team-system-label">
+          <label for="team-system-select">Ausgewähltes System:</label>
+          <select id="team-system-select">
+            <option value="3-5-2">3-5-2</option>
+            <option value="3-4-3">3-4-3</option>
+            <option value="4-3-3">4-3-3</option>
+            <option value="4-4-2">4-4-2</option>
+            <option value="4-5-1">4-5-1</option>
+          </select>
+        </div>
+
+        <div class="pitch-wrapper">
+          <div class="pitch" id="team-pitch"></div>
+        </div>
+
+        <div id="team-error-banner" class="team-error-banner" hidden>
+          <span id="team-error-text"></span>
+          <button type="button" class="team-error-close" aria-label="Hinweis schließen">×</button>
+        </div>
+
+        <div class="team-search">
+          <input type="text" id="team-search-input" placeholder="Spieler suchen und zum Team hinzufügen…" autocomplete="off" />
+          <div id="team-search-results" class="team-search-results"></div>
+        </div>
+
+        <div class="table-scroll">
+          <table class="player-table team-table">
+            <thead>
+              <tr>
+                <th>Spieler</th>
+                <th>Verein</th>
+                <th>Position</th>
+                <th>Punkte</th>
+                <th>Punkte/Spiel</th>
+                <th>Marktwert</th>
+                <th>Aktionen</th>
+              </tr>
+            </thead>
+            <tbody id="team-table-body"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="section-block">
+        <h2 class="section-title">Kaderoptimierung</h2>
+        <p class="section-subtitle">Automatische Vorschläge, wie du deine Startelf verbessern kannst.</p>
+
+        <div class="kaderopt-form">
+          <div class="kaderopt-field">
+            <label for="kaderopt-kontostand">Aktueller Kontostand (€)</label>
+            <input type="number" id="kaderopt-kontostand" min="0" step="1000" placeholder="z.B. 45000000" />
+          </div>
+
+          <div class="kaderopt-position-grid">
+            <div class="kaderopt-position-row" data-position="Torwart">
+              <span class="kaderopt-position-label">Torwart</span>
+              <input type="number" min="0" class="kaderopt-anzahl" placeholder="Anzahl" />
+              <select class="kaderopt-kategorie">
+                <option value="stars">Stars</option>
+                <option value="punktehamster">Punktehamster</option>
+                <option value="schnaeppchen">Schnäppchen</option>
+                <option value="watch">Players to Watch</option>
+              </select>
+            </div>
+            <div class="kaderopt-position-row" data-position="Abwehr">
+              <span class="kaderopt-position-label">Verteidiger</span>
+              <input type="number" min="0" class="kaderopt-anzahl" placeholder="Anzahl" />
+              <select class="kaderopt-kategorie">
+                <option value="stars">Stars</option>
+                <option value="punktehamster">Punktehamster</option>
+                <option value="schnaeppchen">Schnäppchen</option>
+                <option value="watch">Players to Watch</option>
+              </select>
+            </div>
+            <div class="kaderopt-position-row" data-position="Mittelfeld">
+              <span class="kaderopt-position-label">Mittelfeld</span>
+              <input type="number" min="0" class="kaderopt-anzahl" placeholder="Anzahl" />
+              <select class="kaderopt-kategorie">
+                <option value="stars">Stars</option>
+                <option value="punktehamster">Punktehamster</option>
+                <option value="schnaeppchen">Schnäppchen</option>
+                <option value="watch">Players to Watch</option>
+              </select>
+            </div>
+            <div class="kaderopt-position-row" data-position="Sturm">
+              <span class="kaderopt-position-label">Sturm</span>
+              <input type="number" min="0" class="kaderopt-anzahl" placeholder="Anzahl" />
+              <select class="kaderopt-kategorie">
+                <option value="stars">Stars</option>
+                <option value="punktehamster">Punktehamster</option>
+                <option value="schnaeppchen">Schnäppchen</option>
+                <option value="watch">Players to Watch</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="button" id="kaderopt-submit" class="kaderopt-submit-btn">Vorschläge anzeigen</button>
+        </div>
+
+        <div id="kaderopt-results" class="kaderopt-results"></div>
+      </div>
+
+      <div class="section-block">
+        <h2 class="section-title">Watchlist</h2>
+        <p class="section-subtitle">Spieler im Blick behalten, ohne sie deinem Team hinzuzufügen.</p>
+        <div class="placeholder-card">Folgt in einem späteren Schritt.</div>
+      </div>
+    </section>
+  </main>
+
+  <div id="help-tooltip" class="help-tooltip"></div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+spieltag,tore,punkte,gegner,heim_auswaerts,ergebnis,punkte_gesamt,punkte_schnitt
+1,1,11,Bayer 04 Leverkusen,a,1:2,57,3.80
+2,0,4,Eintracht Frankfurt,h,1:3,50,3.33
+3,2,15,1. FC Union Berlin,a,2:4,77,5.13
+4,0,2,FC Bayern München,h,1:4,38,2.38
+5,1,7,Sport-Club Freiburg,a,1:1,50,3.12
+6,0,5,1. FC Köln,h,0:1,48,3.20
+7,0,4,FC St. Pauli,a,0:3,82,5.86
+8,1,11,1. FC Heidenheim,h,3:1,70,4.38
+9,0,2,VfL Wolfsburg,a,2:3,70,4.38
+10,0,3,RB Leipzig,h,3:1,76,4.75
+11,0,6,1. FSV Mainz 05,a,1:1,57,4.07
+12,0,3,FC Augsburg,h,3:0,79,4.94
+13,0,0,Borussia Dortmund,a,2:0,39,2.44
+14,1,8,Hamburger SV,h,4:1,80,5.33
+15,0,4,VfB Stuttgart,a,0:0,39,3.00
+17,0,4,Borussia M'gladbach,h,5:1,102,6.38
+18,0,0,Bayer 04 Leverkusen,h,1:0,59,3.93
+19,0,4,Eintracht Frankfurt,a,1:3,57,4.38
+20,0,5,1. FC Union Berlin,h,3:1,61,4.36
+21,0,5,FC Bayern München,a,5:1,19,1.19
+22,1,10,Sport-Club Freiburg,h,3:0,97,6.93
+23,0,4,1. FC Köln,a,2:2,57,4.38
+24,0,4,FC St. Pauli,h,0:1,65,4.64
+25,1,12,1. FC Heidenheim,a,2:4,75,4.69
+26,0,3,VfL Wolfsburg,h,1:1,65,4.64
+27,0,2,RB Leipzig,a,5:0,3,0.19
+28,1,7,1. FSV Mainz 05,h,1:2,48,3.43
+29,0,3,FC Augsburg,a,2:2,60,4.29
+30,0,1,Borussia Dortmund,h,2:1,52,3.47
+31,1,8,Hamburger SV,a,1:2,57,3.56
+32,0,5,VfB Stuttgart,h,3:3,57,4.75
+33,0,5,SV Werder Bremen,h,1:0,75,5.36
+34,0,4,Borussia M'gladbach,a,4:0,13,0.81

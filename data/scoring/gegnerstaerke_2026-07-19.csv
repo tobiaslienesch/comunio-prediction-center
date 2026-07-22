@@ -1,0 +1,19 @@
+verein,naechste_gegner,gegnerstaerke_score
+1. FC Köln,"TSG Hoffenheim, VfB Stuttgart, SV Werder Bremen, Hamburger SV",3.25
+1. FC Union Berlin,"Eintracht Frankfurt, Bayer 04 Leverkusen, FC Schalke 04, FC Bayern München",2.75
+1. FSV Mainz 05,"SC Paderborn 07, Hamburger SV, Eintracht Frankfurt, Borussia M'gladbach",4.0
+Bayer 04 Leverkusen,"SV 07 Elversberg, 1. FC Union Berlin, FC Augsburg, RB Leipzig",3.5
+Borussia Dortmund,"Hamburger SV, TSG Hoffenheim, SC Paderborn 07, VfB Stuttgart",3.25
+Borussia M'gladbach,"RB Leipzig, SV 07 Elversberg, SC Freiburg, 1. FSV Mainz 05",3.25
+Eintracht Frankfurt,"1. FC Union Berlin, FC Augsburg, 1. FSV Mainz 05, SC Freiburg",3.25
+FC Augsburg,"FC Schalke 04, Eintracht Frankfurt, Bayer 04 Leverkusen, SV Werder Bremen",3.75
+FC Bayern München,"VfB Stuttgart, FC Schalke 04, SV 07 Elversberg, 1. FC Union Berlin",4.0
+FC Schalke 04,"FC Augsburg, FC Bayern München, 1. FC Union Berlin, SV 07 Elversberg",3.25
+Hamburger SV,"Borussia Dortmund, 1. FSV Mainz 05, RB Leipzig, 1. FC Köln",2.5
+RB Leipzig,"Borussia M'gladbach, SV Werder Bremen, Hamburger SV, Bayer 04 Leverkusen",3.75
+SC Freiburg,"SV Werder Bremen, SC Paderborn 07, Borussia M'gladbach, Eintracht Frankfurt",4.25
+SC Paderborn 07,"1. FSV Mainz 05, SC Freiburg, Borussia Dortmund, TSG Hoffenheim",2.25
+SV 07 Elversberg,"Bayer 04 Leverkusen, Borussia M'gladbach, FC Bayern München, FC Schalke 04",3.0
+SV Werder Bremen,"SC Freiburg, RB Leipzig, 1. FC Köln, FC Augsburg",3.0
+TSG Hoffenheim,"1. FC Köln, Borussia Dortmund, VfB Stuttgart, SC Paderborn 07",3.0
+VfB Stuttgart,"FC Bayern München, 1. FC Köln, TSG Hoffenheim, Borussia Dortmund",2.0

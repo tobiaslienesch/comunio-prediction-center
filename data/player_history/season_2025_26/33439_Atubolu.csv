@@ -1,0 +1,35 @@
+spieltag,tore,punkte,gegner,heim_auswaerts,ergebnis,punkte_gesamt,punkte_schnitt
+1,0,1,FC Augsburg,h,1:3,41,2.73
+2,0,0,1. FC Köln,a,4:1,30,1.88
+3,0,3,VfB Stuttgart,h,3:1,64,4.27
+4,0,10,SV Werder Bremen,a,0:3,73,4.56
+5,0,5,TSG Hoffenheim,h,1:1,56,3.50
+6,0,7,Borussia M'gladbach,a,0:0,56,3.73
+7,0,0,Eintracht Frankfurt,h,2:2,52,3.25
+8,0,2,Bayer 04 Leverkusen,a,2:0,39,2.44
+9,0,4,1. FC Union Berlin,a,0:0,54,3.86
+10,0,2,FC St. Pauli,h,2:1,48,3.20
+11,0,-2,FC Bayern München,a,6:2,11,0.69
+12,0,3,1. FSV Mainz 05,h,4:0,104,6.93
+13,0,2,1. FC Heidenheim,a,2:1,45,2.81
+14,0,4,Borussia Dortmund,h,1:1,63,4.85
+15,0,0,VfL Wolfsburg,a,3:4,52,3.25
+16,0,6,Hamburger SV,h,2:1,66,4.12
+17,0,9,RB Leipzig,a,2:0,44,2.75
+18,0,3,FC Augsburg,a,2:2,57,3.56
+19,0,5,1. FC Köln,h,2:1,56,3.50
+20,0,8,VfB Stuttgart,a,1:0,51,3.19
+21,0,9,SV Werder Bremen,h,1:0,56,3.50
+22,0,4,TSG Hoffenheim,a,3:0,28,1.87
+23,0,1,Borussia M'gladbach,h,2:1,48,3.69
+24,0,7,Eintracht Frankfurt,a,2:0,27,1.93
+25,0,1,Bayer 04 Leverkusen,h,3:3,69,4.60
+26,0,3,1. FC Union Berlin,h,0:1,51,3.64
+27,0,5,FC St. Pauli,a,1:2,59,3.93
+28,0,6,FC Bayern München,h,2:3,54,3.60
+29,0,6,1. FSV Mainz 05,a,0:1,53,3.31
+30,0,2,1. FC Heidenheim,h,2:1,69,4.31
+31,0,-1,Borussia Dortmund,a,4:0,22,1.38
+32,0,3,VfL Wolfsburg,h,1:1,53,3.31
+33,0,0,Hamburger SV,a,3:2,40,2.50
+34,0,7,RB Leipzig,h,4:1,81,5.40
