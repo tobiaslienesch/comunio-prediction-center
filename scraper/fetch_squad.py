@@ -1,29 +1,35 @@
 """
-Ruft eine Comunio-Vereinsseite ab und speichert die Spielertabelle
-als wochentliche CSV unter data/squads/<datum>.csv. Mehrere Vereine
-landen in derselben Wochen-Datei (Spalte "verein") - dafuer dieses
-Skript einfach mit angepassten SQUAD_URL/CLUB_NAME pro Verein erneut
-ausfuehren.
+Ruft die Comunio-Kader-Seiten aller 18 Bundesliga-Vereine ab (siehe
+scraper/clubs.py) und speichert alle Spieler zusammen in einer
+CSV unter data/squads/<datum>.csv. Ein erneuter Lauf am selben Tag
+ueberschreibt die Datei komplett neu (keine doppelten Zeilen bei
+mehrfachem Ausfuehren, z.B. bei einem Actions-Retry).
 """
 
 import csv
 import os
 import sys
+import time
 from datetime import date
 
 import requests
 from bs4 import BeautifulSoup
 
-sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+sys.path.insert(0, os.path.dirname(__file__))
+from clubs import CLUBS
 
-SQUAD_URL = "https://stats.comunio.de/squad/81-SC+Paderborn"
-CLUB_NAME = "SC Paderborn"
+sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
 }
 
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "squads")
+
+FIELDNAMES = [
+    "verein", "spieler_id", "name", "position", "punkte",
+    "einsaetze", "punkte_pro_spiel", "marktwert", "trend",
+]
 
 
 def interpret_trend(trend_raw):
@@ -86,24 +92,18 @@ def parse_squad(html):
     return players
 
 
-def save_to_csv(players, club_name):
-    os.makedirs(DATA_DIR, exist_ok=True)
-    filepath = os.path.join(DATA_DIR, f"{date.today().isoformat()}.csv")
-    file_exists = os.path.isfile(filepath)
-
-    fieldnames = [
-        "verein", "spieler_id", "name", "position", "punkte",
-        "einsaetze", "punkte_pro_spiel", "marktwert", "trend",
-    ]
-
-    with open(filepath, "a", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        if not file_exists:
-            writer.writeheader()
+def fetch_all_clubs():
+    """Holt die Kader aller Vereine aus clubs.py und gibt eine Liste
+    aller Spieler-Zeilen zurueck (passend zu FIELDNAMES)."""
+    all_rows = []
+    for club in CLUBS:
+        html = fetch_squad(club["comunio_url"])
+        players = parse_squad(html)
+        print(f"{club['name']}: {len(players)} Spieler gefunden.")
 
         for p in players:
-            writer.writerow({
-                "verein": club_name,
+            all_rows.append({
+                "verein": club["name"],
                 "spieler_id": p["player_id"],
                 "name": p["name"],
                 "position": p["position"],
@@ -113,23 +113,28 @@ def save_to_csv(players, club_name):
                 "marktwert": p["market_value"],
                 "trend": interpret_trend(p["trend_raw"]),
             })
+        time.sleep(0.3)
+
+    return all_rows
+
+
+def save_to_csv(rows):
+    os.makedirs(DATA_DIR, exist_ok=True)
+    filepath = os.path.join(DATA_DIR, f"{date.today().isoformat()}.csv")
+
+    with open(filepath, "w", newline="", encoding="utf-8") as f:
+        writer = csv.DictWriter(f, fieldnames=FIELDNAMES)
+        writer.writeheader()
+        writer.writerows(rows)
 
     return filepath
 
 
+def main():
+    rows = fetch_all_clubs()
+    filepath = save_to_csv(rows)
+    print(f"\n{len(rows)} Spieler insgesamt gespeichert unter: {filepath}")
+
+
 if __name__ == "__main__":
-    html = fetch_squad(SQUAD_URL)
-    players = parse_squad(html)
-
-    print(f"{len(players)} Spieler gefunden:\n")
-    for p in players:
-        print(
-            f"{p['name']:<20} | {p['position']:<10} | "
-            f"Pkt: {p['points']:>4} | Einsaetze: {p['appearances']:>8} | "
-            f"PPS: {p['points_per_game']:>5} | "
-            f"Marktwert: {p['market_value']:>10} | "
-            f"Trend: {interpret_trend(p['trend_raw'])}"
-        )
-
-    filepath = save_to_csv(players, CLUB_NAME)
-    print(f"\nGespeichert unter: {filepath}")
+    main()

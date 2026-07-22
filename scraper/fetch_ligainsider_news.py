@@ -26,6 +26,9 @@ sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 import requests
 from bs4 import BeautifulSoup
 
+sys.path.insert(0, os.path.dirname(__file__))
+from clubs import CLUBS
+
 NEWS_DATE_PATTERN = re.compile(r"(\d{2}\.\d{2}\.\d{4}) - \d{2}:\d{2}")
 
 TRANSFER_KEYWORDS = [
@@ -36,8 +39,6 @@ STAMMPLATZ_KEYWORDS = ["stammplatz", "startelf", "stammspieler", "gesetzt"]
 
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
 BASE_URL = "https://www.ligainsider.de"
-CLUB_KADER_URL = "https://www.ligainsider.de/sc-paderborn-07/1249/kader/"
-CLUB_NAME = "SC Paderborn"
 
 SQUADS_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "squads")
 OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "..", "data", "scoring")
@@ -190,7 +191,9 @@ def process_club(club_kader_url, club_name):
 
 
 def main():
-    process_club(CLUB_KADER_URL, CLUB_NAME)
+    for club in CLUBS:
+        process_club(club["ligainsider_url"], club["name"])
+        print()
 
 
 if __name__ == "__main__":

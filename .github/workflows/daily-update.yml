@@ -1,0 +1,67 @@
+name: Taegliches Update (Marktwert, Punkte, News)
+
+# Laeuft jeden Tag um ca. 8:00 Uhr deutscher Zeit (6:00 UTC - waehrend
+# der Winterzeit entspricht das dann 7:00 Uhr deutscher Zeit, das ist
+# bewusst in Kauf genommen, um die Automatisierung einfach zu halten).
+on:
+  schedule:
+    - cron: "0 6 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhaengigkeiten installieren
+        run: pip install requests beautifulsoup4
+
+      - name: Kader aller Vereine abrufen (Marktwert, Punkte, Trend)
+        run: python scraper/fetch_squad.py
+
+      - name: Ligainsider-News aller Vereine abrufen
+        run: python scraper/fetch_ligainsider_news.py
+
+      - name: Marktwert-Scoring neu berechnen
+        run: |
+          python scoring/market_value_ratio.py
+          python scoring/market_value_trend.py
+
+      - name: Spieler-Uebersicht neu bauen
+        run: python scoring/build_player_overview.py
+
+      - name: Daten committen und pushen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data website/data
+          git diff --cached --quiet || git commit -m "Taegliches Update: Marktwert, Punkte, News"
+          git push
+
+      - name: Webseite als Pages-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+
+      - name: Auf GitHub Pages veroeffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4

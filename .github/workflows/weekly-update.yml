@@ -1,0 +1,74 @@
+name: Woechentliches Update (Punkte-Historie, Tabelle)
+
+# Laeuft jeden Montag ca. eine Stunde nach dem taeglichen Update (7:00
+# UTC), damit der Kader an diesem Tag schon frisch abgerufen wurde.
+on:
+  schedule:
+    - cron: "0 7 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: weekly-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Code auschecken
+        uses: actions/checkout@v4
+
+      - name: Python einrichten
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Abhaengigkeiten installieren
+        run: |
+          pip install requests beautifulsoup4 playwright
+          python -m playwright install chromium --with-deps
+
+      - name: Kader aller Vereine abrufen (fuer aktuelle Spieler-Liste)
+        run: python scraper/fetch_squad.py
+
+      - name: Spieltag-Historie aller Spieler abrufen
+        run: python scraper/fetch_squad_player_histories.py
+
+      - name: Bundesliga-Tabelle und naechste Gegner abrufen
+        run: python scraper/fetch_bundesliga_data.py
+
+      - name: Alle Scoring-Kriterien neu berechnen
+        run: |
+          python scoring/form_score.py
+          python scoring/variance_score.py
+          python scoring/opponent_strength.py
+          python scoring/market_value_ratio.py
+          python scoring/market_value_trend.py
+
+      - name: Spieler-Uebersicht neu bauen
+        run: python scoring/build_player_overview.py
+
+      - name: Daten committen und pushen
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data website/data
+          git diff --cached --quiet || git commit -m "Woechentliches Update: Punkte-Historie, Tabelle, Scoring"
+          git push
+
+      - name: Webseite als Pages-Artefakt hochladen
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: website
+
+      - name: Auf GitHub Pages veroeffentlichen
+        id: deployment
+        uses: actions/deploy-pages@v4
