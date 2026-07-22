@@ -1,3 +1,57 @@
+// ---- Login ----
+// Einfacher clientseitiger Passwortschutz. WICHTIG: das ist keine
+// echte Sicherheit (GitHub Pages liefert nur statische Dateien, es
+// gibt keinen Server, der ein Passwort pruefen koennte) - jeder mit
+// Entwicklertools kann den Hash und die Daten trotzdem sehen. Der
+// Login haelt nur zufaellige Besucher/Suchmaschinen fern.
+
+const AUTH_STORAGE_KEY = "comunio_authed_v1";
+// SHA-256-Hash des Passworts (nicht das Passwort selbst im Code).
+const AUTH_PASSWORD_HASH = "a121a65d2c98355cadc7e8d103b29f9a72799967b07d85b6eddb11b89a067a27";
+
+async function sha256Hex(text) {
+  const data = new TextEncoder().encode(text);
+  const hashBuffer = await crypto.subtle.digest("SHA-256", data);
+  return [...new Uint8Array(hashBuffer)].map((b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+function isAuthenticated() {
+  return localStorage.getItem(AUTH_STORAGE_KEY) === "1";
+}
+
+function hideLoginOverlay() {
+  document.getElementById("login-overlay")?.remove();
+}
+
+function setupLoginForm() {
+  const form = document.getElementById("login-form");
+  const input = document.getElementById("login-password");
+  const error = document.getElementById("login-error");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const hash = await sha256Hex(input.value);
+    if (hash === AUTH_PASSWORD_HASH) {
+      localStorage.setItem(AUTH_STORAGE_KEY, "1");
+      hideLoginOverlay();
+      init();
+    } else {
+      error.hidden = false;
+      input.value = "";
+      input.focus();
+    }
+  });
+}
+
+function startApp() {
+  if (isAuthenticated()) {
+    hideLoginOverlay();
+    init();
+    return;
+  }
+  setupLoginForm();
+}
+
 // Spalten-Definition: Spielername/Verein/Position + Gesamtscore +
 // die vier Kategorie-Scores (mit aufklappbaren KPI-Unterspalten) +
 // Link zur letzten News. Fuer die Kategorie- und Watch-Tabellen wird
@@ -864,4 +918,4 @@ async function init() {
   renderTeam();
 }
 
-init();
+startApp();

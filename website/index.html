@@ -10,6 +10,18 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div id="login-overlay" class="login-overlay">
+    <div class="login-box">
+      <h1>Comunio-Analyse</h1>
+      <p>Bitte Passwort eingeben, um fortzufahren.</p>
+      <form id="login-form">
+        <input type="password" id="login-password" placeholder="Passwort" autocomplete="current-password" autofocus />
+        <button type="submit">Anmelden</button>
+      </form>
+      <p id="login-error" class="login-error" hidden>Falsches Passwort. Bitte erneut versuchen.</p>
+    </div>
+  </div>
+
   <header class="app-header">
     <h1>Comunio-Analyse</h1>
   </header>
