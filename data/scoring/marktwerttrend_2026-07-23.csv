@@ -1,0 +1,578 @@
+spieler_id,name,verein,marktwerttrend
+30755,Neuer,1. FC Bayern München,steigend (Staerke 4)
+34101,Klanac,1. FC Bayern München,unbekannt
+34284,Bärtl,1. FC Bayern München,unbekannt
+34353,Prescott,1. FC Bayern München,unbekannt
+31216,Ulreich,1. FC Bayern München,unbekannt
+33494,Urbig,1. FC Bayern München,steigend (Staerke 1)
+34205,Kiala,1. FC Bayern München,fallend (Staerke 1)
+33975,Brown,1. FC Bayern München,fallend (Staerke 2)
+33894,Boey,1. FC Bayern München,steigend (Staerke 2)
+33823,Kim,1. FC Bayern München,steigend (Staerke 2)
+33796,Buchmann,1. FC Bayern München,unbekannt
+33496,Itō,1. FC Bayern München,steigend (Staerke 1)
+32720,Upamecano,1. FC Bayern München,steigend (Staerke 1)
+33386,Stanišić,1. FC Bayern München,steigend (Staerke 2)
+32157,Tah,1. FC Bayern München,steigend (Staerke 3)
+32800,Laimer,1. FC Bayern München,steigend (Staerke 2)
+33021,Davies,1. FC Bayern München,fallend (Staerke 2)
+34206,Karl,1. FC Bayern München,steigend (Staerke 1)
+34207,Santos Daiber,1. FC Bayern München,fallend (Staerke 1)
+32445,Kimmich,1. FC Bayern München,steigend (Staerke 2)
+34328,Chávez,1. FC Bayern München,steigend (Staerke 1)
+34357,Osmani,1. FC Bayern München,unbekannt
+33504,Bischof,1. FC Bayern München,steigend (Staerke 1)
+34018,João Palhinha,1. FC Bayern München,fallend (Staerke 2)
+34466,Saibari,1. FC Bayern München,fallend (Staerke 2)
+33713,Ibrahimović,1. FC Bayern München,unbekannt
+33236,Musiala,1. FC Bayern München,fallend (Staerke 1)
+33854,Pavlović,1. FC Bayern München,unbekannt
+34254,Luis Díaz,1. FC Bayern München,unbekannt
+34261,Mike,1. FC Bayern München,fallend (Staerke 1)
+33898,Zaragoza,1. FC Bayern München,unbekannt
+33838,Kane,1. FC Bayern München,steigend (Staerke 2)
+34350,Cardozo,1. FC Bayern München,unbekannt
+34006,Sieb,1. FC Bayern München,steigend (Staerke 2)
+32696,Gnabry,1. FC Bayern München,fallend (Staerke 2)
+34014,Olise,1. FC Bayern München,steigend (Staerke 1)
+33440,Ramaj,Borussia Dortmund,fallend (Staerke 1)
+31988,Drewes,Borussia Dortmund,unbekannt
+33539,Ostrzinski,Borussia Dortmund,unbekannt
+32638,Kobel,Borussia Dortmund,fallend (Staerke 2)
+32841,Meyer,Borussia Dortmund,unbekannt
+34346,Reggiani,Borussia Dortmund,steigend (Staerke 1)
+34033,Couto,Borussia Dortmund,fallend (Staerke 1)
+34066,Kabar,Borussia Dortmund,fallend (Staerke 1)
+34084,Mané,Borussia Dortmund,fallend (Staerke 1)
+31935,Can,Borussia Dortmund,fallend (Staerke 2)
+33167,Bensebaini,Borussia Dortmund,fallend (Staerke 1)
+33141,Ryerson,Borussia Dortmund,steigend (Staerke 1)
+33038,N. Schlotterbeck,Borussia Dortmund,unbekannt
+34422,Gadou,Borussia Dortmund,unbekannt
+34423,Prates,Borussia Dortmund,fallend (Staerke 1)
+32452,Anton,Borussia Dortmund,fallend (Staerke 1)
+34114,Svensson,Borussia Dortmund,steigend (Staerke 2)
+34364,Kaba,Borussia Dortmund,steigend (Staerke 5)
+34200,Bellingham,Borussia Dortmund,steigend (Staerke 1)
+34117,Chukwuemeka,Borussia Dortmund,fallend (Staerke 1)
+34424,Lerma,Borussia Dortmund,steigend (Staerke 3)
+33498,F. Nmecha,Borussia Dortmund,fallend (Staerke 2)
+32590,Sabitzer,Borussia Dortmund,steigend (Staerke 1)
+34283,Fábio Silva,Borussia Dortmund,steigend (Staerke 1)
+34347,Inácio,Borussia Dortmund,steigend (Staerke 2)
+34362,Albert,Borussia Dortmund,fallend (Staerke 2)
+33208,Beier,Borussia Dortmund,fallend (Staerke 1)
+32667,Guirassy,Borussia Dortmund,steigend (Staerke 2)
+33575,Adeyemi,Borussia Dortmund,fallend (Staerke 4)
+32267,Zingerle,RB Leipzig,unbekannt
+32575,Gulácsi,RB Leipzig,steigend (Staerke 2)
+33919,Vandevoordt,RB Leipzig,fallend (Staerke 2)
+31846,W. Orbán,RB Leipzig,fallend (Staerke 1)
+33837,Lukeba,RB Leipzig,fallend (Staerke 1)
+33848,Finkgräfe,RB Leipzig,fallend (Staerke 1)
+34479,Estève,RB Leipzig,unbekannt
+34055,Geertruida,RB Leipzig,fallend (Staerke 1)
+34431,Koné,RB Leipzig,fallend (Staerke 2)
+33824,Bitshiabu,RB Leipzig,fallend (Staerke 2)
+32461,Henrichs,RB Leipzig,steigend (Staerke 4)
+33436,Raum,RB Leipzig,unbekannt
+32581,Klostermann,RB Leipzig,fallend (Staerke 2)
+32889,Baku,RB Leipzig,steigend (Staerke 1)
+33769,Seiwald,RB Leipzig,unbekannt
+34348,Kaltefleiter,RB Leipzig,unbekannt
+34238,Maksimović,RB Leipzig,steigend (Staerke 3)
+34185,Banzuzi,RB Leipzig,unbekannt
+34119,Masanka Bungi,RB Leipzig,unbekannt
+34049,Vermeeren,RB Leipzig,steigend (Staerke 2)
+34042,Gebel,RB Leipzig,unbekannt
+33695,Gruda,RB Leipzig,fallend (Staerke 1)
+33991,Ouédraogo,RB Leipzig,unbekannt
+32977,Baumgartner,RB Leipzig,unbekannt
+33353,Reitz,RB Leipzig,unbekannt
+33878,Elmas,RB Leipzig,unbekannt
+34339,Thomas,RB Leipzig,unbekannt
+34330,Sani,RB Leipzig,unbekannt
+34309,Konaté,RB Leipzig,unbekannt
+34295,Harder,RB Leipzig,steigend (Staerke 1)
+34271,Rômulo,RB Leipzig,fallend (Staerke 1)
+34250,Ramšak,RB Leipzig,unbekannt
+34240,Bakayoko,RB Leipzig,steigend (Staerke 1)
+34237,Diomande,RB Leipzig,steigend (Staerke 2)
+34116,T. Gomis,RB Leipzig,unbekannt
+34039,Nusa,RB Leipzig,steigend (Staerke 2)
+31827,Blaswich,Bayer 04 Leverkusen,fallend (Staerke 1)
+32007,Lomb,Bayer 04 Leverkusen,unbekannt
+32925,Flekken,Bayer 04 Leverkusen,unbekannt
+34190,I. Traoré,Bayer 04 Leverkusen,unbekannt
+33772,Arthur,Bayer 04 Leverkusen,unbekannt
+34201,Tape,Bayer 04 Leverkusen,steigend (Staerke 3)
+34212,Faye,Bayer 04 Leverkusen,steigend (Staerke 2)
+33630,Oermann,Bayer 04 Leverkusen,fallend (Staerke 1)
+34217,Quansah,Bayer 04 Leverkusen,steigend (Staerke 2)
+33207,Tapsoba,Bayer 04 Leverkusen,unbekannt
+34272,Badé,Bayer 04 Leverkusen,steigend (Staerke 2)
+34277,Lucas Vázquez,Bayer 04 Leverkusen,fallend (Staerke 1)
+33988,Belocian,Bayer 04 Leverkusen,unbekannt
+34360,J. Mensah,Bayer 04 Leverkusen,steigend (Staerke 1)
+34264,Poku,Bayer 04 Leverkusen,fallend (Staerke 1)
+33992,García,Bayer 04 Leverkusen,steigend (Staerke 1)
+33853,Tella,Bayer 04 Leverkusen,steigend (Staerke 2)
+32080,J. Hofmann,Bayer 04 Leverkusen,steigend (Staerke 3)
+32129,Andrich,Bayer 04 Leverkusen,steigend (Staerke 4)
+34448,Eichhorn,Bayer 04 Leverkusen,steigend (Staerke 1)
+33189,Palacios,Bayer 04 Leverkusen,steigend (Staerke 2)
+33530,Tillman,Bayer 04 Leverkusen,fallend (Staerke 1)
+33709,Mbamba,Bayer 04 Leverkusen,steigend (Staerke 1)
+33744,Maza,Bayer 04 Leverkusen,fallend (Staerke 1)
+34441,Berghoff,Bayer 04 Leverkusen,unbekannt
+34289,Fernández,Bayer 04 Leverkusen,fallend (Staerke 1)
+34311,Culbreath,Bayer 04 Leverkusen,steigend (Staerke 2)
+34428,Bomba,Bayer 04 Leverkusen,unbekannt
+34433,Damjanović,Bayer 04 Leverkusen,unbekannt
+34285,Ben Seghir,Bayer 04 Leverkusen,steigend (Staerke 2)
+34246,Alfa-Ruprecht,Bayer 04 Leverkusen,fallend (Staerke 1)
+34234,Kofane,Bayer 04 Leverkusen,unbekannt
+34085,Alajbegović,Bayer 04 Leverkusen,fallend (Staerke 1)
+34024,Terrier,Bayer 04 Leverkusen,fallend (Staerke 2)
+33827,Boniface,Bayer 04 Leverkusen,steigend (Staerke 4)
+33179,Schick,Bayer 04 Leverkusen,fallend (Staerke 2)
+34461,Moreira,Bayer 04 Leverkusen,fallend (Staerke 1)
+33401,M. Funk,VfB Stuttgart,unbekannt
+33342,Drljača,VfB Stuttgart,unbekannt
+33747,Seimen,VfB Stuttgart,steigend (Staerke 1)
+32891,Bredlow,VfB Stuttgart,steigend (Staerke 3)
+33552,Chabot,VfB Stuttgart,steigend (Staerke 2)
+33850,Stergiou,VfB Stuttgart,unbekannt
+34001,Hendriks,VfB Stuttgart,steigend (Staerke 1)
+34050,Al-Dakhil,VfB Stuttgart,unbekannt
+34112,Jaquez,VfB Stuttgart,steigend (Staerke 1)
+34115,Jeltsch,VfB Stuttgart,steigend (Staerke 3)
+34197,Assignon,VfB Stuttgart,steigend (Staerke 2)
+32509,Mittelstädt,VfB Stuttgart,fallend (Staerke 1)
+32773,Zagadou,VfB Stuttgart,steigend (Staerke 2)
+32880,Vagnoman,VfB Stuttgart,steigend (Staerke 3)
+33411,Leweling,VfB Stuttgart,steigend (Staerke 2)
+32830,Nartey,VfB Stuttgart,unbekannt
+32858,Führich,VfB Stuttgart,unbekannt
+34253,Chema Andrés,VfB Stuttgart,unbekannt
+34262,Ćatović,VfB Stuttgart,unbekannt
+33085,Karazor,VfB Stuttgart,unbekannt
+33666,Ulrich,VfB Stuttgart,fallend (Staerke 1)
+34288,El Khannouss,VfB Stuttgart,fallend (Staerke 4)
+33437,Stiller,VfB Stuttgart,steigend (Staerke 1)
+32492,Prömel,VfB Stuttgart,steigend (Staerke 1)
+34286,Bouanani,VfB Stuttgart,unbekannt
+34320,Arévalo,VfB Stuttgart,steigend (Staerke 2)
+34230,Jovanović,VfB Stuttgart,steigend (Staerke 1)
+33832,Undav,VfB Stuttgart,unbekannt
+33812,Milošević,VfB Stuttgart,fallend (Staerke 1)
+33718,Diehl,VfB Stuttgart,fallend (Staerke 1)
+33557,Tiago Tomás,VfB Stuttgart,unbekannt
+33311,Demirović,VfB Stuttgart,fallend (Staerke 1)
+34458,van der Leij,VfB Stuttgart,fallend (Staerke 2)
+31489,Baumann,TSG Hoffenheim,steigend (Staerke 3)
+33313,Philipp,TSG Hoffenheim,unbekannt
+33913,Petersson,TSG Hoffenheim,unbekannt
+34048,Hranáč,TSG Hoffenheim,fallend (Staerke 2)
+34051,Gendrey,TSG Hoffenheim,fallend (Staerke 1)
+34062,Chaves,TSG Hoffenheim,fallend (Staerke 1)
+34105,Erlein,TSG Hoffenheim,steigend (Staerke 3)
+34213,Machida,TSG Hoffenheim,fallend (Staerke 3)
+34457,Dulic,TSG Hoffenheim,fallend (Staerke 1)
+34257,Coufal,TSG Hoffenheim,steigend (Staerke 1)
+34275,Hajdari,TSG Hoffenheim,unbekannt
+34340,Engelns,TSG Hoffenheim,unbekannt
+34446,Rots,TSG Hoffenheim,fallend (Staerke 1)
+33026,Kabak,TSG Hoffenheim,fallend (Staerke 1)
+32693,Bernardo,TSG Hoffenheim,fallend (Staerke 2)
+34242,Burger,TSG Hoffenheim,unbekannt
+34202,Avdullahu,TSG Hoffenheim,steigend (Staerke 1)
+34128,Lenz,TSG Hoffenheim,steigend (Staerke 2)
+32680,Geiger,TSG Hoffenheim,unbekannt
+34064,Micheler,TSG Hoffenheim,unbekannt
+33574,Tohumcu,TSG Hoffenheim,fallend (Staerke 1)
+32553,Kramarić,TSG Hoffenheim,fallend (Staerke 2)
+33673,Damar,TSG Hoffenheim,fallend (Staerke 3)
+34034,Prass,TSG Hoffenheim,steigend (Staerke 1)
+33857,Conté,TSG Hoffenheim,steigend (Staerke 2)
+34474,De Cat,TSG Hoffenheim,steigend (Staerke 1)
+34425,Vogt,TSG Hoffenheim,fallend (Staerke 1)
+34336,Fields,TSG Hoffenheim,steigend (Staerke 1)
+33270,Lemperle,TSG Hoffenheim,unbekannt
+34232,Zeitler,TSG Hoffenheim,fallend (Staerke 1)
+33507,Wimmer,TSG Hoffenheim,fallend (Staerke 1)
+33536,Asllani,TSG Hoffenheim,steigend (Staerke 2)
+34078,G. Orban,TSG Hoffenheim,steigend (Staerke 1)
+33619,Hložek,TSG Hoffenheim,steigend (Staerke 2)
+33885,Moerstedt,TSG Hoffenheim,steigend (Staerke 4)
+33439,Atubolu,Sport-Club Freiburg,fallend (Staerke 3)
+33647,Backhaus,Sport-Club Freiburg,unbekannt
+32656,F. Müller,Sport-Club Freiburg,fallend (Staerke 1)
+32506,Huth,Sport-Club Freiburg,unbekannt
+34476,Steinmann,Sport-Club Freiburg,unbekannt
+33815,Rosenfelder,Sport-Club Freiburg,fallend (Staerke 1)
+33829,Makengo,Sport-Club Freiburg,steigend (Staerke 2)
+33947,Treu,Sport-Club Freiburg,unbekannt
+34020,Yılmaz,Sport-Club Freiburg,fallend (Staerke 2)
+34021,Ogbus,Sport-Club Freiburg,fallend (Staerke 1)
+31910,Ginter,Sport-Club Freiburg,steigend (Staerke 1)
+32579,Jung,Sport-Club Freiburg,fallend (Staerke 1)
+32019,Günter,Sport-Club Freiburg,steigend (Staerke 1)
+32807,Lienhart,Sport-Club Freiburg,steigend (Staerke 2)
+32597,Kübler,Sport-Club Freiburg,fallend (Staerke 2)
+34437,Yamamoto,Sport-Club Freiburg,steigend (Staerke 1)
+34361,Tarnutzer,Sport-Club Freiburg,unbekannt
+34184,Suzuki,Sport-Club Freiburg,fallend (Staerke 2)
+32071,Grifo,Sport-Club Freiburg,fallend (Staerke 1)
+32398,M. Eggestein,Sport-Club Freiburg,steigend (Staerke 1)
+33008,Muslija,Sport-Club Freiburg,steigend (Staerke 1)
+32961,Beste,Sport-Club Freiburg,fallend (Staerke 3)
+33156,Osterhage,Sport-Club Freiburg,steigend (Staerke 2)
+33603,Y. Engelhardt,Sport-Club Freiburg,unbekannt
+33783,Matanović,Sport-Club Freiburg,fallend (Staerke 2)
+33629,Scherhant,Sport-Club Freiburg,fallend (Staerke 2)
+32861,Höler,Sport-Club Freiburg,fallend (Staerke 1)
+34183,Irié,Sport-Club Freiburg,steigend (Staerke 5)
+33364,Dinkçi,Sport-Club Freiburg,steigend (Staerke 1)
+34451,Goto,Sport-Club Freiburg,fallend (Staerke 1)
+31458,Grahl,Eintracht Frankfurt,unbekannt
+33855,Kauã Santos,Eintracht Frankfurt,fallend (Staerke 1)
+32408,Zetterer,Eintracht Frankfurt,fallend (Staerke 2)
+34073,Siljević,Eintracht Frankfurt,unbekannt
+33860,Nkounkou,Eintracht Frankfurt,fallend (Staerke 1)
+33869,Baum,Eintracht Frankfurt,steigend (Staerke 2)
+34043,Theate,Eintracht Frankfurt,unbekannt
+34310,Neuendorff,Eintracht Frankfurt,unbekannt
+34313,Kosugi,Eintracht Frankfurt,fallend (Staerke 1)
+33836,Collins,Eintracht Frankfurt,unbekannt
+32836,Koch,Eintracht Frankfurt,steigend (Staerke 1)
+33383,Knauff,Eintracht Frankfurt,steigend (Staerke 2)
+34314,Arrhov,Eintracht Frankfurt,unbekannt
+31572,Götze,Eintracht Frankfurt,unbekannt
+31743,Chandler,Eintracht Frankfurt,unbekannt
+34019,O. Højlund,Eintracht Frankfurt,fallend (Staerke 3)
+33912,Aséko,Eintracht Frankfurt,steigend (Staerke 1)
+33157,Skhiri,Eintracht Frankfurt,steigend (Staerke 5)
+33856,Chaïbi,Eintracht Frankfurt,unbekannt
+33678,Dina Ebimbe,Eintracht Frankfurt,fallend (Staerke 1)
+33782,Larsson,Eintracht Frankfurt,fallend (Staerke 2)
+33335,Doan,Eintracht Frankfurt,unbekannt
+32948,Burkardt,Eintracht Frankfurt,fallend (Staerke 2)
+34318,Amaimouni-Echghouyab,Eintracht Frankfurt,unbekannt
+34316,Ebnoutalib,Eintracht Frankfurt,steigend (Staerke 2)
+34312,Kumashiro,Eintracht Frankfurt,unbekannt
+33820,Futkeu,Eintracht Frankfurt,steigend (Staerke 2)
+34223,İnanoğlu,Eintracht Frankfurt,unbekannt
+34096,Wahi,Eintracht Frankfurt,fallend (Staerke 2)
+32874,Batshuayi,Eintracht Frankfurt,fallend (Staerke 1)
+33214,Ngankam,Eintracht Frankfurt,steigend (Staerke 1)
+34008,Uzun,Eintracht Frankfurt,steigend (Staerke 1)
+33890,Bahoya,Eintracht Frankfurt,unbekannt
+34465,Pimpong,Eintracht Frankfurt,fallend (Staerke 2)
+33990,Labrović,FC Augsburg,unbekannt
+34363,Wisbereit,FC Augsburg,fallend (Staerke 1)
+32877,Dahmen,FC Augsburg,steigend (Staerke 2)
+34438,Brackelmann,FC Augsburg,fallend (Staerke 1)
+34017,N. Banks,FC Augsburg,fallend (Staerke 1)
+34027,Giannoulis,FC Augsburg,unbekannt
+34057,Matsima,FC Augsburg,steigend (Staerke 2)
+34106,Behrens,FC Augsburg,unbekannt
+34351,Schnitzer,FC Augsburg,unbekannt
+33969,Suso,FC Augsburg,fallend (Staerke 1)
+33134,Pedersen,FC Augsburg,unbekannt
+32953,K. Schlotterbeck,FC Augsburg,steigend (Staerke 1)
+32549,Gouweleeuw,FC Augsburg,steigend (Staerke 2)
+32546,Wolf,FC Augsburg,steigend (Staerke 2)
+34236,Massengo,FC Augsburg,unbekannt
+34171,Fellhauer,FC Augsburg,steigend (Staerke 1)
+34069,Sakar,FC Augsburg,unbekannt
+34063,Claude-Maurice,FC Augsburg,steigend (Staerke 1)
+33732,Mbuku,FC Augsburg,unbekannt
+33211,Keitel,FC Augsburg,steigend (Staerke 1)
+33517,Jakić,FC Augsburg,fallend (Staerke 1)
+33736,Kömür,FC Augsburg,unbekannt
+33808,Breithaupt,FC Augsburg,unbekannt
+33914,Kücüksahin,FC Augsburg,unbekannt
+33564,Kade,FC Augsburg,fallend (Staerke 1)
+33997,Rieder,FC Augsburg,fallend (Staerke 1)
+33983,Kabadayi,FC Augsburg,unbekannt
+33588,Kastanaras,FC Augsburg,steigend (Staerke 4)
+34331,Ribeiro,FC Augsburg,fallend (Staerke 3)
+34344,Ogundu,FC Augsburg,steigend (Staerke 1)
+34345,Onoda,FC Augsburg,unbekannt
+34012,Mounié,FC Augsburg,unbekannt
+31958,Gregoritsch,FC Augsburg,fallend (Staerke 2)
+34464,Kinzig,1. FSV Mainz 05,unbekannt
+31774,Schwolow,1. FSV Mainz 05,unbekannt
+32364,Zentner,1. FSV Mainz 05,fallend (Staerke 2)
+31666,Bell,1. FSV Mainz 05,fallend (Staerke 1)
+34454,Gruber,1. FSV Mainz 05,unbekannt
+34307,Potulski,1. FSV Mainz 05,steigend (Staerke 3)
+33707,Hanche-Olsen,1. FSV Mainz 05,unbekannt
+33577,Caci,1. FSV Mainz 05,fallend (Staerke 1)
+33478,Widmer,1. FSV Mainz 05,steigend (Staerke 1)
+31762,da Costa,1. FSV Mainz 05,steigend (Staerke 1)
+31959,Kohr,1. FSV Mainz 05,unbekannt
+32178,Mwene,1. FSV Mainz 05,fallend (Staerke 1)
+33093,Maloney,1. FSV Mainz 05,fallend (Staerke 1)
+34231,Kawasaki,1. FSV Mainz 05,unbekannt
+34098,Nordin,1. FSV Mainz 05,unbekannt
+34053,Hong,1. FSV Mainz 05,unbekannt
+34009,Sano,1. FSV Mainz 05,unbekannt
+32395,Amiri,1. FSV Mainz 05,unbekannt
+34467,Ruoppi,1. FSV Mainz 05,fallend (Staerke 2)
+33477,Lee,1. FSV Mainz 05,unbekannt
+33356,Martel,1. FSV Mainz 05,steigend (Staerke 2)
+33296,Nebel,1. FSV Mainz 05,steigend (Staerke 1)
+33135,S. Becker,1. FSV Mainz 05,steigend (Staerke 1)
+33247,Silas,1. FSV Mainz 05,steigend (Staerke 3)
+34429,A. Haidara,1. FSV Mainz 05,steigend (Staerke 1)
+34308,Moreno Fell,1. FSV Mainz 05,unbekannt
+34291,Bøving,1. FSV Mainz 05,unbekannt
+34158,Königsdörffer,1. FSV Mainz 05,fallend (Staerke 1)
+33070,Tietz,1. FSV Mainz 05,unbekannt
+32733,Richter,1. FSV Mainz 05,steigend (Staerke 1)
+33830,Hollerbach,1. FSV Mainz 05,fallend (Staerke 2)
+34032,Klaus,1. FC Union Berlin,unbekannt
+34144,Raab,1. FC Union Berlin,steigend (Staerke 2)
+32921,Rönnow,1. FC Union Berlin,steigend (Staerke 2)
+33720,Juranović,1. FC Union Berlin,steigend (Staerke 1)
+33995,Querfeld,1. FC Union Berlin,unbekannt
+34455,Van Den Bosch,1. FC Union Berlin,fallend (Staerke 2)
+34038,Ogbemudia,1. FC Union Berlin,unbekannt
+34061,Köhn,1. FC Union Berlin,unbekannt
+34214,Markgraf,1. FC Union Berlin,unbekannt
+33669,Nsoki,1. FC Union Berlin,fallend (Staerke 2)
+32311,M. Friedrich,1. FC Union Berlin,fallend (Staerke 1)
+33567,Rothe,1. FC Union Berlin,unbekannt
+33096,Trimmel,1. FC Union Berlin,fallend (Staerke 2)
+34453,Blaszczak,1. FC Union Berlin,steigend (Staerke 1)
+32310,Haberer,1. FC Union Berlin,steigend (Staerke 1)
+32073,Khedira,1. FC Union Berlin,fallend (Staerke 1)
+33035,Jeong,1. FC Union Berlin,steigend (Staerke 5)
+33821,Kemlein,1. FC Union Berlin,steigend (Staerke 2)
+33550,Schäfer,1. FC Union Berlin,fallend (Staerke 1)
+33158,Skov,1. FC Union Berlin,unbekannt
+34452,Gray,1. FC Union Berlin,unbekannt
+34432,J. Friedrich,1. FC Union Berlin,unbekannt
+34358,Güther,1. FC Union Berlin,fallend (Staerke 1)
+34265,Bogdanov,1. FC Union Berlin,steigend (Staerke 1)
+34059,Ilić,1. FC Union Berlin,steigend (Staerke 1)
+34199,Ansah,1. FC Union Berlin,unbekannt
+34191,Burcu,1. FC Union Berlin,steigend (Staerke 1)
+34111,M. Ljubičić,1. FC Union Berlin,unbekannt
+32694,Burke,1. FC Union Berlin,steigend (Staerke 2)
+33616,Skarke,1. FC Union Berlin,fallend (Staerke 1)
+31618,Sippel,Borussia M'gladbach,unbekannt
+31693,Batz,Borussia M'gladbach,unbekannt
+34349,Trippel,Borussia M'gladbach,unbekannt
+32654,Nicolas,Borussia M'gladbach,unbekannt
+33306,Olschowsky,Borussia M'gladbach,unbekannt
+34187,Diks,Borussia M'gladbach,steigend (Staerke 1)
+33778,Ullrich,Borussia M'gladbach,unbekannt
+33601,Chiarodia,Borussia M'gladbach,steigend (Staerke 4)
+33258,Scally,Borussia M'gladbach,steigend (Staerke 2)
+34366,Herold,Borussia M'gladbach,fallend (Staerke 2)
+34439,Konoplya,Borussia M'gladbach,steigend (Staerke 1)
+32472,Elvedi,Borussia M'gladbach,steigend (Staerke 4)
+34470,Leszczyński,Borussia M'gladbach,fallend (Staerke 3)
+34435,Leopold,Borussia M'gladbach,fallend (Staerke 1)
+34459,Uno,Borussia M'gladbach,fallend (Staerke 2)
+34342,Bolin,Borussia M'gladbach,unbekannt
+34270,Mohya,Borussia M'gladbach,steigend (Staerke 2)
+34186,Castrop,Borussia M'gladbach,fallend (Staerke 2)
+33978,Sander,Borussia M'gladbach,steigend (Staerke 2)
+31985,Stöger,Borussia M'gladbach,steigend (Staerke 2)
+32931,Neuhaus,Borussia M'gladbach,steigend (Staerke 4)
+34481,Horvat,Borussia M'gladbach,unbekannt
+33817,Honorat,Borussia M'gladbach,fallend (Staerke 1)
+33938,Machino,Borussia M'gladbach,fallend (Staerke 1)
+32599,Kleindienst,Borussia M'gladbach,steigend (Staerke 1)
+34449,Uwakhonye,Borussia M'gladbach,unbekannt
+34447,Lidberg,Borussia M'gladbach,fallend (Staerke 2)
+32787,Hack,Borussia M'gladbach,unbekannt
+33198,Reyna,Borussia M'gladbach,fallend (Staerke 1)
+33681,Ngoumou,Borussia M'gladbach,unbekannt
+33819,Čvančara,Borussia M'gladbach,unbekannt
+32629,Heuer Fernandes,Hamburger SV,unbekannt
+34334,Tangvik,Hamburger SV,fallend (Staerke 1)
+34094,Dickes,Hamburger SV,unbekannt
+34164,Agyekum,Hamburger SV,unbekannt
+34233,Capaldo,Hamburger SV,unbekannt
+34354,Nandja,Hamburger SV,unbekannt
+34355,Lemke,Hamburger SV,steigend (Staerke 1)
+34148,Muheim,Hamburger SV,steigend (Staerke 2)
+34146,Elfadli,Hamburger SV,steigend (Staerke 2)
+34258,Omari,Hamburger SV,steigend (Staerke 1)
+32710,Torunarigha,Hamburger SV,steigend (Staerke 1)
+34290,Sambi Lokonga,Hamburger SV,unbekannt
+32630,Jatta,Hamburger SV,steigend (Staerke 2)
+34337,Grønbæk,Hamburger SV,fallend (Staerke 1)
+33254,Pherai,Hamburger SV,steigend (Staerke 3)
+33877,Amoako,Hamburger SV,fallend (Staerke 1)
+34477,Adeline,Hamburger SV,steigend (Staerke 1)
+33935,Remberg,Hamburger SV,fallend (Staerke 2)
+34462,Barkowsky,Hamburger SV,unbekannt
+34249,Stange,Hamburger SV,steigend (Staerke 5)
+34216,Philippe,Hamburger SV,steigend (Staerke 4)
+34194,Baldé,Hamburger SV,steigend (Staerke 1)
+32591,Poulsen,Hamburger SV,unbekannt
+34157,Sahiti,Hamburger SV,unbekannt
+34156,Røssing-Lelesiit,Hamburger SV,fallend (Staerke 2)
+34155,Dompé,Hamburger SV,fallend (Staerke 2)
+34483,Daka,Hamburger SV,unbekannt
+31634,Zieler,1. FC Köln,unbekannt
+33495,Köbbing,1. FC Köln,unbekannt
+32356,Schwäbe,1. FC Köln,steigend (Staerke 2)
+34241,Sebulonsen,1. FC Köln,steigend (Staerke 2)
+34352,Neumann,1. FC Köln,unbekannt
+34267,van den Berg,1. FC Köln,fallend (Staerke 1)
+34135,Schmied,1. FC Köln,unbekannt
+34134,Pauli,1. FC Köln,steigend (Staerke 2)
+33737,Bakatukanda,1. FC Köln,unbekannt
+34137,Gazibegović,1. FC Köln,unbekannt
+34444,Voufack,1. FC Köln,fallend (Staerke 1)
+34478,Fürst,1. FC Köln,steigend (Staerke 5)
+32744,Hübers,1. FC Köln,fallend (Staerke 1)
+34323,Simpson-Pusey,1. FC Köln,fallend (Staerke 2)
+34469,Lochoshvili,1. FC Köln,fallend (Staerke 1)
+34475,G. Mensah,1. FC Köln,fallend (Staerke 2)
+34138,Harchaoui,1. FC Köln,unbekannt
+34287,Castro-Montes,1. FC Köln,unbekannt
+34225,Kujović,1. FC Köln,fallend (Staerke 2)
+34196,Jóhannesson,1. FC Köln,steigend (Staerke 1)
+33130,Krauß,1. FC Köln,fallend (Staerke 2)
+32881,Maina,1. FC Köln,fallend (Staerke 2)
+34326,Niang,1. FC Köln,fallend (Staerke 2)
+34325,Schenten,1. FC Köln,fallend (Staerke 1)
+34141,M. El Mala,1. FC Köln,steigend (Staerke 1)
+34140,Rondić,1. FC Köln,unbekannt
+34139,S. El Mala,1. FC Köln,fallend (Staerke 1)
+33263,Ache,1. FC Köln,unbekannt
+33185,Thielmann,1. FC Köln,unbekannt
+33139,Bülter,1. FC Köln,unbekannt
+32206,Waldschmidt,1. FC Köln,unbekannt
+34480,Heskey,1. FC Köln,unbekannt
+34473,Schlager,SV Werder Bremen,steigend (Staerke 3)
+34274,Hein,SV Werder Bremen,steigend (Staerke 2)
+34251,Smarkalev,SV Werder Bremen,unbekannt
+33986,Kolke,SV Werder Bremen,unbekannt
+33882,Malatini,SV Werder Bremen,unbekannt
+31929,Weiser,SV Werder Bremen,fallend (Staerke 1)
+34239,Coulibaly,SV Werder Bremen,fallend (Staerke 1)
+34245,Schmetgens,SV Werder Bremen,steigend (Staerke 1)
+34468,Höcker,SV Werder Bremen,steigend (Staerke 1)
+34472,Wójcik,SV Werder Bremen,steigend (Staerke 3)
+33858,Deman,SV Werder Bremen,unbekannt
+33224,Pieper,SV Werder Bremen,steigend (Staerke 2)
+32120,Stark,SV Werder Bremen,unbekannt
+32754,Friedl,SV Werder Bremen,steigend (Staerke 1)
+33288,Agu,SV Werder Bremen,steigend (Staerke 2)
+34463,Stalmach,SV Werder Bremen,fallend (Staerke 2)
+34442,Chuki,SV Werder Bremen,unbekannt
+33110,Schmid,SV Werder Bremen,unbekannt
+33835,Lynen,SV Werder Bremen,steigend (Staerke 2)
+33640,Stage,SV Werder Bremen,fallend (Staerke 1)
+34091,Čović,SV Werder Bremen,fallend (Staerke 2)
+33896,Alvero,SV Werder Bremen,unbekannt
+33741,Topp,SV Werder Bremen,unbekannt
+34471,Erevbenagie,SV Werder Bremen,unbekannt
+33687,Njinmah,SV Werder Bremen,fallend (Staerke 2)
+34243,Mbangula,SV Werder Bremen,steigend (Staerke 1)
+34430,Quetant,SV Werder Bremen,unbekannt
+33030,Kownacki,SV Werder Bremen,fallend (Staerke 1)
+33520,Itten,SV Werder Bremen,fallend (Staerke 1)
+34244,Musah,SV Werder Bremen,unbekannt
+33923,Grüll,SV Werder Bremen,steigend (Staerke 2)
+31874,Karius,FC Schalke 04,steigend (Staerke 2)
+34369,Siebeking,FC Schalke 04,steigend (Staerke 1)
+32225,K. Müller,FC Schalke 04,fallend (Staerke 1)
+34378,Wasinski,FC Schalke 04,unbekannt
+34377,Gantenbein,FC Schalke 04,unbekannt
+34392,Ayhan,FC Schalke 04,steigend (Staerke 2)
+34375,Noode,FC Schalke 04,unbekannt
+34374,Leonard,FC Schalke 04,unbekannt
+34372,Katić,FC Schalke 04,unbekannt
+34371,Kuruçay,FC Schalke 04,unbekannt
+34376,V. Becker,FC Schalke 04,unbekannt
+33843,Gosens,FC Schalke 04,unbekannt
+33831,Wöber,FC Schalke 04,unbekannt
+32331,Kalas,FC Schalke 04,unbekannt
+32663,Donkor,FC Schalke 04,unbekannt
+33184,T. Becker,FC Schalke 04,fallend (Staerke 1)
+34391,El-Faouzi,FC Schalke 04,steigend (Staerke 5)
+32190,Karaman,FC Schalke 04,steigend (Staerke 1)
+34383,Bachmann,FC Schalke 04,unbekannt
+34434,Vozar,FC Schalke 04,unbekannt
+34382,Aouchiche,FC Schalke 04,steigend (Staerke 3)
+34381,M. Zalazar,FC Schalke 04,unbekannt
+34380,Grüger,FC Schalke 04,fallend (Staerke 1)
+33453,D. Ljubičić,FC Schalke 04,fallend (Staerke 2)
+34450,Tanaka,FC Schalke 04,fallend (Staerke 1)
+32490,Porath,FC Schalke 04,fallend (Staerke 1)
+34379,Schallenberg,FC Schalke 04,fallend (Staerke 2)
+34385,Wallentowitz,FC Schalke 04,steigend (Staerke 1)
+34386,Tchibara,FC Schalke 04,unbekannt
+34387,Sylla,FC Schalke 04,unbekannt
+34389,E. Højlund,FC Schalke 04,unbekannt
+33465,Lasme,FC Schalke 04,steigend (Staerke 1)
+33802,Adamu,FC Schalke 04,steigend (Staerke 4)
+34388,C. Gomis,FC Schalke 04,unbekannt
+34167,Lehmann,SV Elversberg,unbekannt
+34445,Etringer,SV Elversberg,unbekannt
+34166,Boss,SV Elversberg,unbekannt
+34165,Kristof,SV Elversberg,fallend (Staerke 1)
+34169,Le Joncour,SV Elversberg,unbekannt
+34170,Rohr,SV Elversberg,unbekannt
+34396,Keidel,SV Elversberg,unbekannt
+34393,Seifert,SV Elversberg,unbekannt
+34394,Mickelson,SV Elversberg,unbekannt
+34482,Sirch,SV Elversberg,unbekannt
+34168,Pinckert,SV Elversberg,fallend (Staerke 1)
+34395,Gyamerah,SV Elversberg,fallend (Staerke 1)
+33451,Günther,SV Elversberg,steigend (Staerke 4)
+33996,Krattenmacher,SV Elversberg,unbekannt
+34215,Darvich,SV Elversberg,fallend (Staerke 1)
+34427,Onyeka,SV Elversberg,fallend (Staerke 1)
+34397,Condé,SV Elversberg,fallend (Staerke 1)
+34176,Schmahl,SV Elversberg,unbekannt
+34153,Poręba,SV Elversberg,fallend (Staerke 2)
+34398,Ceka,SV Elversberg,unbekannt
+34399,Adam,SV Elversberg,unbekannt
+34180,Schnellbacher,SV Elversberg,steigend (Staerke 2)
+34178,Gerezgiher,SV Elversberg,unbekannt
+34177,Zimmerschied,SV Elversberg,steigend (Staerke 1)
+34090,Mokwa,SV Elversberg,unbekannt
+34016,Campbell,SV Elversberg,steigend (Staerke 3)
+33398,Petkov,SV Elversberg,steigend (Staerke 1)
+33072,Pfeiffer,SV Elversberg,fallend (Staerke 1)
+33140,Schubert,SC Paderborn,fallend (Staerke 1)
+33397,Noll,SC Paderborn,unbekannt
+34400,Pruhs,SC Paderborn,unbekannt
+31586,F. Götze,SC Paderborn,fallend (Staerke 1)
+34443,Awortwie-Grant,SC Paderborn,fallend (Staerke 2)
+34440,Lippmann,SC Paderborn,fallend (Staerke 1)
+34460,ter Horst,SC Paderborn,unbekannt
+34405,Zobel,SC Paderborn,unbekannt
+34403,Hoffmeier,SC Paderborn,steigend (Staerke 3)
+34402,Scheller,SC Paderborn,unbekannt
+34401,Hansen,SC Paderborn,fallend (Staerke 1)
+34456,Obermair,SC Paderborn,steigend (Staerke 3)
+34436,Baack,SC Paderborn,fallend (Staerke 1)
+34409,Gayret,SC Paderborn,unbekannt
+34414,Mohr,SC Paderborn,unbekannt
+34412,R. Müller,SC Paderborn,steigend (Staerke 2)
+34411,Sticker,SC Paderborn,fallend (Staerke 1)
+34410,Curda,SC Paderborn,fallend (Staerke 2)
+34107,Đurić,SC Paderborn,unbekannt
+34408,Klaas,SC Paderborn,unbekannt
+34407,Baur,SC Paderborn,fallend (Staerke 1)
+34406,Castañeda,SC Paderborn,fallend (Staerke 2)
+32087,Michel,SC Paderborn,steigend (Staerke 1)
+33219,Batista Meier,SC Paderborn,steigend (Staerke 5)
+34419,Marino,SC Paderborn,fallend (Staerke 1)
+34418,Millgramm,SC Paderborn,unbekannt
+34417,Okpala,SC Paderborn,unbekannt
+34416,Eickel,SC Paderborn,unbekannt
+33365,Tigges,SC Paderborn,unbekannt
+34415,Bätzner,SC Paderborn,steigend (Staerke 1)
