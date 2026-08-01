@@ -922,6 +922,382 @@ function setupKaderoptimierung() {
   document.getElementById("kaderopt-submit")?.addEventListener("click", runKaderoptimierung);
 }
 
+// ---- Spieleranalyse ----
+// Marktwert-Verlauf einzelner Spieler, bis zu 3 gleichzeitig (neuester
+// zuerst, der laengste hinzugefuegte faellt bei einem 4. Spieler raus).
+// Alle Kennzahlen (vs. Vortag, vs. 7 Tage, vs. Gesamtmarkt, Prognose)
+// werden clientseitig aus der rohen Tages-Historie berechnet.
+
+const ANALYSE_STORAGE_KEY = "comunio_analyse_players_v1";
+const ANALYSE_MAX = 3;
+
+let ANALYSE_PLAYER_IDS = loadAnalysePlayers();
+let MARKTWERT_HISTORY = {};
+let MARKET_AVERAGE_7D = null;
+const ANALYSE_FILTER_STATE = {};
+const ANALYSE_CHARTS = {};
+
+function loadAnalysePlayers() {
+  try {
+    const raw = localStorage.getItem(ANALYSE_STORAGE_KEY);
+    const parsed = raw ? JSON.parse(raw) : [];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveAnalysePlayers() {
+  localStorage.setItem(ANALYSE_STORAGE_KEY, JSON.stringify(ANALYSE_PLAYER_IDS));
+}
+
+function addAnalysePlayer(spielerId) {
+  if (ANALYSE_PLAYER_IDS.includes(spielerId)) return;
+  ANALYSE_PLAYER_IDS.unshift(spielerId);
+  if (ANALYSE_PLAYER_IDS.length > ANALYSE_MAX) {
+    ANALYSE_PLAYER_IDS = ANALYSE_PLAYER_IDS.slice(0, ANALYSE_MAX);
+  }
+  saveAnalysePlayers();
+  renderAnalyse();
+}
+
+function removeAnalysePlayer(spielerId) {
+  ANALYSE_PLAYER_IDS = ANALYSE_PLAYER_IDS.filter((id) => id !== spielerId);
+  saveAnalysePlayers();
+  renderAnalyse();
+}
+
+function parseISODate(str) {
+  return new Date(`${str}T00:00:00`);
+}
+
+function daysBetween(fromStr, toStr) {
+  return Math.round((parseISODate(toStr) - parseISODate(fromStr)) / 86400000);
+}
+
+function sortedHistory(spielerId) {
+  return (MARKTWERT_HISTORY[spielerId] || []).slice().sort((a, b) => a.datum.localeCompare(b.datum));
+}
+
+function filterHistoryByRange(history, filter) {
+  if (filter === "all" || history.length === 0) return history;
+  const latestDatum = history[history.length - 1].datum;
+  const maxDays = filter === "7d" ? 6 : 29;
+  return history.filter((h) => daysBetween(h.datum, latestDatum) <= maxDays);
+}
+
+function changeVsVortag(history) {
+  if (history.length < 2) return null;
+  const latest = history[history.length - 1];
+  const prev = history[history.length - 2];
+  const abs = latest.marktwert - prev.marktwert;
+  const rel = prev.marktwert ? (abs / prev.marktwert) * 100 : null;
+  return { abs, rel };
+}
+
+// "letzten 7 Tage": am weitesten entfernter verfuegbarer Tag innerhalb
+// des Fensters vs. der aktuellste verfuegbare Tag.
+function changeVsWindow(history, days) {
+  if (history.length === 0) return null;
+  const latest = history[history.length - 1];
+  const windowEntries = history.filter((h) => daysBetween(h.datum, latest.datum) <= days);
+  if (windowEntries.length < 2) return null;
+  const earliest = windowEntries[0];
+  const abs = latest.marktwert - earliest.marktwert;
+  const rel = earliest.marktwert ? (abs / earliest.marktwert) * 100 : null;
+  return { abs, rel };
+}
+
+// Durchschnittliches taegliches Wachstum der letzten 7 Tage, auf den
+// naechsten Tag hochgerechnet.
+function forecastNextDay(history) {
+  if (history.length === 0) return null;
+  const latest = history[history.length - 1];
+  const windowEntries = history.filter((h) => daysBetween(h.datum, latest.datum) <= 6);
+  if (windowEntries.length < 2) return null;
+
+  const dailyDeltas = [];
+  for (let i = 1; i < windowEntries.length; i++) {
+    const gap = daysBetween(windowEntries[i - 1].datum, windowEntries[i].datum) || 1;
+    dailyDeltas.push((windowEntries[i].marktwert - windowEntries[i - 1].marktwert) / gap);
+  }
+  const avgDailyDelta = dailyDeltas.reduce((a, b) => a + b, 0) / dailyDeltas.length;
+  return { forecastValue: latest.marktwert + avgDailyDelta, avgDailyDelta };
+}
+
+// Durchschnittliche 7-Tage-Entwicklung ueber alle Spieler - einmal
+// berechnet und wiederverwendet (nicht pro Spieler-Render neu).
+function computeMarketAverage7d() {
+  const relValues = [];
+  const absValues = [];
+  Object.keys(MARKTWERT_HISTORY).forEach((pid) => {
+    const change = changeVsWindow(sortedHistory(pid), 6);
+    if (change && change.rel !== null) {
+      relValues.push(change.rel);
+      absValues.push(change.abs);
+    }
+  });
+  if (relValues.length === 0) return null;
+  return {
+    avgAbs: absValues.reduce((a, b) => a + b, 0) / absValues.length,
+    avgRel: relValues.reduce((a, b) => a + b, 0) / relValues.length,
+  };
+}
+
+function formatSignedEuro(value) {
+  if (value === null || value === undefined || !Number.isFinite(value)) return "–";
+  const rounded = Math.round(value);
+  const sign = rounded > 0 ? "+" : "";
+  return `${sign}${new Intl.NumberFormat("de-DE").format(rounded)} €`;
+}
+
+function formatSignedPercent(value) {
+  if (value === null || value === undefined || !Number.isFinite(value)) return "–";
+  const sign = value > 0 ? "+" : "";
+  return `${sign}${value.toFixed(1).replace(".", ",")} %`;
+}
+
+function formatDateLabel(datum) {
+  const parts = datum.split("-");
+  return `${parts[2]}.${parts[1]}.`;
+}
+
+function directionClass(value) {
+  if (value === null || value === undefined || !Number.isFinite(value)) return "";
+  if (value > 0) return "positive";
+  if (value < 0) return "negative";
+  return "";
+}
+
+function analyseTile(label, change) {
+  if (!change) {
+    return `
+      <div class="analyse-tile">
+        <div class="analyse-tile-label">${label}</div>
+        <div class="analyse-tile-abs">–</div>
+      </div>`;
+  }
+  return `
+    <div class="analyse-tile ${directionClass(change.abs)}">
+      <div class="analyse-tile-label">${label}</div>
+      <div class="analyse-tile-abs">${formatSignedEuro(change.abs)}</div>
+      <div class="analyse-tile-rel">${formatSignedPercent(change.rel)}</div>
+    </div>`;
+}
+
+function analyseMarketTile(change7d) {
+  if (!change7d || !MARKET_AVERAGE_7D) {
+    return `
+      <div class="analyse-tile">
+        <div class="analyse-tile-label">Vs. Gesamtmarkt (7 Tage)</div>
+        <div class="analyse-tile-abs">–</div>
+      </div>`;
+  }
+  const diffAbs = change7d.abs - MARKET_AVERAGE_7D.avgAbs;
+  const diffRel = change7d.rel - MARKET_AVERAGE_7D.avgRel;
+  return `
+    <div class="analyse-tile ${directionClass(diffRel)}">
+      <div class="analyse-tile-label">Vs. Gesamtmarkt (7 Tage)</div>
+      <div class="analyse-tile-abs">${formatSignedEuro(diffAbs)}</div>
+      <div class="analyse-tile-rel">${formatSignedPercent(diffRel)} Punkte</div>
+    </div>`;
+}
+
+function analyseForecastTile(history) {
+  const forecast = forecastNextDay(history);
+  if (!forecast) {
+    return `
+      <div class="analyse-tile">
+        <div class="analyse-tile-label">Prognose morgen</div>
+        <div class="analyse-tile-abs">–</div>
+      </div>`;
+  }
+  return `
+    <div class="analyse-tile ${directionClass(forecast.avgDailyDelta)}">
+      <div class="analyse-tile-label">Prognose morgen</div>
+      <div class="analyse-tile-abs">${formatEuro(Math.round(forecast.forecastValue))}</div>
+      <div class="analyse-tile-rel">${formatSignedEuro(forecast.avgDailyDelta)}</div>
+    </div>`;
+}
+
+function analysePlayerBlock(spielerId) {
+  const player = ALL_PLAYERS.find((p) => p.spieler_id === spielerId);
+  if (!player) return "";
+
+  const history = sortedHistory(spielerId);
+  const filter = ANALYSE_FILTER_STATE[spielerId] || "30d";
+  const vortag = changeVsVortag(history);
+  const window7d = changeVsWindow(history, 6);
+
+  return `
+    <div class="analyse-player-block" data-spieler-id="${spielerId}">
+      <div class="analyse-header-row">
+        <span class="analyse-header-name">${player.name}</span>
+        <span class="analyse-header-item">${formatValue(player.verein)}</span>
+        <span class="analyse-header-item">${formatValue(player.position)}</span>
+        <span class="analyse-header-item"><strong>${formatEuro(player.marktwert)}</strong></span>
+        <span class="analyse-header-item"><strong>${formatValue(player.detail.punkte_saison)}</strong> Pkt.</span>
+        <button type="button" class="analyse-remove-btn" data-remove-id="${spielerId}" title="Aus Analyse entfernen">×</button>
+      </div>
+      <div class="analyse-chart-area">
+        <div class="analyse-chart-filter">
+          <label for="analyse-filter-${spielerId}">Zeitraum</label>
+          <select id="analyse-filter-${spielerId}" class="analyse-filter-select" data-spieler-id="${spielerId}">
+            <option value="7d" ${filter === "7d" ? "selected" : ""}>MW-Entwicklung letzte 7 Tage</option>
+            <option value="30d" ${filter === "30d" ? "selected" : ""}>Letzte 30 Tage</option>
+            <option value="all" ${filter === "all" ? "selected" : ""}>All-Time</option>
+          </select>
+        </div>
+        <div class="analyse-chart-canvas-wrapper">
+          <canvas id="analyse-chart-${spielerId}"></canvas>
+        </div>
+      </div>
+      <div class="analyse-tiles">
+        ${analyseTile("Vs. Vortag", vortag)}
+        ${analyseTile("Vs. letzte 7 Tage", window7d)}
+        ${analyseMarketTile(window7d)}
+        ${analyseForecastTile(history)}
+      </div>
+    </div>`;
+}
+
+function renderAnalyseChart(spielerId) {
+  const history = sortedHistory(spielerId);
+  const filter = ANALYSE_FILTER_STATE[spielerId] || "30d";
+  const filtered = filterHistoryByRange(history, filter);
+
+  const canvas = document.getElementById(`analyse-chart-${spielerId}`);
+  if (!canvas) return;
+
+  if (ANALYSE_CHARTS[spielerId]) {
+    ANALYSE_CHARTS[spielerId].destroy();
+  }
+
+  ANALYSE_CHARTS[spielerId] = new Chart(canvas, {
+    type: "line",
+    data: {
+      labels: filtered.map((h) => formatDateLabel(h.datum)),
+      datasets: [
+        {
+          label: "Marktwert",
+          data: filtered.map((h) => h.marktwert),
+          borderColor: "#0f2a4a",
+          backgroundColor: "rgba(15, 42, 74, 0.1)",
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: "#0f2a4a",
+          pointBorderColor: "#ffffff",
+          pointBorderWidth: 1.5,
+          fill: true,
+          tension: 0.15,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => formatEuro(ctx.parsed.y),
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 },
+        },
+        y: {
+          grid: { color: "#dbe2ec" },
+          ticks: {
+            callback: (value) => formatEuro(value),
+          },
+        },
+      },
+    },
+  });
+}
+
+function renderAnalyse() {
+  const container = document.getElementById("analyse-players");
+  if (!container) return;
+
+  if (ANALYSE_PLAYER_IDS.length === 0) {
+    container.innerHTML = `<div class="section-empty">Noch keine Spieler ausgewählt. Nutze die Suche oben, um bis zu drei Spieler zu vergleichen.</div>`;
+    return;
+  }
+
+  container.innerHTML = ANALYSE_PLAYER_IDS.map((id) => analysePlayerBlock(id)).join("");
+
+  ANALYSE_PLAYER_IDS.forEach((id) => renderAnalyseChart(id));
+
+  container.querySelectorAll(".analyse-remove-btn").forEach((btn) => {
+    btn.addEventListener("click", () => removeAnalysePlayer(btn.dataset.removeId));
+  });
+
+  container.querySelectorAll(".analyse-filter-select").forEach((select) => {
+    select.addEventListener("change", () => {
+      ANALYSE_FILTER_STATE[select.dataset.spielerId] = select.value;
+      renderAnalyseChart(select.dataset.spielerId);
+    });
+  });
+}
+
+function setupAnalyseSearch() {
+  const input = document.getElementById("analyse-search-input");
+  const results = document.getElementById("analyse-search-results");
+  if (!input || !results) return;
+
+  function closeResults() {
+    results.innerHTML = "";
+    results.classList.remove("visible");
+  }
+
+  input.addEventListener("input", () => {
+    const query = input.value.trim().toLowerCase();
+    if (query.length < 2) {
+      closeResults();
+      return;
+    }
+
+    const matches = ALL_PLAYERS.filter((p) => p.name.toLowerCase().includes(query)).slice(0, 8);
+
+    if (matches.length === 0) {
+      results.innerHTML = `<div class="search-empty">Keine Spieler gefunden.</div>`;
+    } else {
+      results.innerHTML = matches
+        .map((p) => {
+          const already = ANALYSE_PLAYER_IDS.includes(p.spieler_id);
+          return `
+            <button type="button" class="search-result${already ? " already-added" : ""}" data-id="${p.spieler_id}" ${already ? "disabled" : ""}>
+              <span class="search-result-name">${p.name}</span>
+              <span class="search-result-meta">${formatValue(p.verein)} · ${formatValue(p.position)}</span>
+              ${already ? '<span class="search-result-flag">bereits in der Analyse</span>' : ""}
+            </button>`;
+        })
+        .join("");
+    }
+    results.classList.add("visible");
+  });
+
+  results.addEventListener("click", (e) => {
+    const btn = e.target.closest(".search-result");
+    if (!btn || btn.disabled) return;
+    addAnalysePlayer(btn.dataset.id);
+    input.value = "";
+    closeResults();
+  });
+
+  document.addEventListener("click", (e) => {
+    if (e.target !== input && !results.contains(e.target)) {
+      closeResults();
+    }
+  });
+}
+
 async function init() {
   setupTabs();
   const response = await fetch("data/players.json");
@@ -936,6 +1312,12 @@ async function init() {
   setupKaderoptimierung();
   enforceSystemLimits();
   renderTeam();
+
+  const historyResponse = await fetch("data/marktwert_history.json");
+  MARKTWERT_HISTORY = await historyResponse.json();
+  MARKET_AVERAGE_7D = computeMarketAverage7d();
+  setupAnalyseSearch();
+  renderAnalyse();
 }
 
 startApp();

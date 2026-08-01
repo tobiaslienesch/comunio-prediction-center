@@ -49,6 +49,9 @@ jobs:
       - name: Spieler-Uebersicht neu bauen
         run: python scoring/build_player_overview.py
 
+      - name: Marktwert-Historie fuer Spieleranalyse aktualisieren
+        run: python scoring/build_marktwert_history.py
+
       - name: Daten committen und pushen
         run: |
           git config user.name "github-actions[bot]"

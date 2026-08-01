@@ -29,6 +29,7 @@
   <nav class="tabs">
     <button id="tab-uebersicht" class="active" data-view="uebersicht">Übersicht</button>
     <button id="tab-team" data-view="team">Mein Team</button>
+    <button id="tab-analyse" data-view="analyse">Spieleranalyse</button>
   </nav>
 
   <main>
@@ -190,10 +191,25 @@
         <div class="placeholder-card">Folgt in einem späteren Schritt.</div>
       </div>
     </section>
+
+    <section id="view-analyse" class="view">
+      <div class="section-block">
+        <h2 class="section-title">Spieleranalyse</h2>
+        <p class="section-subtitle">Marktwert-Verlauf im Detail - bis zu 3 Spieler gleichzeitig.</p>
+
+        <div class="team-search analyse-search">
+          <input type="text" id="analyse-search-input" placeholder="Spieler suchen und zur Analyse hinzufügen…" autocomplete="off" />
+          <div id="analyse-search-results" class="team-search-results"></div>
+        </div>
+
+        <div id="analyse-players" class="analyse-players"></div>
+      </div>
+    </section>
   </main>
 
   <div id="help-tooltip" class="help-tooltip"></div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

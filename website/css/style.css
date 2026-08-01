@@ -947,3 +947,159 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
     gap: 6px;
   }
 }
+
+/* Spieleranalyse */
+
+.analyse-search {
+  margin-left: 16px;
+}
+
+.analyse-players {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  margin: 20px 0 0 16px;
+}
+
+.analyse-player-block {
+  background: var(--white);
+  border-radius: var(--radius);
+  border-top: 4px solid var(--accent-2);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.analyse-header-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 20px;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+  color: var(--white);
+}
+
+.analyse-header-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-right: auto;
+}
+
+.analyse-header-item {
+  font-size: 0.82rem;
+}
+
+.analyse-header-item strong {
+  font-variant-numeric: tabular-nums;
+}
+
+.analyse-remove-btn {
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  line-height: 1;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.analyse-remove-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.analyse-chart-area {
+  padding: 16px;
+}
+
+.analyse-chart-filter {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.analyse-chart-filter label {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+}
+
+.analyse-chart-filter select {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--white);
+  color: var(--text);
+  font-size: 0.85rem;
+}
+
+.analyse-chart-filter select:focus {
+  outline: none;
+  border-color: var(--accent-2);
+  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.22);
+}
+
+.analyse-chart-canvas-wrapper {
+  position: relative;
+  height: 240px;
+}
+
+.analyse-tiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 0 16px 16px;
+}
+
+.analyse-tile {
+  flex: 1 1 150px;
+  background: var(--row-alt);
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.analyse-tile-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+}
+
+.analyse-tile-abs {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+}
+
+.analyse-tile-rel {
+  font-size: 0.78rem;
+  font-variant-numeric: tabular-nums;
+  color: var(--text-muted);
+}
+
+.analyse-tile.positive .analyse-tile-abs,
+.analyse-tile.positive .analyse-tile-rel {
+  color: var(--ampel-gruen);
+}
+
+.analyse-tile.negative .analyse-tile-abs,
+.analyse-tile.negative .analyse-tile-rel {
+  color: var(--ampel-rot);
+}
+
+@media (max-width: 480px) {
+  .analyse-tiles {
+    flex-direction: column;
+  }
+}
