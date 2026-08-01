@@ -117,16 +117,28 @@ function buildColumns(gesamtField, gesamtAmpelField, katField, katAmpelField, kp
       value: (p) => ({ display: `<div class="player-name">${p.name}</div>`, sort: p.name.toLowerCase() }),
     },
     {
-      key: "verein",
-      label: "Verein",
-      help: "Aktueller Verein des Spielers.",
-      value: (p) => ({ display: formatValue(p.verein), sort: (p.verein || "").toLowerCase() }),
-    },
-    {
       key: "position",
       label: "Position",
       help: "Spielposition: Torwart, Abwehr, Mittelfeld oder Sturm.",
       value: (p) => ({ display: formatValue(p.position), sort: (p.position || "").toLowerCase() }),
+    },
+    {
+      key: "marktwert",
+      label: "Marktwert",
+      help: "Aktueller Marktwert des Spielers.",
+      value: (p) => ({ display: formatEuro(p.marktwert), sort: p.marktwert }),
+    },
+    {
+      key: "punkte",
+      label: "Punkte",
+      help: "Gesamtpunkte in dieser Saison.",
+      value: (p) => ({ display: formatValue(p.detail.punkte_saison), sort: Number(p.detail.punkte_saison) || 0 }),
+    },
+    {
+      key: "punkte_pro_spiel",
+      label: "Punkte/Spiel",
+      help: "Durchschnittliche Punkte pro gespieltem Spiel (0, wenn weniger als 5 Spiele absolviert wurden).",
+      value: (p) => ({ display: formatPunkteProSpiel(p.detail.punkte_pro_spiel), sort: parseGermanFloat(p.detail.punkte_pro_spiel) }),
     },
     {
       key: "gesamtscore",
@@ -158,6 +170,13 @@ function buildColumns(gesamtField, gesamtAmpelField, katField, katAmpelField, kp
         value: (p) => (p[kpiField] ? scoreDisplay(p[kpiField][kpiKey], p[kpiAmpelField][kpiKey]) : { display: "–", sort: null }),
       });
     });
+  });
+
+  columns.push({
+    key: "verein",
+    label: "Verein",
+    help: "Aktueller Verein des Spielers.",
+    value: (p) => ({ display: formatValue(p.verein), sort: (p.verein || "").toLowerCase() }),
   });
 
   columns.push({
@@ -406,6 +425,7 @@ function applyFiltersAndRender() {
       } else if (p.marktwert_sektion !== section) {
         return false;
       }
+      if (section === "schnaeppchen" && p.position === "Torwart") return false;
       if (filterState.verein !== "alle" && p.verein !== filterState.verein) return false;
       if (filterState.position !== "alle" && p.position !== filterState.position) return false;
       return true;

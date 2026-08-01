@@ -104,8 +104,8 @@ KATEGORIEN = {
         "trend": 0.10,
     },
     "mw_entwicklung": {
-        "news_count_7d": 0.05, "transfernews": 0.25, "stammplatznews": 0.25,
-        "trend": 0.30, "form": 0.15,
+        "news_count_7d": 0.10, "transfernews": 0.15, "stammplatznews": 0.05,
+        "trend": 0.45, "form": 0.25,
     },
 }
 
@@ -130,7 +130,7 @@ WATCH_MARKTWERT_MAX = 8_000_000
 
 WATCH_KATEGORIE_GEWICHTUNG = {
     "preis_leistung": 0.15, "konstanz": 0.05,
-    "leistungspotenzial": 0.30, "mw_entwicklung": 0.50,
+    "leistungspotenzial": 0.25, "mw_entwicklung": 0.55,
 }
 
 
