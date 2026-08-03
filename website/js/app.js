@@ -1192,6 +1192,9 @@ const ANALYSE_MAX = 3;
 let ANALYSE_PLAYER_IDS = loadAnalysePlayers();
 let MARKTWERT_HISTORY = {};
 let MARKET_AVERAGE_7D = null;
+let MARKT_GESAMT_HISTORY = [];
+let MARKT_FILTER = "30d";
+let MARKT_CHART = null;
 const ANALYSE_FILTER_STATE = {};
 const ANALYSE_CHARTS = {};
 
@@ -1283,23 +1286,31 @@ function forecastNextDay(history) {
   return { forecastValue: latest.marktwert + avgDailyDelta, avgDailyDelta };
 }
 
-// Durchschnittliche 7-Tage-Entwicklung ueber alle Spieler - einmal
-// berechnet und wiederverwendet (nicht pro Spieler-Render neu).
-function computeMarketAverage7d() {
-  const relValues = [];
-  const absValues = [];
-  Object.keys(MARKTWERT_HISTORY).forEach((pid) => {
-    const change = changeVsWindow(sortedHistory(pid), 6);
-    if (change && change.rel !== null) {
-      relValues.push(change.rel);
-      absValues.push(change.abs);
-    }
+// Der "Gesamtmarkt" ist der Durchschnitts-Marktwert ueber alle
+// Spieler mit Daten an diesem Tag - als Zeitreihe im selben Format
+// wie die Historie eines einzelnen Spielers, damit dieselben
+// Berechnungs- und Chart-Funktionen wiederverwendet werden koennen.
+function computeMarketHistory() {
+  const byDate = {};
+  Object.values(MARKTWERT_HISTORY).forEach((entries) => {
+    entries.forEach((e) => {
+      if (!byDate[e.datum]) byDate[e.datum] = { sum: 0, count: 0 };
+      byDate[e.datum].sum += e.marktwert;
+      byDate[e.datum].count += 1;
+    });
   });
-  if (relValues.length === 0) return null;
-  return {
-    avgAbs: absValues.reduce((a, b) => a + b, 0) / absValues.length,
-    avgRel: relValues.reduce((a, b) => a + b, 0) / relValues.length,
-  };
+  return Object.keys(byDate)
+    .sort()
+    .map((datum) => ({ datum, marktwert: Math.round(byDate[datum].sum / byDate[datum].count) }));
+}
+
+// 7-Tage-Entwicklung des Gesamtmarkts - einmal berechnet und als
+// Vergleichsbasis fuer die "Vs. Gesamtmarkt"-Kachel jedes Spielers
+// wiederverwendet (nicht pro Spieler-Render neu berechnet).
+function computeMarketAverage7d() {
+  const change = changeVsWindow(MARKT_GESAMT_HISTORY, 6);
+  if (!change) return null;
+  return { avgAbs: change.abs, avgRel: change.rel };
 }
 
 function formatSignedEuro(value) {
@@ -1479,6 +1490,109 @@ function renderAnalyseChart(spielerId) {
   });
 }
 
+// Immer sichtbare Gesamtmarkt-Karte oberhalb der Spieler-Suche -
+// nutzt dieselben Berechnungs- und Kachel-Funktionen wie die
+// einzelnen Spieler-Karten, nur mit der aggregierten Marktwert-
+// Zeitreihe (Durchschnitt ueber alle Spieler) statt eines einzelnen
+// Spielers Historie.
+function renderMarketChart() {
+  const filtered = filterHistoryByRange(MARKT_GESAMT_HISTORY, MARKT_FILTER);
+  const canvas = document.getElementById("analyse-market-canvas");
+  if (!canvas) return;
+
+  if (MARKT_CHART) {
+    MARKT_CHART.destroy();
+  }
+
+  MARKT_CHART = new Chart(canvas, {
+    type: "line",
+    data: {
+      labels: filtered.map((h) => formatDateLabel(h.datum)),
+      datasets: [
+        {
+          label: "Ø Marktwert",
+          data: filtered.map((h) => h.marktwert),
+          borderColor: "#b9791a",
+          backgroundColor: "rgba(185, 121, 26, 0.1)",
+          borderWidth: 2,
+          pointRadius: 3,
+          pointBackgroundColor: "#b9791a",
+          pointBorderColor: "#ffffff",
+          pointBorderWidth: 1.5,
+          fill: true,
+          tension: 0.15,
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: "index", intersect: false },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: (ctx) => formatEuro(ctx.parsed.y),
+          },
+        },
+      },
+      scales: {
+        x: {
+          grid: { display: false },
+          ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 },
+        },
+        y: {
+          grid: { color: "#dbe2ec" },
+          ticks: {
+            callback: (value) => formatEuro(value),
+          },
+        },
+      },
+    },
+  });
+}
+
+function renderMarketCard() {
+  const container = document.getElementById("analyse-market-card");
+  if (!container) return;
+
+  const history = MARKT_GESAMT_HISTORY;
+  const vortag = changeVsVortag(history);
+  const window7d = changeVsWindow(history, 6);
+
+  container.innerHTML = `
+    <div class="analyse-header-row">
+      <span class="analyse-header-name">Gesamtmarkt</span>
+      <span class="analyse-header-item">Ø Marktwert über alle Spieler</span>
+    </div>
+    <div class="analyse-chart-area">
+      <div class="analyse-chart-filter">
+        <label for="analyse-market-filter">Zeitraum</label>
+        <select id="analyse-market-filter" class="analyse-filter-select">
+          <option value="7d" ${MARKT_FILTER === "7d" ? "selected" : ""}>MW-Entwicklung letzte 7 Tage</option>
+          <option value="30d" ${MARKT_FILTER === "30d" ? "selected" : ""}>Letzte 30 Tage</option>
+          <option value="all" ${MARKT_FILTER === "all" ? "selected" : ""}>All-Time</option>
+        </select>
+      </div>
+      <div class="analyse-chart-canvas-wrapper">
+        <canvas id="analyse-market-canvas"></canvas>
+      </div>
+    </div>
+    <div class="analyse-tiles">
+      ${analyseTile("Vs. Vortag", vortag)}
+      ${analyseTile("Vs. letzte 7 Tage", window7d)}
+      ${analyseMarketTile(window7d)}
+      ${analyseForecastTile(history)}
+    </div>`;
+
+  renderMarketChart();
+
+  document.getElementById("analyse-market-filter")?.addEventListener("change", (e) => {
+    MARKT_FILTER = e.target.value;
+    renderMarketChart();
+  });
+}
+
 function renderAnalyse() {
   const container = document.getElementById("analyse-players");
   if (!container) return;
@@ -1574,7 +1688,9 @@ async function init() {
 
   const historyResponse = await fetch("data/marktwert_history.json");
   MARKTWERT_HISTORY = await historyResponse.json();
+  MARKT_GESAMT_HISTORY = computeMarketHistory();
   MARKET_AVERAGE_7D = computeMarketAverage7d();
+  renderMarketCard();
   setupAnalyseSearch();
   renderAnalyse();
 }
