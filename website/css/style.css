@@ -1098,6 +1098,37 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
   color: var(--ampel-rot);
 }
 
+.analyse-tile-dual-row {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.analyse-tile-dual-caption {
+  font-size: 0.64rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--text-muted);
+  width: 58px;
+  flex-shrink: 0;
+}
+
+.analyse-tile-dual .analyse-tile-abs {
+  font-size: 0.85rem;
+}
+
+.analyse-tile-dual-row.positive .analyse-tile-abs,
+.analyse-tile-dual-row.positive .analyse-tile-rel {
+  color: var(--ampel-gruen);
+}
+
+.analyse-tile-dual-row.negative .analyse-tile-abs,
+.analyse-tile-dual-row.negative .analyse-tile-rel {
+  color: var(--ampel-rot);
+}
+
 @media (max-width: 480px) {
   .analyse-tiles {
     flex-direction: column;

@@ -1193,6 +1193,7 @@ let ANALYSE_PLAYER_IDS = loadAnalysePlayers();
 let MARKTWERT_HISTORY = {};
 let MARKET_AVERAGE_7D = null;
 let MARKT_GESAMT_HISTORY = [];
+let MARKT_GESAMT_TOTAL_HISTORY = [];
 let MARKT_FILTER = "30d";
 let MARKT_CHART = null;
 const ANALYSE_FILTER_STATE = {};
@@ -1302,6 +1303,21 @@ function computeMarketHistory() {
   return Object.keys(byDate)
     .sort()
     .map((datum) => ({ datum, marktwert: Math.round(byDate[datum].sum / byDate[datum].count) }));
+}
+
+// Gleiche Aggregation, aber als Summe statt Durchschnitt - fuer die
+// "Gesamt"-Zeile der Kacheln (Durchschnitt kommt aus
+// computeMarketHistory / MARKT_GESAMT_HISTORY, die "Je Spieler"-Zeile).
+function computeMarketTotalHistory() {
+  const byDate = {};
+  Object.values(MARKTWERT_HISTORY).forEach((entries) => {
+    entries.forEach((e) => {
+      byDate[e.datum] = (byDate[e.datum] || 0) + e.marktwert;
+    });
+  });
+  return Object.keys(byDate)
+    .sort()
+    .map((datum) => ({ datum, marktwert: byDate[datum] }));
 }
 
 // 7-Tage-Entwicklung des Gesamtmarkts - einmal berechnet und als
@@ -1552,13 +1568,63 @@ function renderMarketChart() {
   });
 }
 
+function analyseDualChangeRow(caption, change) {
+  const cls = directionClass(change?.abs);
+  return `
+    <div class="analyse-tile-dual-row ${cls}">
+      <span class="analyse-tile-dual-caption">${caption}</span>
+      <span class="analyse-tile-abs">${formatSignedEuro(change?.abs)}</span>
+      <span class="analyse-tile-rel">${formatSignedPercent(change?.rel)}</span>
+    </div>`;
+}
+
+function analyseDualChangeTile(label, totalChange, perPlayerChange) {
+  return `
+    <div class="analyse-tile analyse-tile-dual">
+      <div class="analyse-tile-label">${label}</div>
+      ${analyseDualChangeRow("Gesamt", totalChange)}
+      ${analyseDualChangeRow("Je Spieler", perPlayerChange)}
+    </div>`;
+}
+
+function analyseDualForecastRow(caption, forecast) {
+  if (!forecast) {
+    return `
+      <div class="analyse-tile-dual-row">
+        <span class="analyse-tile-dual-caption">${caption}</span>
+        <span class="analyse-tile-abs">–</span>
+      </div>`;
+  }
+  const cls = directionClass(forecast.avgDailyDelta);
+  return `
+    <div class="analyse-tile-dual-row ${cls}">
+      <span class="analyse-tile-dual-caption">${caption}</span>
+      <span class="analyse-tile-abs">${formatEuro(Math.round(forecast.forecastValue))}</span>
+      <span class="analyse-tile-rel">${formatSignedEuro(forecast.avgDailyDelta)}</span>
+    </div>`;
+}
+
+function analyseDualForecastTile(totalHistory, perPlayerHistory) {
+  const totalForecast = forecastNextDay(totalHistory);
+  const perPlayerForecast = forecastNextDay(perPlayerHistory);
+  return `
+    <div class="analyse-tile analyse-tile-dual">
+      <div class="analyse-tile-label">Prognose morgen</div>
+      ${analyseDualForecastRow("Gesamt", totalForecast)}
+      ${analyseDualForecastRow("Je Spieler", perPlayerForecast)}
+    </div>`;
+}
+
 function renderMarketCard() {
   const container = document.getElementById("analyse-market-card");
   if (!container) return;
 
   const history = MARKT_GESAMT_HISTORY;
+  const totalHistory = MARKT_GESAMT_TOTAL_HISTORY;
   const vortag = changeVsVortag(history);
+  const vortagTotal = changeVsVortag(totalHistory);
   const window7d = changeVsWindow(history, 6);
+  const window7dTotal = changeVsWindow(totalHistory, 6);
 
   container.innerHTML = `
     <div class="analyse-header-row">
@@ -1579,10 +1645,9 @@ function renderMarketCard() {
       </div>
     </div>
     <div class="analyse-tiles">
-      ${analyseTile("Vs. Vortag", vortag)}
-      ${analyseTile("Vs. letzte 7 Tage", window7d)}
-      ${analyseMarketTile(window7d)}
-      ${analyseForecastTile(history)}
+      ${analyseDualChangeTile("Vs. Vortag", vortagTotal, vortag)}
+      ${analyseDualChangeTile("Vs. letzte 7 Tage", window7dTotal, window7d)}
+      ${analyseDualForecastTile(totalHistory, history)}
     </div>`;
 
   renderMarketChart();
@@ -1689,6 +1754,7 @@ async function init() {
   const historyResponse = await fetch("data/marktwert_history.json");
   MARKTWERT_HISTORY = await historyResponse.json();
   MARKT_GESAMT_HISTORY = computeMarketHistory();
+  MARKT_GESAMT_TOTAL_HISTORY = computeMarketTotalHistory();
   MARKET_AVERAGE_7D = computeMarketAverage7d();
   renderMarketCard();
   setupAnalyseSearch();
