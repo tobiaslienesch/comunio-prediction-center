@@ -983,11 +983,16 @@ function transferKosten(marktwert) {
   return marktwert * TRANSFER_AUFSCHLAG;
 }
 
+// Feste Regel: Spieler unter diesem Marktwert werden fuer die
+// Kaderoptimierung grundsaetzlich nicht vorgeschlagen.
+const SQUADOPT_MIN_MARKTWERT = 1_750_000;
+
 function squadOptShortlist(position, maxSize) {
   const candidates = ALL_PLAYERS.filter((p) => {
     if (p.position !== position) return false;
     if (isInTeam(p.spieler_id)) return false;
     if (p.marktwert === null || p.marktwert === undefined) return false;
+    if (p.marktwert < SQUADOPT_MIN_MARKTWERT) return false;
     return parseGermanFloat(p.detail.punkte_pro_spiel) !== null;
   });
 
