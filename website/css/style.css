@@ -1142,3 +1142,13 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
   color: var(--text);
   font-variant-numeric: tabular-nums;
 }
+
+.squadopt-option {
+  padding: 14px 0 18px;
+  border-top: 3px solid var(--accent-2);
+}
+
+.squadopt-option:first-child {
+  border-top: none;
+  padding-top: 0;
+}

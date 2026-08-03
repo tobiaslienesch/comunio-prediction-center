@@ -973,6 +973,16 @@ function mergeFrontiers(frontierA, frontierB, budgetLimit) {
   return paretoFrontier(combined);
 }
 
+// Bei einem echten Transfer zahlt man in der Praxis mehr als den
+// reinen Marktwert - wird hier pauschal mit +20% angenommen und
+// fliesst ueberall ein, wo die Optimierung Kosten gegen das Budget
+// prueft (Shortlist-Effizienz, Kombinationen, angezeigte Kosten).
+const TRANSFER_AUFSCHLAG = 1.2;
+
+function transferKosten(marktwert) {
+  return marktwert * TRANSFER_AUFSCHLAG;
+}
+
 function squadOptShortlist(position, maxSize) {
   const candidates = ALL_PLAYERS.filter((p) => {
     if (p.position !== position) return false;
@@ -986,8 +996,8 @@ function squadOptShortlist(position, maxSize) {
     (a, b) => parseGermanFloat(b.detail.punkte_pro_spiel) - parseGermanFloat(a.detail.punkte_pro_spiel)
   );
   const byEfficiency = [...candidates].sort((a, b) => {
-    const effA = parseGermanFloat(a.detail.punkte_pro_spiel) / a.marktwert;
-    const effB = parseGermanFloat(b.detail.punkte_pro_spiel) / b.marktwert;
+    const effA = parseGermanFloat(a.detail.punkte_pro_spiel) / transferKosten(a.marktwert);
+    const effB = parseGermanFloat(b.detail.punkte_pro_spiel) / transferKosten(b.marktwert);
     return effB - effA;
   });
 
@@ -1002,7 +1012,7 @@ function squadOptPositionFrontier(shortlist, k, budgetLimit) {
 
   const combos = [];
   for (const combo of combinationsOf(shortlist, k)) {
-    const cost = combo.reduce((sum, p) => sum + p.marktwert, 0);
+    const cost = combo.reduce((sum, p) => sum + transferKosten(p.marktwert), 0);
     if (cost > budgetLimit) continue;
     const ppg = combo.reduce((sum, p) => sum + (parseGermanFloat(p.detail.punkte_pro_spiel) || 0), 0);
     combos.push({ cost, ppg, players: combo });
@@ -1035,6 +1045,10 @@ function lockedPpgSum(entries) {
     .reduce((sum, e) => sum + (parseGermanFloat(e.player.detail.punkte_pro_spiel) || 0), 0);
 }
 
+// Liefert die Top 3 Moeglichkeiten (je eine pro Formation, sortiert
+// nach erreichbarer Gesamt-Punkte-pro-Spiel-Summe) - da jede Formation
+// immer exakt 11 Spieler umfasst, ist der Vergleich zwischen den
+// Formationen fair.
 function runSquadOptimierung(kontostand) {
   const entries = currentTeamEntries();
   const lockedCounts = countStartelfByPosition(entries);
@@ -1043,9 +1057,9 @@ function runSquadOptimierung(kontostand) {
   const feasibleSystems = STARTELF_SYSTEME.filter(
     (s) => lockedCounts.Abwehr <= s.abwehr && lockedCounts.Mittelfeld <= s.mittelfeld && lockedCounts.Sturm <= s.sturm
   );
-  if (feasibleSystems.length === 0) return null;
+  if (feasibleSystems.length === 0) return [];
 
-  let best = null;
+  const results = [];
   for (const sys of feasibleSystems) {
     const openSlots = {
       Torwart: 1 - lockedCounts.Torwart,
@@ -1059,14 +1073,15 @@ function runSquadOptimierung(kontostand) {
 
     const totalTeamPpg = lockedPpg + combo.ppg;
     const label = systemLabel(sys);
-    const isCurrent = label === SELECTED_SYSTEM;
-
-    if (!best || totalTeamPpg > best.totalTeamPpg || (totalTeamPpg === best.totalTeamPpg && isCurrent)) {
-      best = { systemLabel: label, isCurrent, openSlots, combo, totalTeamPpg };
-    }
+    results.push({ systemLabel: label, isCurrent: label === SELECTED_SYSTEM, openSlots, combo, totalTeamPpg });
   }
 
-  return best;
+  results.sort((a, b) => {
+    if (b.totalTeamPpg !== a.totalTeamPpg) return b.totalTeamPpg - a.totalTeamPpg;
+    return (b.isCurrent ? 1 : 0) - (a.isCurrent ? 1 : 0);
+  });
+
+  return results.slice(0, 3);
 }
 
 function squadOptResultRow(player) {
@@ -1076,11 +1091,55 @@ function squadOptResultRow(player) {
       <td>${formatValue(player.verein)}</td>
       <td>${formatValue(player.position)}</td>
       <td>${formatEuro(player.marktwert)}</td>
+      <td>${formatEuro(transferKosten(player.marktwert))}</td>
       <td>${formatPunkteProSpiel(player.detail.punkte_pro_spiel)}</td>
       <td>
         <button type="button" class="team-action squadopt-add-btn" data-id="${player.spieler_id}" title="Zum Team hinzufügen (Ersatzbank)">Hinzufügen</button>
       </td>
     </tr>`;
+}
+
+function squadOptOptionBlock(result, rank, kontostand) {
+  const systemNote = result.isCurrent
+    ? `<span class="squadopt-system-current">entspricht deinem aktuellen System</span>`
+    : `<span class="squadopt-system-switch">Wechsel zu Formation ${result.systemLabel} empfohlen (aktuell: ${SELECTED_SYSTEM})</span>`;
+
+  const totalOpen = Object.values(result.openSlots).reduce((a, b) => a + b, 0);
+
+  if (totalOpen === 0 || result.combo.players.length === 0) {
+    return `
+      <div class="squadopt-option">
+        <div class="squadopt-header">Option ${rank}: System <strong>${result.systemLabel}</strong> ${systemNote}</div>
+        <div class="section-empty">Startelf für dieses System bereits vollständig - keine Ergänzung nötig.</div>
+      </div>`;
+  }
+
+  const rows = result.combo.players.map(squadOptResultRow).join("");
+
+  return `
+    <div class="squadopt-option">
+      <div class="squadopt-header">Option ${rank}: System <strong>${result.systemLabel}</strong> ${systemNote}</div>
+      <div class="squadopt-summary">
+        Geschätzte Kosten (inkl. +20% Transfer-Aufschlag): <strong>${formatEuro(result.combo.cost)}</strong> von ${formatEuro(kontostand)}
+        &middot; Zuwachs Punkte/Spiel: <strong>${result.combo.ppg.toFixed(2)}</strong>
+      </div>
+      <div class="table-scroll">
+        <table class="player-table team-table">
+          <thead>
+            <tr>
+              <th>Spieler</th>
+              <th>Verein</th>
+              <th>Position</th>
+              <th>Marktwert</th>
+              <th>Geschätzte Kosten</th>
+              <th>Punkte/Spiel</th>
+              <th>Aktion</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
 }
 
 function runSquadOptimierungAndRender() {
@@ -1093,48 +1152,13 @@ function runSquadOptimierungAndRender() {
     return;
   }
 
-  const result = runSquadOptimierung(kontostand);
-  if (!result) {
+  const results = runSquadOptimierung(kontostand);
+  if (!results || results.length === 0) {
     resultsEl.innerHTML = `<div class="section-empty">Mit diesem Budget lässt sich deine Startelf in keinem gültigen System ergänzen.</div>`;
     return;
   }
 
-  const systemNote = result.isCurrent
-    ? `<span class="squadopt-system-current">entspricht deinem aktuellen System</span>`
-    : `<span class="squadopt-system-switch">Wechsel zu Formation ${result.systemLabel} empfohlen (aktuell: ${SELECTED_SYSTEM})</span>`;
-
-  const totalOpen = Object.values(result.openSlots).reduce((a, b) => a + b, 0);
-
-  if (totalOpen === 0 || result.combo.players.length === 0) {
-    resultsEl.innerHTML = `
-      <div class="squadopt-header">Empfohlenes System: <strong>${result.systemLabel}</strong> ${systemNote}</div>
-      <div class="section-empty">Deine Startelf ist bereits vollständig - keine Ergänzung nötig.</div>`;
-    return;
-  }
-
-  const rows = result.combo.players.map(squadOptResultRow).join("");
-
-  resultsEl.innerHTML = `
-    <div class="squadopt-header">Empfohlenes System: <strong>${result.systemLabel}</strong> ${systemNote}</div>
-    <div class="squadopt-summary">
-      Kosten der Vorschläge: <strong>${formatEuro(result.combo.cost)}</strong> von ${formatEuro(kontostand)}
-      &middot; Zuwachs Punkte/Spiel: <strong>${result.combo.ppg.toFixed(2)}</strong>
-    </div>
-    <div class="table-scroll">
-      <table class="player-table team-table">
-        <thead>
-          <tr>
-            <th>Spieler</th>
-            <th>Verein</th>
-            <th>Position</th>
-            <th>Marktwert</th>
-            <th>Punkte/Spiel</th>
-            <th>Aktion</th>
-          </tr>
-        </thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>`;
+  resultsEl.innerHTML = results.map((r, i) => squadOptOptionBlock(r, i + 1, kontostand)).join("");
 
   resultsEl.querySelectorAll(".squadopt-add-btn").forEach((btn) => {
     btn.addEventListener("click", () => {
