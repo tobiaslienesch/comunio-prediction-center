@@ -922,6 +922,233 @@ function setupKaderoptimierung() {
   document.getElementById("kaderopt-submit")?.addEventListener("click", runKaderoptimierung);
 }
 
+// ---- Kaderoptimierung (Startelf-Ergaenzung) ----
+// Ergaenzt die aktuell gesetzte Startelf (locked) optimal innerhalb
+// eines Budgets: fuer jede noch offene Position wird eine engere
+// Shortlist gebildet, daraus alle Kombinationen fuer die benoetigte
+// Anzahl an Spielern erzeugt und je Position auf eine Pareto-Front
+// (Kosten -> beste erreichbare Punkte-pro-Spiel-Summe) reduziert.
+// Die Fronten mehrerer Positionen werden dann kombiniert (weiterhin
+// Pareto-reduziert), um die budget-optimale Gesamtkombination zu
+// finden. Das Ganze wird fuer jedes zur aktuellen Startelf passende
+// Formations-System durchgerechnet; das System mit der hoechsten
+// GESAMT-Punkte-pro-Spiel-Summe (gesetzte + neue Spieler) gewinnt -
+// da jedes System immer exakt 11 Spieler umfasst, ist dieser
+// Vergleich zwischen Systemen fair.
+
+function* combinationsOf(arr, k) {
+  if (k === 0) {
+    yield [];
+    return;
+  }
+  for (let i = 0; i <= arr.length - k; i++) {
+    for (const rest of combinationsOf(arr.slice(i + 1), k - 1)) {
+      yield [arr[i], ...rest];
+    }
+  }
+}
+
+function paretoFrontier(points) {
+  const sorted = [...points].sort((a, b) => a.cost - b.cost || b.ppg - a.ppg);
+  const frontier = [];
+  let bestPpg = -Infinity;
+  for (const p of sorted) {
+    if (p.ppg > bestPpg) {
+      frontier.push(p);
+      bestPpg = p.ppg;
+    }
+  }
+  return frontier;
+}
+
+function mergeFrontiers(frontierA, frontierB, budgetLimit) {
+  const combined = [];
+  for (const a of frontierA) {
+    for (const b of frontierB) {
+      const cost = a.cost + b.cost;
+      if (cost > budgetLimit) continue;
+      combined.push({ cost, ppg: a.ppg + b.ppg, players: [...a.players, ...b.players] });
+    }
+  }
+  return paretoFrontier(combined);
+}
+
+function squadOptShortlist(position, maxSize) {
+  const candidates = ALL_PLAYERS.filter((p) => {
+    if (p.position !== position) return false;
+    if (isInTeam(p.spieler_id)) return false;
+    if (p.marktwert === null || p.marktwert === undefined) return false;
+    return parseGermanFloat(p.detail.punkte_pro_spiel) !== null;
+  });
+
+  const half = Math.ceil(maxSize * 0.6);
+  const byPpg = [...candidates].sort(
+    (a, b) => parseGermanFloat(b.detail.punkte_pro_spiel) - parseGermanFloat(a.detail.punkte_pro_spiel)
+  );
+  const byEfficiency = [...candidates].sort((a, b) => {
+    const effA = parseGermanFloat(a.detail.punkte_pro_spiel) / a.marktwert;
+    const effB = parseGermanFloat(b.detail.punkte_pro_spiel) / b.marktwert;
+    return effB - effA;
+  });
+
+  const shortlist = new Map();
+  byPpg.slice(0, half).forEach((p) => shortlist.set(p.spieler_id, p));
+  byEfficiency.slice(0, half).forEach((p) => shortlist.set(p.spieler_id, p));
+  return [...shortlist.values()];
+}
+
+function squadOptPositionFrontier(shortlist, k, budgetLimit) {
+  if (k === 0) return [{ cost: 0, ppg: 0, players: [] }];
+
+  const combos = [];
+  for (const combo of combinationsOf(shortlist, k)) {
+    const cost = combo.reduce((sum, p) => sum + p.marktwert, 0);
+    if (cost > budgetLimit) continue;
+    const ppg = combo.reduce((sum, p) => sum + (parseGermanFloat(p.detail.punkte_pro_spiel) || 0), 0);
+    combos.push({ cost, ppg, players: combo });
+  }
+  return paretoFrontier(combos);
+}
+
+function squadOptBestCombination(openSlots, budgetLimit) {
+  let frontier = [{ cost: 0, ppg: 0, players: [] }];
+
+  for (const position of POSITION_ORDER) {
+    const k = openSlots[position] || 0;
+    if (k === 0) continue;
+
+    const maxSize = k >= 4 ? 18 : k === 3 ? 22 : 30;
+    const shortlist = squadOptShortlist(position, maxSize);
+    const posFrontier = squadOptPositionFrontier(shortlist, k, budgetLimit);
+    if (posFrontier.length === 0) return null;
+
+    frontier = mergeFrontiers(frontier, posFrontier, budgetLimit);
+    if (frontier.length === 0) return null;
+  }
+
+  return frontier.reduce((best, f) => (f.ppg > best.ppg ? f : best), frontier[0]);
+}
+
+function lockedPpgSum(entries) {
+  return entries
+    .filter((e) => e.startelf)
+    .reduce((sum, e) => sum + (parseGermanFloat(e.player.detail.punkte_pro_spiel) || 0), 0);
+}
+
+function runSquadOptimierung(kontostand) {
+  const entries = currentTeamEntries();
+  const lockedCounts = countStartelfByPosition(entries);
+  const lockedPpg = lockedPpgSum(entries);
+
+  const feasibleSystems = STARTELF_SYSTEME.filter(
+    (s) => lockedCounts.Abwehr <= s.abwehr && lockedCounts.Mittelfeld <= s.mittelfeld && lockedCounts.Sturm <= s.sturm
+  );
+  if (feasibleSystems.length === 0) return null;
+
+  let best = null;
+  for (const sys of feasibleSystems) {
+    const openSlots = {
+      Torwart: 1 - lockedCounts.Torwart,
+      Abwehr: sys.abwehr - lockedCounts.Abwehr,
+      Mittelfeld: sys.mittelfeld - lockedCounts.Mittelfeld,
+      Sturm: sys.sturm - lockedCounts.Sturm,
+    };
+
+    const combo = squadOptBestCombination(openSlots, kontostand);
+    if (!combo) continue;
+
+    const totalTeamPpg = lockedPpg + combo.ppg;
+    const label = systemLabel(sys);
+    const isCurrent = label === SELECTED_SYSTEM;
+
+    if (!best || totalTeamPpg > best.totalTeamPpg || (totalTeamPpg === best.totalTeamPpg && isCurrent)) {
+      best = { systemLabel: label, isCurrent, openSlots, combo, totalTeamPpg };
+    }
+  }
+
+  return best;
+}
+
+function squadOptResultRow(player) {
+  return `
+    <tr class="team-row-tr">
+      <td><div class="player-name">${player.name}</div></td>
+      <td>${formatValue(player.verein)}</td>
+      <td>${formatValue(player.position)}</td>
+      <td>${formatEuro(player.marktwert)}</td>
+      <td>${formatPunkteProSpiel(player.detail.punkte_pro_spiel)}</td>
+      <td>
+        <button type="button" class="team-action squadopt-add-btn" data-id="${player.spieler_id}" title="Zum Team hinzufügen (Ersatzbank)">Hinzufügen</button>
+      </td>
+    </tr>`;
+}
+
+function runSquadOptimierungAndRender() {
+  const resultsEl = document.getElementById("squadopt-results");
+  const kontostandRaw = Number(document.getElementById("squadopt-kontostand").value);
+  const kontostand = Number.isFinite(kontostandRaw) && kontostandRaw > 0 ? kontostandRaw : 0;
+
+  if (!kontostand) {
+    resultsEl.innerHTML = `<div class="section-empty">Bitte gib zuerst deinen Kontostand ein.</div>`;
+    return;
+  }
+
+  const result = runSquadOptimierung(kontostand);
+  if (!result) {
+    resultsEl.innerHTML = `<div class="section-empty">Mit diesem Budget lässt sich deine Startelf in keinem gültigen System ergänzen.</div>`;
+    return;
+  }
+
+  const systemNote = result.isCurrent
+    ? `<span class="squadopt-system-current">entspricht deinem aktuellen System</span>`
+    : `<span class="squadopt-system-switch">Wechsel zu Formation ${result.systemLabel} empfohlen (aktuell: ${SELECTED_SYSTEM})</span>`;
+
+  const totalOpen = Object.values(result.openSlots).reduce((a, b) => a + b, 0);
+
+  if (totalOpen === 0 || result.combo.players.length === 0) {
+    resultsEl.innerHTML = `
+      <div class="squadopt-header">Empfohlenes System: <strong>${result.systemLabel}</strong> ${systemNote}</div>
+      <div class="section-empty">Deine Startelf ist bereits vollständig - keine Ergänzung nötig.</div>`;
+    return;
+  }
+
+  const rows = result.combo.players.map(squadOptResultRow).join("");
+
+  resultsEl.innerHTML = `
+    <div class="squadopt-header">Empfohlenes System: <strong>${result.systemLabel}</strong> ${systemNote}</div>
+    <div class="squadopt-summary">
+      Kosten der Vorschläge: <strong>${formatEuro(result.combo.cost)}</strong> von ${formatEuro(kontostand)}
+      &middot; Zuwachs Punkte/Spiel: <strong>${result.combo.ppg.toFixed(2)}</strong>
+    </div>
+    <div class="table-scroll">
+      <table class="player-table team-table">
+        <thead>
+          <tr>
+            <th>Spieler</th>
+            <th>Verein</th>
+            <th>Position</th>
+            <th>Marktwert</th>
+            <th>Punkte/Spiel</th>
+            <th>Aktion</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
+
+  resultsEl.querySelectorAll(".squadopt-add-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      addToTeam(btn.dataset.id);
+      btn.textContent = "Hinzugefügt";
+      btn.disabled = true;
+    });
+  });
+}
+
+function setupSquadOptimierung() {
+  document.getElementById("squadopt-submit")?.addEventListener("click", runSquadOptimierungAndRender);
+}
+
 // ---- Spieleranalyse ----
 // Marktwert-Verlauf einzelner Spieler, bis zu 3 gleichzeitig (neuester
 // zuerst, der laengste hinzugefuegte faellt bei einem 4. Spieler raus).
@@ -1310,6 +1537,7 @@ async function init() {
   setupTeamErrorBanner();
   setupSystemSelect();
   setupKaderoptimierung();
+  setupSquadOptimierung();
   enforceSystemLimits();
   renderTeam();
 

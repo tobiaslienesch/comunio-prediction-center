@@ -1103,3 +1103,42 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
     flex-direction: column;
   }
 }
+
+/* Kaderoptimierung (Startelf-Ergaenzung) */
+
+.squadopt-header {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin: 0 0 8px 16px;
+}
+
+.squadopt-system-current {
+  font-family: inherit;
+  font-weight: 400;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.squadopt-system-switch {
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--accent-2-dark);
+  text-transform: none;
+  letter-spacing: normal;
+}
+
+.squadopt-summary {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 14px 16px;
+}
+
+.squadopt-summary strong {
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+}

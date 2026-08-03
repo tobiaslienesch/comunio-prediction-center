@@ -127,8 +127,8 @@
       </div>
 
       <div class="section-block">
-        <h2 class="section-title">Kaderoptimierung</h2>
-        <p class="section-subtitle">Automatische Vorschläge, wie du deine Startelf verbessern kannst.</p>
+        <h2 class="section-title">Watchlist</h2>
+        <p class="section-subtitle">Transfer-Vorschläge nach Position, Kategorie und Budget.</p>
 
         <div class="kaderopt-form">
           <div class="kaderopt-field">
@@ -186,9 +186,19 @@
       </div>
 
       <div class="section-block">
-        <h2 class="section-title">Watchlist</h2>
-        <p class="section-subtitle">Spieler im Blick behalten, ohne sie deinem Team hinzuzufügen.</p>
-        <div class="placeholder-card">Folgt in einem späteren Schritt.</div>
+        <h2 class="section-title">Kaderoptimierung</h2>
+        <p class="section-subtitle">Ergänzt deine gesetzte Startelf optimal innerhalb deines Budgets (maximiert Punkte pro Spiel).</p>
+
+        <div class="kaderopt-form">
+          <div class="kaderopt-field">
+            <label for="squadopt-kontostand">Aktueller Kontostand (€)</label>
+            <input type="number" id="squadopt-kontostand" min="0" step="1000" placeholder="z.B. 45000000" />
+          </div>
+
+          <button type="button" id="squadopt-submit" class="kaderopt-submit-btn">Vorschlag Optimierung</button>
+        </div>
+
+        <div id="squadopt-results" class="kaderopt-results"></div>
       </div>
     </section>
 
