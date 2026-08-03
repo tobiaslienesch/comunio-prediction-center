@@ -200,6 +200,11 @@ const WATCH_COLUMNS = buildColumns("watch_score", "watch_score_ampel", "watch_ka
 
 const WATCH_MARKTWERT_MAX = 8_000_000;
 
+// Feste Regel: Spieler unter diesem Marktwert werden bei Transfer-
+// Vorschlaegen (Watchlist und Kaderoptimierung) grundsaetzlich nicht
+// vorgeschlagen.
+const MIN_TRANSFER_MARKTWERT = 1_750_000;
+
 const COLUMN_SETS = {
   watch: WATCH_COLUMNS,
   stars: COLUMNS,
@@ -826,6 +831,7 @@ function kaderoptSuggestions(position, kategorie, budgetLimit) {
     .filter((p) => p.position === position)
     .filter((p) => kaderoptMatchesKategorie(p, kategorie))
     .filter((p) => p.marktwert !== null && p.marktwert < budgetLimit)
+    .filter((p) => p.marktwert >= MIN_TRANSFER_MARKTWERT)
     .filter((p) => !isInTeam(p.spieler_id))
     .sort((a, b) => (b[scoreField] ?? -Infinity) - (a[scoreField] ?? -Infinity))
     .slice(0, 5);
@@ -983,16 +989,12 @@ function transferKosten(marktwert) {
   return marktwert * TRANSFER_AUFSCHLAG;
 }
 
-// Feste Regel: Spieler unter diesem Marktwert werden fuer die
-// Kaderoptimierung grundsaetzlich nicht vorgeschlagen.
-const SQUADOPT_MIN_MARKTWERT = 1_750_000;
-
 function squadOptShortlist(position, maxSize) {
   const candidates = ALL_PLAYERS.filter((p) => {
     if (p.position !== position) return false;
     if (isInTeam(p.spieler_id)) return false;
     if (p.marktwert === null || p.marktwert === undefined) return false;
-    if (p.marktwert < SQUADOPT_MIN_MARKTWERT) return false;
+    if (p.marktwert < MIN_TRANSFER_MARKTWERT) return false;
     return parseGermanFloat(p.detail.punkte_pro_spiel) !== null;
   });
 
