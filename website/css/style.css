@@ -1,21 +1,19 @@
 :root {
-  --accent: #0f2a4a;
-  --accent-light: #1f4d7a;
-  --accent-2: #e8a838;
-  --accent-2-dark: #b9791a;
+  --accent: #16281d;
+  --accent-light: #24402f;
   --white: #ffffff;
-  --bg: #eef1f7;
-  --text: #172431;
-  --text-muted: #5c6b7a;
-  --border: #dbe2ec;
-  --row-alt: #eef2f8;
-  --ampel-gruen: #1f9d55;
+  --bg: #f6f6f3;
+  --text: #1a221c;
+  --text-muted: #6b7268;
+  --border: #e4e4e0;
+  --row-alt: #f2f2ef;
+  --ampel-gruen: #3aa65c;
   --ampel-gelb: #d9a72c;
-  --ampel-rot: #d6484a;
-  --shadow: 0 10px 26px rgba(15, 42, 74, 0.10);
-  --shadow-sm: 0 2px 10px rgba(15, 42, 74, 0.07);
+  --ampel-rot: #c8483d;
+  --shadow: 0 10px 26px rgba(20, 30, 24, 0.12);
+  --shadow-sm: 0 2px 10px rgba(20, 30, 24, 0.08);
   --radius: 10px;
-  --font-display: "Oswald", "Segoe UI", Arial, sans-serif;
+  --font-display: ui-monospace, "SFMono-Regular", "Cascadia Code", Consolas, "Courier New", monospace;
 
   --w-name: 110px;
 }
@@ -77,8 +75,8 @@
 
 .login-box input[type="password"]:focus {
   outline: none;
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 40, 29, 0.25);
 }
 
 .login-box button {
@@ -128,7 +126,6 @@ header.app-header {
   padding: 22px 16px 20px;
   text-align: center;
   box-shadow: var(--shadow);
-  border-bottom: 3px solid var(--accent-2);
 }
 
 header.app-header h1 {
@@ -172,7 +169,7 @@ nav.tabs button:hover {
 
 nav.tabs button.active {
   color: var(--white);
-  border-bottom: 3px solid var(--accent-2);
+  border-bottom: 3px solid var(--white);
 }
 
 main {
@@ -228,8 +225,8 @@ main {
 
 .filter-group select:focus {
   outline: none;
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.22);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 40, 29, 0.22);
 }
 
 .section-block {
@@ -245,7 +242,7 @@ main {
   color: var(--accent);
   margin: 0 0 4px 0;
   padding: 2px 0 2px 12px;
-  border-left: 4px solid var(--accent-2);
+  border-left: 4px solid var(--accent);
 }
 
 .section-subtitle {
@@ -292,7 +289,7 @@ table.player-table thead th {
   font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.02em;
-  border-bottom: 2px solid var(--accent-2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.18);
 }
 
 table.player-table tbody tr {
@@ -304,7 +301,7 @@ table.player-table tbody tr:nth-child(even) {
 }
 
 table.player-table tbody tr:hover {
-  background: rgba(232, 168, 56, 0.08);
+  background: rgba(22, 40, 29, 0.08);
 }
 
 .col-name {
@@ -322,7 +319,7 @@ table.player-table tbody tr:nth-child(even) .col-name {
 }
 
 table.player-table tbody tr:hover .col-name {
-  background: #fdf3e0;
+  background: #eef2ee;
 }
 
 thead .col-name {
@@ -440,11 +437,11 @@ th.col-sub {
 }
 
 td.col-sub {
-  background: rgba(15, 42, 74, 0.05);
+  background: rgba(22, 40, 29, 0.05);
 }
 
 table.player-table tbody tr:nth-child(even) td.col-sub {
-  background: rgba(15, 42, 74, 0.09);
+  background: rgba(22, 40, 29, 0.09);
 }
 
 .help-tooltip {
@@ -496,8 +493,8 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 
 .team-system-label select:focus {
   outline: none;
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.22);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 40, 29, 0.22);
 }
 
 .pitch-wrapper {
@@ -667,8 +664,8 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 
 .team-search input:focus {
   outline: none;
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.25);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 40, 29, 0.25);
 }
 
 .team-search-results {
@@ -766,7 +763,7 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 
 .team-divider-value {
   font-variant-numeric: tabular-nums;
-  color: var(--accent-2);
+  color: var(--white);
   font-weight: 700;
   white-space: nowrap;
 }
@@ -888,8 +885,8 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 .kaderopt-position-row select:focus,
 .kaderopt-field input:focus {
   outline: none;
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.22);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 40, 29, 0.22);
 }
 
 .kaderopt-submit-btn {
@@ -964,7 +961,7 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 .analyse-player-block {
   background: var(--white);
   border-radius: var(--radius);
-  border-top: 4px solid var(--accent-2);
+  border-top: 4px solid var(--accent);
   box-shadow: var(--shadow);
   overflow: hidden;
 }
@@ -1042,8 +1039,8 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 
 .analyse-chart-filter select:focus {
   outline: none;
-  border-color: var(--accent-2);
-  box-shadow: 0 0 0 3px rgba(232, 168, 56, 0.22);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(22, 40, 29, 0.22);
 }
 
 .analyse-chart-canvas-wrapper {
@@ -1158,7 +1155,7 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
   font-family: inherit;
   font-weight: 700;
   font-size: 0.82rem;
-  color: var(--accent-2-dark);
+  color: var(--accent);
   text-transform: none;
   letter-spacing: normal;
 }
@@ -1176,7 +1173,7 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 
 .squadopt-option {
   padding: 14px 0 18px;
-  border-top: 3px solid var(--accent-2);
+  border-top: 3px solid var(--accent);
 }
 
 .squadopt-option:first-child {

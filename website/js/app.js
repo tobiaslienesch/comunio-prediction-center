@@ -1466,11 +1466,11 @@ function renderAnalyseChart(spielerId) {
         {
           label: "Marktwert",
           data: filtered.map((h) => h.marktwert),
-          borderColor: "#0f2a4a",
-          backgroundColor: "rgba(15, 42, 74, 0.1)",
+          borderColor: "#16281d",
+          backgroundColor: "rgba(22, 40, 29, 0.1)",
           borderWidth: 2,
           pointRadius: 3,
-          pointBackgroundColor: "#0f2a4a",
+          pointBackgroundColor: "#16281d",
           pointBorderColor: "#ffffff",
           pointBorderWidth: 1.5,
           fill: true,
@@ -1496,7 +1496,7 @@ function renderAnalyseChart(spielerId) {
           ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 },
         },
         y: {
-          grid: { color: "#dbe2ec" },
+          grid: { color: "#e4e4e0" },
           ticks: {
             callback: (value) => formatEuro(value),
           },
@@ -1528,11 +1528,11 @@ function renderMarketChart() {
         {
           label: "Ø Marktwert",
           data: filtered.map((h) => h.marktwert),
-          borderColor: "#b9791a",
-          backgroundColor: "rgba(185, 121, 26, 0.1)",
+          borderColor: "#24402f",
+          backgroundColor: "rgba(36, 64, 47, 0.12)",
           borderWidth: 2,
           pointRadius: 3,
-          pointBackgroundColor: "#b9791a",
+          pointBackgroundColor: "#24402f",
           pointBorderColor: "#ffffff",
           pointBorderWidth: 1.5,
           fill: true,
@@ -1558,7 +1558,7 @@ function renderMarketChart() {
           ticks: { maxRotation: 0, autoSkip: true, maxTicksLimit: 8 },
         },
         y: {
-          grid: { color: "#dbe2ec" },
+          grid: { color: "#e4e4e0" },
           ticks: {
             callback: (value) => formatEuro(value),
           },
