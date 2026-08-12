@@ -58,6 +58,32 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data website/data
           git diff --cached --quiet || git commit -m "Taegliches Update: Marktwert, Punkte, News"
+
+          # Falls in der Zwischenzeit (z.B. durch einen manuellen Push)
+          # bereits neue Commits auf origin/main liegen: mergen statt
+          # einfach zu pushen. Ein Konflikt kann praktisch nur bei den
+          # generierten JSON-Dateien auftreten (data/*.csv sind immer
+          # eindeutig datierte, nicht ueberschneidende Dateien) - die
+          # werden dann statt manuell aufgeloest einfach aus den
+          # bereits gemergten Rohdaten neu gebaut.
+          git fetch origin main
+          if ! git merge origin/main --no-edit; then
+            echo "Merge-Konflikt - generierte Dateien werden neu gebaut"
+            git checkout --ours -- website/data/players.json website/data/marktwert_history.json 2>/dev/null || true
+            git add website/data/players.json website/data/marktwert_history.json 2>/dev/null || true
+
+            if git diff --name-only --diff-filter=U | grep -q .; then
+              echo "Unerwarteter Konflikt ausserhalb der generierten Dateien:"
+              git diff --name-only --diff-filter=U
+              exit 1
+            fi
+
+            python scoring/build_player_overview.py
+            python scoring/build_marktwert_history.py
+            git add website/data
+            git commit --no-edit
+          fi
+
           git push
 
       - name: Webseite als Pages-Artefakt hochladen
