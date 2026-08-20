@@ -1184,10 +1184,16 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 /* Marktwert-Bewegungen (Spieleranalyse) */
 
 .movers-section {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px 18px;
   margin: 20px 0 24px 16px;
+}
+
+@media (max-width: 900px) {
+  .movers-section {
+    grid-template-columns: 1fr;
+  }
 }
 
 .movers-box {
