@@ -1180,3 +1180,72 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
   border-top: none;
   padding-top: 0;
 }
+
+/* Marktwert-Bewegungen (Spieleranalyse) */
+
+.movers-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin: 20px 0 24px 16px;
+}
+
+.movers-box {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+}
+
+.movers-box-title {
+  margin: 0;
+  padding: 10px 12px;
+  background: var(--accent);
+  color: var(--white);
+  font-family: var(--font-display);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.movers-table-scroll {
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  max-height: 420px;
+  overflow-y: auto;
+}
+
+.movers-table {
+  font-size: 0.7rem;
+}
+
+.movers-table th,
+.movers-table td {
+  padding: 5px 8px;
+}
+
+.movers-table td.positive {
+  color: var(--ampel-gruen);
+  font-weight: 700;
+}
+
+.movers-table td.negative {
+  color: var(--ampel-rot);
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+  .movers-section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 560px) {
+  .movers-section {
+    grid-template-columns: 1fr;
+    margin-left: 16px;
+  }
+}

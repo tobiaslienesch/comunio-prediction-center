@@ -1658,6 +1658,91 @@ function renderMarketCard() {
   });
 }
 
+// Permanente Top-15-Ranglisten der staerksten Marktwert-Bewegungen
+// (absolut/relativ, 7 bzw. 3 Tage) - unabhaengig von der darunter
+// waehlbaren Spieler-Auswahl, einmalig aus MARKTWERT_HISTORY
+// berechnet. spanDays ist die Fensterbreite in Kalendertagen (7 oder
+// 3); intern wird wie bei den anderen Aenderungs-Kacheln mit
+// spanDays - 1 gegen die Tagesdifferenz gefiltert.
+function computeMarktwertMovers(spanDays, sortBy, limit = 15) {
+  const filterDays = spanDays - 1;
+  const results = [];
+
+  Object.keys(MARKTWERT_HISTORY).forEach((pid) => {
+    const player = ALL_PLAYERS.find((p) => p.spieler_id === pid);
+    if (!player) return;
+
+    const history = sortedHistory(pid);
+    const change = changeVsWindow(history, filterDays);
+    if (!change || change.rel === null) return;
+
+    const latest = history[history.length - 1];
+    const windowEntries = history.filter((h) => daysBetween(h.datum, latest.datum) <= filterDays);
+    const earliest = windowEntries[0];
+
+    results.push({
+      player,
+      heute: latest.marktwert,
+      vorher: earliest.marktwert,
+      abs: change.abs,
+      rel: change.rel,
+    });
+  });
+
+  results.sort((a, b) => (sortBy === "abs" ? b.abs - a.abs : b.rel - a.rel));
+  return results.slice(0, limit);
+}
+
+function moversRow(entry) {
+  const cls = directionClass(entry.abs);
+  return `
+    <tr class="team-row-tr">
+      <td><div class="player-name">${entry.player.name}</div></td>
+      <td>${formatEuro(entry.heute)}</td>
+      <td>${formatEuro(entry.vorher)}</td>
+      <td class="${cls}">${formatSignedEuro(entry.abs)}</td>
+      <td class="${cls}">${formatSignedPercent(entry.rel)}</td>
+    </tr>`;
+}
+
+function moversBox(title, spanDays, sortBy) {
+  const entries = computeMarktwertMovers(spanDays, sortBy, 15);
+  const rows = entries.length
+    ? entries.map(moversRow).join("")
+    : `<tr><td colspan="5" class="section-empty">Keine Daten verfügbar.</td></tr>`;
+
+  return `
+    <div class="movers-box">
+      <h3 class="movers-box-title">${title}</h3>
+      <div class="table-scroll movers-table-scroll">
+        <table class="player-table movers-table">
+          <thead>
+            <tr>
+              <th>Spieler</th>
+              <th>Heute</th>
+              <th>Vor ${spanDays} T.</th>
+              <th>Δ abs.</th>
+              <th>Δ rel.</th>
+            </tr>
+          </thead>
+          <tbody>${rows}</tbody>
+        </table>
+      </div>
+    </div>`;
+}
+
+function renderMoversSection() {
+  const container = document.getElementById("movers-section");
+  if (!container) return;
+
+  container.innerHTML = [
+    moversBox("Top 15 MW-Gewinner · 7 Tage · absolut", 7, "abs"),
+    moversBox("Top 15 MW-Gewinner · 7 Tage · relativ", 7, "rel"),
+    moversBox("Top 15 MW-Gewinner · 3 Tage · absolut", 3, "abs"),
+    moversBox("Top 15 MW-Gewinner · 3 Tage · relativ", 3, "rel"),
+  ].join("");
+}
+
 function renderAnalyse() {
   const container = document.getElementById("analyse-players");
   if (!container) return;
@@ -1757,6 +1842,7 @@ async function init() {
   MARKT_GESAMT_TOTAL_HISTORY = computeMarketTotalHistory();
   MARKET_AVERAGE_7D = computeMarketAverage7d();
   renderMarketCard();
+  renderMoversSection();
   setupAnalyseSearch();
   renderAnalyse();
 }
