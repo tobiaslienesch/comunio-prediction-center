@@ -1184,9 +1184,9 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 /* Marktwert-Bewegungen (Spieleranalyse) */
 
 .movers-section {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
   margin: 20px 0 24px 16px;
 }
 
@@ -1200,11 +1200,11 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
 
 .movers-box-title {
   margin: 0;
-  padding: 10px 12px;
+  padding: 11px 14px;
   background: var(--accent);
   color: var(--white);
   font-family: var(--font-display);
-  font-size: 0.68rem;
+  font-size: 0.78rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -1214,17 +1214,26 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  max-height: 420px;
+  max-height: 460px;
   overflow-y: auto;
 }
 
 .movers-table {
-  font-size: 0.7rem;
+  width: 100%;
+  font-size: 0.86rem;
+  table-layout: fixed;
 }
 
 .movers-table th,
 .movers-table td {
-  padding: 5px 8px;
+  padding: 8px 12px;
+  white-space: nowrap;
+}
+
+.movers-table th:first-child,
+.movers-table td:first-child {
+  width: 26%;
+  white-space: normal;
 }
 
 .movers-table td.positive {
@@ -1237,15 +1246,13 @@ table.player-table tbody tr:nth-child(even) td.col-sub {
   font-weight: 700;
 }
 
-@media (max-width: 900px) {
-  .movers-section {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 480px) {
+  .movers-table {
+    font-size: 0.78rem;
   }
-}
 
-@media (max-width: 560px) {
-  .movers-section {
-    grid-template-columns: 1fr;
-    margin-left: 16px;
+  .movers-table th,
+  .movers-table td {
+    padding: 6px 8px;
   }
 }
