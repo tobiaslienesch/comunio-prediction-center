@@ -1,0 +1,545 @@
+verein,spieler_id,name,position,punkte,einsaetze,punkte_pro_spiel,marktwert,trend
+1. FC Bayern München,30755,Neuer,Torwart,6,1 (1),"6,00",2000000,steigend (Staerke 2)
+1. FC Bayern München,34284,Bärtl,Torwart,0,-,-,160000,unbekannt
+1. FC Bayern München,33494,Urbig,Torwart,0,-,-,1270000,fallend (Staerke 2)
+1. FC Bayern München,34353,Prescott,Torwart,0,-,-,160000,fallend (Staerke 1)
+1. FC Bayern München,34101,Klanac,Torwart,0,-,-,160000,unbekannt
+1. FC Bayern München,31216,Ulreich,Torwart,0,-,-,180000,unbekannt
+1. FC Bayern München,32800,Laimer,Abwehr,1,1 (1),"1,00",5810000,unbekannt
+1. FC Bayern München,34205,Kiala,Abwehr,0,-,-,170000,fallend (Staerke 1)
+1. FC Bayern München,33975,Brown,Abwehr,2,1 (1),"2,00",7690000,fallend (Staerke 3)
+1. FC Bayern München,33894,Boey,Abwehr,0,-,-,650000,unbekannt
+1. FC Bayern München,33823,Kim,Abwehr,4,1 (1),"4,00",4300000,steigend (Staerke 4)
+1. FC Bayern München,33796,Buchmann,Abwehr,0,-,-,180000,unbekannt
+1. FC Bayern München,32720,Upamecano,Abwehr,16,1 (1),"16,00",7510000,steigend (Staerke 5)
+1. FC Bayern München,33496,Itō,Abwehr,0,-,-,1190000,steigend (Staerke 1)
+1. FC Bayern München,32157,Tah,Abwehr,3,1 (1),"3,00",5740000,fallend (Staerke 2)
+1. FC Bayern München,33386,Stanišić,Abwehr,2,1 (1),"2,00",4000000,fallend (Staerke 2)
+1. FC Bayern München,33021,Davies,Abwehr,8,1 (1),"8,00",5970000,steigend (Staerke 5)
+1. FC Bayern München,34207,Santos Daiber,Mittelfeld,0,-,-,180000,unbekannt
+1. FC Bayern München,34206,Karl,Mittelfeld,1,1 (1),"1,00",7080000,fallend (Staerke 3)
+1. FC Bayern München,34321,Sapoko Ndiaye,Mittelfeld,0,-,-,2070000,fallend (Staerke 3)
+1. FC Bayern München,34357,Osmani,Mittelfeld,0,-,-,260000,unbekannt
+1. FC Bayern München,33236,Musiala,Mittelfeld,0,-,-,9190000,unbekannt
+1. FC Bayern München,33854,Pavlović,Mittelfeld,13,1 (1),"13,00",8700000,steigend (Staerke 2)
+1. FC Bayern München,34466,Saibari,Mittelfeld,9,1 (1),"9,00",18320000,steigend (Staerke 2)
+1. FC Bayern München,32445,Kimmich,Mittelfeld,12,1 (1),"12,00",14820000,steigend (Staerke 1)
+1. FC Bayern München,33504,Bischof,Mittelfeld,3,1 (1),"3,00",5360000,fallend (Staerke 4)
+1. FC Bayern München,32696,Gnabry,Sturm,0,-,-,6760000,steigend (Staerke 1)
+1. FC Bayern München,34350,Cardozo,Sturm,0,-,-,550000,fallend (Staerke 2)
+1. FC Bayern München,34014,Olise,Sturm,10,1 (1),"10,00",19760000,unbekannt
+1. FC Bayern München,34254,Luis Díaz,Sturm,9,1 (1),"9,00",15920000,fallend (Staerke 1)
+1. FC Bayern München,33838,Kane,Sturm,7,1 (1),"7,00",20840000,fallend (Staerke 1)
+Borussia Dortmund,31988,Drewes,Torwart,0,-,-,160000,unbekannt
+Borussia Dortmund,33539,Ostrzinski,Torwart,0,-,-,160000,fallend (Staerke 1)
+Borussia Dortmund,32638,Kobel,Torwart,6,1 (1),"6,00",3280000,fallend (Staerke 1)
+Borussia Dortmund,32841,Meyer,Torwart,0,-,-,340000,steigend (Staerke 1)
+Borussia Dortmund,31935,Can,Abwehr,0,-,-,550000,unbekannt
+Borussia Dortmund,34084,Mané,Abwehr,1,1 (1),"1,00",1450000,steigend (Staerke 2)
+Borussia Dortmund,34423,Prates,Abwehr,3,1 (1),"3,00",690000,steigend (Staerke 5)
+Borussia Dortmund,33167,Bensebaini,Abwehr,0,-,-,3600000,fallend (Staerke 1)
+Borussia Dortmund,33141,Ryerson,Abwehr,6,1 (1),"6,00",6040000,steigend (Staerke 1)
+Borussia Dortmund,33038,N. Schlotterbeck,Abwehr,0,-,-,5560000,fallend (Staerke 1)
+Borussia Dortmund,34422,Gadou,Abwehr,6,1 (1),"6,00",5700000,steigend (Staerke 1)
+Borussia Dortmund,34346,Reggiani,Abwehr,0,-,-,770000,fallend (Staerke 2)
+Borussia Dortmund,32452,Anton,Abwehr,7,1 (1),"7,00",6780000,fallend (Staerke 1)
+Borussia Dortmund,34114,Svensson,Abwehr,8,1 (1),"8,00",5570000,steigend (Staerke 5)
+Borussia Dortmund,34424,Lerma,Mittelfeld,0,-,-,570000,fallend (Staerke 3)
+Borussia Dortmund,34495,Karetsas,Mittelfeld,10,1 (1),"10,00",23550000,unbekannt
+Borussia Dortmund,34503,Konstantelias,Mittelfeld,12,1 (1),"12,00",12820000,fallend (Staerke 2)
+Borussia Dortmund,34505,Veerman,Mittelfeld,2,1 (1),"2,00",10950000,fallend (Staerke 2)
+Borussia Dortmund,34507,dos Santos,Mittelfeld,0,-,-,820000,steigend (Staerke 5)
+Borussia Dortmund,34364,Kaba,Mittelfeld,0,-,-,210000,fallend (Staerke 1)
+Borussia Dortmund,34519,Nwaneri,Mittelfeld,0,-,-,5890000,unbekannt
+Borussia Dortmund,32590,Sabitzer,Mittelfeld,3,1 (1),"3,00",3270000,steigend (Staerke 5)
+Borussia Dortmund,33208,Beier,Mittelfeld,7,1 (1),"7,00",6190000,steigend (Staerke 1)
+Borussia Dortmund,33498,F. Nmecha,Mittelfeld,3,1 (1),"3,00",7500000,fallend (Staerke 1)
+Borussia Dortmund,34117,Chukwuemeka,Mittelfeld,0,-,-,1660000,steigend (Staerke 1)
+Borussia Dortmund,34200,Bellingham,Mittelfeld,9,1 (1),"9,00",7310000,steigend (Staerke 5)
+Borussia Dortmund,34283,Fábio Silva,Sturm,0,-,-,3090000,fallend (Staerke 2)
+Borussia Dortmund,32667,Guirassy,Sturm,11,1 (1),"11,00",14000000,unbekannt
+Borussia Dortmund,34347,Inácio,Sturm,-4,1 (1),"-4,00",3170000,fallend (Staerke 3)
+Borussia Dortmund,34362,Albert,Sturm,0,-,-,1170000,steigend (Staerke 5)
+RB Leipzig,32267,Zingerle,Torwart,0,-,-,170000,fallend (Staerke 1)
+RB Leipzig,32481,Nyland,Torwart,0,-,-,630000,steigend (Staerke 2)
+RB Leipzig,33919,Vandevoordt,Torwart,8,1 (1),"8,00",3360000,steigend (Staerke 4)
+RB Leipzig,31846,W. Orbán,Abwehr,7,1 (1),"7,00",7130000,unbekannt
+RB Leipzig,33848,Finkgräfe,Abwehr,0,-,-,550000,fallend (Staerke 1)
+RB Leipzig,33436,Raum,Abwehr,6,1 (1),"6,00",8380000,unbekannt
+RB Leipzig,34431,Koné,Abwehr,0,-,-,810000,fallend (Staerke 2)
+RB Leipzig,34479,Estève,Abwehr,0,-,-,3840000,fallend (Staerke 5)
+RB Leipzig,32889,Baku,Abwehr,13,1 (1),"13,00",6690000,steigend (Staerke 3)
+RB Leipzig,32581,Klostermann,Abwehr,0,-,-,450000,fallend (Staerke 2)
+RB Leipzig,32461,Henrichs,Abwehr,4,1 (1),"4,00",2060000,steigend (Staerke 3)
+RB Leipzig,33837,Lukeba,Abwehr,8,1 (1),"8,00",5840000,steigend (Staerke 5)
+RB Leipzig,34185,Banzuzi,Mittelfeld,3,1 (1),"3,00",3980000,steigend (Staerke 3)
+RB Leipzig,34238,Maksimović,Mittelfeld,0,-,-,1090000,fallend (Staerke 3)
+RB Leipzig,34348,Kaltefleiter,Mittelfeld,0,-,-,190000,unbekannt
+RB Leipzig,34042,Gebel,Mittelfeld,0,-,-,170000,unbekannt
+RB Leipzig,34518,El Aynaoui,Mittelfeld,0,-,-,7640000,unbekannt
+RB Leipzig,33991,Ouédraogo,Mittelfeld,0,-,-,4650000,steigend (Staerke 2)
+RB Leipzig,33769,Seiwald,Mittelfeld,5,1 (1),"5,00",5900000,unbekannt
+RB Leipzig,33695,Gruda,Mittelfeld,7,1 (1),"7,00",9320000,unbekannt
+RB Leipzig,32977,Baumgartner,Mittelfeld,0,-,-,4940000,fallend (Staerke 4)
+RB Leipzig,33353,Reitz,Mittelfeld,12,1 (1),"12,00",7100000,steigend (Staerke 5)
+RB Leipzig,34515,Guiu,Sturm,0,-,-,5630000,unbekannt
+RB Leipzig,33151,Nkunku,Sturm,5,1 (1),"5,00",14620000,steigend (Staerke 4)
+RB Leipzig,34330,Sani,Sturm,0,-,-,170000,fallend (Staerke 1)
+RB Leipzig,34309,Konaté,Sturm,0,-,-,430000,fallend (Staerke 2)
+RB Leipzig,34271,Rômulo,Sturm,0,-,-,5370000,fallend (Staerke 2)
+RB Leipzig,34240,Bakayoko,Sturm,0,1 (1),"0,00",3180000,fallend (Staerke 3)
+RB Leipzig,34116,T. Gomis,Sturm,6,1 (1),"6,00",3750000,steigend (Staerke 5)
+RB Leipzig,34039,Nusa,Sturm,12,1 (1),"12,00",12230000,steigend (Staerke 2)
+Bayer 04 Leverkusen,31827,Blaswich,Torwart,0,-,-,320000,fallend (Staerke 2)
+Bayer 04 Leverkusen,32007,Lomb,Torwart,0,-,-,170000,unbekannt
+Bayer 04 Leverkusen,32925,Flekken,Torwart,2,1 (1),"2,00",2600000,unbekannt
+Bayer 04 Leverkusen,34498,Medina,Abwehr,4,1 (1),"4,00",4060000,fallend (Staerke 2)
+Bayer 04 Leverkusen,34496,Gutiérrez,Abwehr,6,1 (1),"6,00",7590000,fallend (Staerke 1)
+Bayer 04 Leverkusen,34277,Lucas Vázquez,Abwehr,-2,1 (1),"-2,00",2320000,fallend (Staerke 2)
+Bayer 04 Leverkusen,34272,Badé,Abwehr,4,1 (1),"4,00",3060000,fallend (Staerke 3)
+Bayer 04 Leverkusen,34217,Quansah,Abwehr,6,1 (1),"6,00",5930000,steigend (Staerke 4)
+Bayer 04 Leverkusen,33630,Oermann,Abwehr,0,-,-,270000,unbekannt
+Bayer 04 Leverkusen,34520,Doué,Abwehr,0,-,-,5200000,unbekannt
+Bayer 04 Leverkusen,33207,Tapsoba,Abwehr,0,1 (1),"0,00",5230000,fallend (Staerke 5)
+Bayer 04 Leverkusen,32080,J. Hofmann,Mittelfeld,4,1 (1),"4,00",2070000,steigend (Staerke 5)
+Bayer 04 Leverkusen,32129,Andrich,Mittelfeld,0,-,-,2290000,fallend (Staerke 1)
+Bayer 04 Leverkusen,34448,Eichhorn,Mittelfeld,0,-,-,3060000,fallend (Staerke 1)
+Bayer 04 Leverkusen,34441,Berghoff,Mittelfeld,0,-,-,180000,fallend (Staerke 1)
+Bayer 04 Leverkusen,34289,Fernández,Mittelfeld,2,1 (1),"2,00",4120000,steigend (Staerke 1)
+Bayer 04 Leverkusen,33530,Tillman,Mittelfeld,5,1 (1),"5,00",7210000,fallend (Staerke 1)
+Bayer 04 Leverkusen,33744,Maza,Mittelfeld,6,1 (1),"6,00",8330000,unbekannt
+Bayer 04 Leverkusen,33853,Tella,Mittelfeld,0,-,-,3160000,steigend (Staerke 1)
+Bayer 04 Leverkusen,33992,García,Mittelfeld,6,1 (1),"6,00",10420000,fallend (Staerke 1)
+Bayer 04 Leverkusen,33179,Schick,Sturm,8,1 (1),"8,00",11970000,fallend (Staerke 2)
+Bayer 04 Leverkusen,33827,Boniface,Sturm,3,1 (1),"3,00",3320000,steigend (Staerke 1)
+Bayer 04 Leverkusen,34461,Moreira,Sturm,-2,1 (1),"-2,00",6890000,fallend (Staerke 4)
+Bayer 04 Leverkusen,34433,Damjanović,Sturm,0,-,-,250000,fallend (Staerke 1)
+Bayer 04 Leverkusen,34428,Bomba,Sturm,0,-,-,180000,unbekannt
+Bayer 04 Leverkusen,34311,Culbreath,Sturm,0,-,-,980000,fallend (Staerke 2)
+Bayer 04 Leverkusen,34024,Terrier,Sturm,0,-,-,1200000,fallend (Staerke 3)
+Bayer 04 Leverkusen,34234,Kofane,Sturm,7,1 (1),"7,00",5330000,steigend (Staerke 1)
+Bayer 04 Leverkusen,33122,Diaby,Sturm,0,-,-,11220000,unbekannt
+Bayer 04 Leverkusen,34285,Ben Seghir,Sturm,0,-,-,940000,fallend (Staerke 3)
+VfB Stuttgart,33747,Seimen,Torwart,0,-,-,1610000,fallend (Staerke 1)
+VfB Stuttgart,33401,M. Funk,Torwart,0,-,-,160000,unbekannt
+VfB Stuttgart,32891,Bredlow,Torwart,1,1 (1),"1,00",2450000,steigend (Staerke 3)
+VfB Stuttgart,33342,Drljača,Torwart,0,-,-,160000,unbekannt
+VfB Stuttgart,34115,Jeltsch,Abwehr,0,1 (1),"0,00",3150000,fallend (Staerke 1)
+VfB Stuttgart,33552,Chabot,Abwehr,0,1 (1),"0,00",4010000,fallend (Staerke 1)
+VfB Stuttgart,34197,Assignon,Abwehr,0,-,-,630000,steigend (Staerke 5)
+VfB Stuttgart,33850,Stergiou,Abwehr,1,1 (1),"1,00",470000,steigend (Staerke 3)
+VfB Stuttgart,34001,Hendriks,Abwehr,1,1 (1),"1,00",2570000,fallend (Staerke 1)
+VfB Stuttgart,34050,Al-Dakhil,Abwehr,0,-,-,550000,steigend (Staerke 1)
+VfB Stuttgart,32880,Vagnoman,Abwehr,9,1 (1),"9,00",3410000,steigend (Staerke 5)
+VfB Stuttgart,34112,Jaquez,Abwehr,0,-,-,570000,fallend (Staerke 1)
+VfB Stuttgart,32773,Zagadou,Abwehr,0,-,-,600000,fallend (Staerke 2)
+VfB Stuttgart,32509,Mittelstädt,Abwehr,2,1 (1),"2,00",7370000,unbekannt
+VfB Stuttgart,34074,Malanga,Mittelfeld,0,-,-,230000,steigend (Staerke 1)
+VfB Stuttgart,34288,El Khannouss,Mittelfeld,2,1 (1),"2,00",5780000,fallend (Staerke 2)
+VfB Stuttgart,33437,Stiller,Mittelfeld,0,1 (1),"0,00",7510000,fallend (Staerke 4)
+VfB Stuttgart,33411,Leweling,Mittelfeld,2,1 (1),"2,00",6860000,fallend (Staerke 3)
+VfB Stuttgart,34488,Yigit,Mittelfeld,0,-,-,200000,unbekannt
+VfB Stuttgart,33085,Karazor,Mittelfeld,0,-,-,1920000,fallend (Staerke 2)
+VfB Stuttgart,32858,Führich,Mittelfeld,0,-,-,7290000,steigend (Staerke 1)
+VfB Stuttgart,32830,Nartey,Mittelfeld,0,-,-,2030000,fallend (Staerke 5)
+VfB Stuttgart,32492,Prömel,Mittelfeld,-3,1 (1),"-3,00",5600000,fallend (Staerke 1)
+VfB Stuttgart,34320,Arévalo,Sturm,0,-,-,310000,unbekannt
+VfB Stuttgart,34458,van der Leij,Sturm,0,-,-,300000,fallend (Staerke 1)
+VfB Stuttgart,33832,Undav,Sturm,0,1 (1),"0,00",12210000,fallend (Staerke 2)
+VfB Stuttgart,33718,Diehl,Sturm,0,-,-,190000,unbekannt
+VfB Stuttgart,33657,Pejčinović,Sturm,1,1 (1),"1,00",12310000,unbekannt
+VfB Stuttgart,33557,Tiago Tomás,Sturm,2,1 (1),"2,00",4690000,steigend (Staerke 2)
+VfB Stuttgart,33311,Demirović,Sturm,1,1 (1),"1,00",6710000,fallend (Staerke 2)
+VfB Stuttgart,34491,Sauer,Sturm,0,-,-,2380000,steigend (Staerke 3)
+TSG Hoffenheim,31489,Baumann,Torwart,3,1 (1),"3,00",3430000,fallend (Staerke 2)
+TSG Hoffenheim,33913,Petersson,Torwart,0,-,-,170000,unbekannt
+TSG Hoffenheim,33313,Philipp,Torwart,0,-,-,160000,fallend (Staerke 1)
+TSG Hoffenheim,34340,Engelns,Abwehr,0,-,-,300000,fallend (Staerke 1)
+TSG Hoffenheim,34275,Hajdari,Abwehr,-1,1 (1),"-1,00",2970000,fallend (Staerke 2)
+TSG Hoffenheim,34446,Rots,Abwehr,0,1 (0),-,2210000,fallend (Staerke 3)
+TSG Hoffenheim,34457,Dulic,Abwehr,0,-,-,290000,steigend (Staerke 2)
+TSG Hoffenheim,34213,Machida,Abwehr,0,-,-,530000,fallend (Staerke 2)
+TSG Hoffenheim,34062,Chaves,Abwehr,0,-,-,510000,fallend (Staerke 3)
+TSG Hoffenheim,34051,Gendrey,Abwehr,0,-,-,410000,fallend (Staerke 2)
+TSG Hoffenheim,34048,Hranáč,Abwehr,3,1 (1),"3,00",1530000,steigend (Staerke 1)
+TSG Hoffenheim,34257,Coufal,Abwehr,7,1 (1),"7,00",5960000,fallend (Staerke 2)
+TSG Hoffenheim,34487,Abraha,Abwehr,0,-,-,270000,unbekannt
+TSG Hoffenheim,32693,Bernardo,Abwehr,4,1 (1),"4,00",3190000,steigend (Staerke 1)
+TSG Hoffenheim,33026,Kabak,Abwehr,13,1 (1),"13,00",5790000,steigend (Staerke 3)
+TSG Hoffenheim,34474,De Cat,Mittelfeld,0,1 (1),"0,00",4940000,fallend (Staerke 2)
+TSG Hoffenheim,32553,Kramarić,Mittelfeld,0,1 (0),-,7720000,steigend (Staerke 1)
+TSG Hoffenheim,34034,Prass,Mittelfeld,0,-,-,1080000,fallend (Staerke 5)
+TSG Hoffenheim,34242,Burger,Mittelfeld,0,1 (1),"0,00",5890000,fallend (Staerke 4)
+TSG Hoffenheim,34202,Avdullahu,Mittelfeld,5,1 (1),"5,00",4810000,steigend (Staerke 1)
+TSG Hoffenheim,34128,Lenz,Mittelfeld,0,-,-,560000,fallend (Staerke 2)
+TSG Hoffenheim,33857,Conté,Mittelfeld,4,1 (1),"4,00",2440000,steigend (Staerke 5)
+TSG Hoffenheim,34064,Micheler,Mittelfeld,0,-,-,180000,unbekannt
+TSG Hoffenheim,33536,Asllani,Sturm,0,-,-,6770000,fallend (Staerke 5)
+TSG Hoffenheim,33885,Moerstedt,Sturm,-3,1 (1),"-3,00",1970000,steigend (Staerke 1)
+TSG Hoffenheim,33619,Hložek,Sturm,5,1 (1),"5,00",3740000,steigend (Staerke 2)
+TSG Hoffenheim,34336,Fields,Sturm,0,-,-,180000,fallend (Staerke 1)
+TSG Hoffenheim,34294,Daghim,Sturm,9,1 (1),"9,00",5450000,steigend (Staerke 5)
+TSG Hoffenheim,33270,Lemperle,Sturm,0,-,-,4720000,steigend (Staerke 4)
+TSG Hoffenheim,33507,Wimmer,Sturm,4,1 (1),"4,00",5750000,steigend (Staerke 1)
+Sport-Club Freiburg,33647,Backhaus,Torwart,1,1 (1),"1,00",2940000,fallend (Staerke 2)
+Sport-Club Freiburg,32506,Huth,Torwart,0,-,-,160000,unbekannt
+Sport-Club Freiburg,32656,F. Müller,Torwart,0,-,-,220000,unbekannt
+Sport-Club Freiburg,33815,Rosenfelder,Abwehr,2,1 (1),"2,00",1320000,steigend (Staerke 3)
+Sport-Club Freiburg,33829,Makengo,Abwehr,3,1 (1),"3,00",2440000,steigend (Staerke 5)
+Sport-Club Freiburg,33947,Treu,Abwehr,3,1 (1),"3,00",2800000,steigend (Staerke 1)
+Sport-Club Freiburg,34020,Yılmaz,Abwehr,0,-,-,1080000,fallend (Staerke 3)
+Sport-Club Freiburg,34021,Ogbus,Abwehr,0,-,-,980000,fallend (Staerke 2)
+Sport-Club Freiburg,32807,Lienhart,Abwehr,8,1 (1),"8,00",3800000,steigend (Staerke 5)
+Sport-Club Freiburg,32597,Kübler,Abwehr,6,1 (1),"6,00",2600000,steigend (Staerke 5)
+Sport-Club Freiburg,32579,Jung,Abwehr,0,-,-,290000,unbekannt
+Sport-Club Freiburg,32019,Günter,Abwehr,0,-,-,720000,fallend (Staerke 2)
+Sport-Club Freiburg,31910,Ginter,Abwehr,8,1 (1),"8,00",5780000,fallend (Staerke 2)
+Sport-Club Freiburg,34184,Suzuki,Mittelfeld,24,1 (1),"24,00",9230000,steigend (Staerke 5)
+Sport-Club Freiburg,34361,Tarnutzer,Mittelfeld,0,-,-,190000,fallend (Staerke 1)
+Sport-Club Freiburg,34437,Yamamoto,Mittelfeld,0,-,-,1940000,fallend (Staerke 1)
+Sport-Club Freiburg,32961,Beste,Mittelfeld,4,1 (1),"4,00",4830000,steigend (Staerke 2)
+Sport-Club Freiburg,32071,Grifo,Mittelfeld,0,-,-,5040000,fallend (Staerke 3)
+Sport-Club Freiburg,33603,Y. Engelhardt,Mittelfeld,-2,1 (1),"-2,00",3620000,fallend (Staerke 3)
+Sport-Club Freiburg,33156,Osterhage,Mittelfeld,0,-,-,1120000,fallend (Staerke 1)
+Sport-Club Freiburg,33008,Muslija,Mittelfeld,0,-,-,180000,unbekannt
+Sport-Club Freiburg,32398,M. Eggestein,Mittelfeld,5,1 (1),"5,00",5360000,fallend (Staerke 2)
+Sport-Club Freiburg,32861,Höler,Sturm,4,1 (1),"4,00",2660000,fallend (Staerke 1)
+Sport-Club Freiburg,34183,Irié,Sturm,2,1 (1),"2,00",2170000,steigend (Staerke 5)
+Sport-Club Freiburg,33783,Matanović,Sturm,13,1 (1),"13,00",11270000,steigend (Staerke 3)
+Sport-Club Freiburg,33629,Scherhant,Sturm,1,1 (1),"1,00",4370000,steigend (Staerke 3)
+Sport-Club Freiburg,34451,Goto,Sturm,2,1 (1),"2,00",2820000,unbekannt
+Eintracht Frankfurt,31458,Grahl,Torwart,0,-,-,170000,unbekannt
+Eintracht Frankfurt,33439,Atubolu,Torwart,7,1 (1),"7,00",4580000,steigend (Staerke 5)
+Eintracht Frankfurt,34073,Siljević,Torwart,0,-,-,160000,unbekannt
+Eintracht Frankfurt,33855,Kauã Santos,Torwart,0,-,-,1090000,fallend (Staerke 5)
+Eintracht Frankfurt,34310,Neuendorff,Abwehr,0,-,-,330000,fallend (Staerke 2)
+Eintracht Frankfurt,34221,Maluze,Abwehr,6,1 (1),"6,00",1310000,unbekannt
+Eintracht Frankfurt,34313,Kosugi,Abwehr,0,1 (1),"0,00",2160000,fallend (Staerke 1)
+Eintracht Frankfurt,34511,Brassier,Abwehr,0,-,-,4730000,unbekannt
+Eintracht Frankfurt,33869,Baum,Abwehr,4,1 (1),"4,00",3330000,unbekannt
+Eintracht Frankfurt,34490,Otávio,Abwehr,1,1 (1),"1,00",2850000,fallend (Staerke 2)
+Eintracht Frankfurt,33836,Collins,Abwehr,0,-,-,1510000,fallend (Staerke 3)
+Eintracht Frankfurt,32836,Koch,Abwehr,5,1 (1),"5,00",5530000,steigend (Staerke 1)
+Eintracht Frankfurt,34493,Onyedika,Mittelfeld,-1,1 (1),"-1,00",5170000,fallend (Staerke 2)
+Eintracht Frankfurt,31572,Götze,Mittelfeld,0,-,-,1890000,unbekannt
+Eintracht Frankfurt,34314,Arrhov,Mittelfeld,1,1 (1),"1,00",690000,steigend (Staerke 2)
+Eintracht Frankfurt,31743,Chandler,Mittelfeld,0,-,-,200000,unbekannt
+Eintracht Frankfurt,34312,Kumashiro,Mittelfeld,0,-,-,200000,unbekannt
+Eintracht Frankfurt,34008,Uzun,Mittelfeld,1,1 (1),"1,00",7150000,fallend (Staerke 4)
+Eintracht Frankfurt,33856,Chaïbi,Mittelfeld,1,1 (1),"1,00",3040000,steigend (Staerke 1)
+Eintracht Frankfurt,34019,O. Højlund,Mittelfeld,0,1 (1),"0,00",1390000,steigend (Staerke 2)
+Eintracht Frankfurt,33335,Doan,Mittelfeld,0,-,-,6420000,steigend (Staerke 2)
+Eintracht Frankfurt,33912,Aséko,Mittelfeld,0,-,-,3160000,steigend (Staerke 2)
+Eintracht Frankfurt,33383,Knauff,Mittelfeld,0,-,-,1620000,fallend (Staerke 5)
+Eintracht Frankfurt,34465,Pimpong,Sturm,1,1 (1),"1,00",1460000,steigend (Staerke 1)
+Eintracht Frankfurt,34318,Amaimouni-Echghouyab,Sturm,4,1 (1),"4,00",3090000,steigend (Staerke 5)
+Eintracht Frankfurt,34316,Ebnoutalib,Sturm,19,1 (1),"19,00",10210000,steigend (Staerke 5)
+Eintracht Frankfurt,33214,Ngankam,Sturm,0,-,-,170000,unbekannt
+Eintracht Frankfurt,32948,Burkardt,Sturm,3,1 (1),"3,00",10600000,steigend (Staerke 2)
+FC Augsburg,33990,Labrović,Torwart,0,-,-,160000,unbekannt
+FC Augsburg,32877,Dahmen,Torwart,7,1 (1),"7,00",2710000,fallend (Staerke 1)
+FC Augsburg,34363,Wisbereit,Torwart,0,-,-,170000,unbekannt
+FC Augsburg,34522,Bah,Abwehr,0,-,-,3260000,unbekannt
+FC Augsburg,34017,N. Banks,Abwehr,5,1 (1),"5,00",3190000,steigend (Staerke 5)
+FC Augsburg,34057,Matsima,Abwehr,8,1 (1),"8,00",4280000,steigend (Staerke 5)
+FC Augsburg,34106,Behrens,Abwehr,7,1 (1),"7,00",3870000,steigend (Staerke 4)
+FC Augsburg,34351,Schnitzer,Abwehr,0,-,-,210000,unbekannt
+FC Augsburg,34438,Brackelmann,Abwehr,6,1 (1),"6,00",1920000,steigend (Staerke 5)
+FC Augsburg,34510,Seol,Abwehr,0,1 (0),-,2060000,steigend (Staerke 1)
+FC Augsburg,33969,Suso,Abwehr,0,-,-,390000,fallend (Staerke 2)
+FC Augsburg,32546,Wolf,Abwehr,12,1 (1),"12,00",2990000,steigend (Staerke 5)
+FC Augsburg,32549,Gouweleeuw,Abwehr,0,1 (0),-,2180000,steigend (Staerke 1)
+FC Augsburg,33914,Kücüksahin,Mittelfeld,0,-,-,170000,unbekannt
+FC Augsburg,33211,Keitel,Mittelfeld,2,1 (1),"2,00",740000,steigend (Staerke 2)
+FC Augsburg,33517,Jakić,Mittelfeld,0,-,-,1340000,fallend (Staerke 2)
+FC Augsburg,34236,Massengo,Mittelfeld,7,1 (1),"7,00",4310000,steigend (Staerke 4)
+FC Augsburg,34171,Fellhauer,Mittelfeld,0,1 (1),"0,00",3460000,fallend (Staerke 2)
+FC Augsburg,33564,Kade,Mittelfeld,12,1 (1),"12,00",8050000,steigend (Staerke 5)
+FC Augsburg,34069,Sakar,Mittelfeld,0,-,-,170000,unbekannt
+FC Augsburg,34063,Claude-Maurice,Mittelfeld,0,-,-,4500000,fallend (Staerke 1)
+FC Augsburg,33713,Ibrahimović,Mittelfeld,0,-,-,3640000,steigend (Staerke 5)
+FC Augsburg,33808,Breithaupt,Mittelfeld,0,-,-,180000,unbekannt
+FC Augsburg,33997,Rieder,Mittelfeld,9,1 (1),"9,00",6470000,steigend (Staerke 4)
+FC Augsburg,33736,Kömür,Mittelfeld,3,1 (1),"3,00",1950000,fallend (Staerke 1)
+FC Augsburg,34012,Mounié,Sturm,0,-,-,170000,fallend (Staerke 1)
+FC Augsburg,34345,Onoda,Sturm,0,-,-,270000,steigend (Staerke 2)
+FC Augsburg,34344,Ogundu,Sturm,0,-,-,980000,unbekannt
+FC Augsburg,34331,Ribeiro,Sturm,7,1 (1),"7,00",2400000,steigend (Staerke 5)
+FC Augsburg,31958,Gregoritsch,Sturm,11,1 (1),"11,00",6310000,steigend (Staerke 5)
+1. FSV Mainz 05,34464,Kinzig,Torwart,0,-,-,160000,unbekannt
+1. FSV Mainz 05,31774,Schwolow,Torwart,0,-,-,390000,fallend (Staerke 2)
+1. FSV Mainz 05,32364,Zentner,Torwart,4,1 (1),"4,00",2480000,fallend (Staerke 2)
+1. FSV Mainz 05,31666,Bell,Abwehr,0,-,-,540000,fallend (Staerke 3)
+1. FSV Mainz 05,34454,Gruber,Abwehr,5,1 (1),"5,00",3460000,steigend (Staerke 5)
+1. FSV Mainz 05,34307,Potulski,Abwehr,2,1 (1),"2,00",2430000,steigend (Staerke 1)
+1. FSV Mainz 05,33577,Caci,Abwehr,8,1 (1),"8,00",4550000,steigend (Staerke 5)
+1. FSV Mainz 05,33478,Widmer,Abwehr,3,1 (1),"3,00",2100000,steigend (Staerke 2)
+1. FSV Mainz 05,34509,Nakuzola,Abwehr,0,-,-,420000,steigend (Staerke 5)
+1. FSV Mainz 05,31762,da Costa,Abwehr,4,1 (1),"4,00",2830000,steigend (Staerke 1)
+1. FSV Mainz 05,31959,Kohr,Abwehr,2,1 (1),"2,00",1760000,fallend (Staerke 4)
+1. FSV Mainz 05,32178,Mwene,Abwehr,3,1 (1),"3,00",2670000,steigend (Staerke 1)
+1. FSV Mainz 05,32786,Posch,Abwehr,0,-,-,3080000,fallend (Staerke 3)
+1. FSV Mainz 05,33093,Maloney,Mittelfeld,0,-,-,350000,unbekannt
+1. FSV Mainz 05,34467,Ruoppi,Mittelfeld,2,1 (1),"2,00",680000,steigend (Staerke 2)
+1. FSV Mainz 05,34231,Kawasaki,Mittelfeld,0,-,-,480000,fallend (Staerke 2)
+1. FSV Mainz 05,34009,Sano,Mittelfeld,8,1 (1),"8,00",7130000,unbekannt
+1. FSV Mainz 05,33477,Lee,Mittelfeld,2,1 (1),"2,00",4750000,unbekannt
+1. FSV Mainz 05,32395,Amiri,Mittelfeld,7,1 (1),"7,00",12360000,steigend (Staerke 1)
+1. FSV Mainz 05,33356,Martel,Mittelfeld,0,-,-,1690000,fallend (Staerke 1)
+1. FSV Mainz 05,33296,Nebel,Mittelfeld,0,-,-,3300000,steigend (Staerke 2)
+1. FSV Mainz 05,33135,S. Becker,Sturm,1,1 (1),"1,00",4620000,fallend (Staerke 2)
+1. FSV Mainz 05,33247,Silas,Sturm,0,-,-,400000,steigend (Staerke 1)
+1. FSV Mainz 05,34429,A. Haidara,Sturm,0,-,-,500000,fallend (Staerke 2)
+1. FSV Mainz 05,34308,Moreno Fell,Sturm,0,-,-,200000,unbekannt
+1. FSV Mainz 05,33070,Tietz,Sturm,5,1 (1),"5,00",6360000,unbekannt
+1. FSV Mainz 05,34158,Königsdörffer,Sturm,3,1 (1),"3,00",3400000,fallend (Staerke 1)
+1. FSV Mainz 05,33830,Hollerbach,Sturm,0,-,-,1420000,steigend (Staerke 2)
+1. FC Union Berlin,34032,Klaus,Torwart,0,-,-,890000,fallend (Staerke 4)
+1. FC Union Berlin,34144,Raab,Torwart,-3,1 (1),"-3,00",900000,steigend (Staerke 5)
+1. FC Union Berlin,32921,Rönnow,Torwart,0,-,-,1550000,steigend (Staerke 2)
+1. FC Union Berlin,34061,Köhn,Abwehr,3,1 (1),"3,00",1660000,steigend (Staerke 4)
+1. FC Union Berlin,33720,Juranović,Abwehr,9,1 (1),"9,00",2600000,steigend (Staerke 5)
+1. FC Union Berlin,33669,Nsoki,Abwehr,0,-,-,400000,fallend (Staerke 2)
+1. FC Union Berlin,33567,Rothe,Abwehr,-5,1 (1),"-5,00",2090000,unbekannt
+1. FC Union Berlin,34214,Markgraf,Abwehr,0,-,-,180000,unbekannt
+1. FC Union Berlin,33096,Trimmel,Abwehr,0,-,-,1350000,fallend (Staerke 4)
+1. FC Union Berlin,32801,Uduokhai,Abwehr,0,-,-,2360000,steigend (Staerke 3)
+1. FC Union Berlin,34455,Van Den Bosch,Abwehr,3,1 (1),"3,00",2930000,unbekannt
+1. FC Union Berlin,32311,M. Friedrich,Abwehr,0,-,-,550000,fallend (Staerke 2)
+1. FC Union Berlin,33995,Querfeld,Abwehr,13,1 (1),"13,00",4760000,steigend (Staerke 4)
+1. FC Union Berlin,34191,Burcu,Mittelfeld,2,1 (1),"2,00",1590000,fallend (Staerke 2)
+1. FC Union Berlin,34358,Güther,Mittelfeld,0,-,-,490000,steigend (Staerke 1)
+1. FC Union Berlin,34506,Aebischer,Mittelfeld,1,1 (1),"1,00",2860000,fallend (Staerke 3)
+1. FC Union Berlin,32073,Khedira,Mittelfeld,-1,1 (1),"-1,00",2610000,fallend (Staerke 4)
+1. FC Union Berlin,32310,Haberer,Mittelfeld,3,1 (1),"3,00",720000,steigend (Staerke 5)
+1. FC Union Berlin,33035,Jeong,Mittelfeld,5,1 (1),"5,00",2440000,steigend (Staerke 5)
+1. FC Union Berlin,33158,Skov,Mittelfeld,0,-,-,250000,unbekannt
+1. FC Union Berlin,33550,Schäfer,Mittelfeld,3,1 (1),"3,00",1870000,steigend (Staerke 2)
+1. FC Union Berlin,33821,Kemlein,Mittelfeld,2,1 (1),"2,00",2210000,fallend (Staerke 3)
+1. FC Union Berlin,34516,Imeri,Mittelfeld,0,-,-,3400000,unbekannt
+1. FC Union Berlin,33616,Skarke,Sturm,10,1 (1),"10,00",1960000,steigend (Staerke 5)
+1. FC Union Berlin,34111,M. Ljubičić,Sturm,0,1 (1),"0,00",2000000,steigend (Staerke 5)
+1. FC Union Berlin,34432,J. Friedrich,Sturm,0,-,-,170000,fallend (Staerke 1)
+1. FC Union Berlin,34452,Gray,Sturm,0,-,-,180000,fallend (Staerke 1)
+1. FC Union Berlin,32694,Burke,Sturm,0,-,-,1040000,fallend (Staerke 3)
+1. FC Union Berlin,34494,Latte Lath,Sturm,6,1 (1),"6,00",4730000,steigend (Staerke 3)
+1. FC Union Berlin,34059,Ilić,Sturm,0,-,-,2480000,fallend (Staerke 5)
+Borussia M'gladbach,31618,Sippel,Torwart,0,-,-,160000,fallend (Staerke 1)
+Borussia M'gladbach,34349,Trippel,Torwart,0,-,-,180000,steigend (Staerke 1)
+Borussia M'gladbach,33306,Olschowsky,Torwart,0,-,-,160000,unbekannt
+Borussia M'gladbach,32654,Nicolas,Torwart,7,1 (1),"7,00",3470000,fallend (Staerke 2)
+Borussia M'gladbach,31693,Batz,Torwart,0,-,-,360000,fallend (Staerke 3)
+Borussia M'gladbach,34492,Hashioka,Abwehr,-1,1 (1),"-1,00",1940000,fallend (Staerke 4)
+Borussia M'gladbach,34366,Herold,Abwehr,3,1 (1),"3,00",1710000,steigend (Staerke 4)
+Borussia M'gladbach,33778,Ullrich,Abwehr,0,1 (1),"0,00",1690000,fallend (Staerke 3)
+Borussia M'gladbach,33601,Chiarodia,Abwehr,0,-,-,530000,steigend (Staerke 4)
+Borussia M'gladbach,33592,Itakura,Abwehr,-1,1 (1),"-1,00",4360000,unbekannt
+Borussia M'gladbach,33258,Scally,Abwehr,1,1 (1),"1,00",1600000,fallend (Staerke 1)
+Borussia M'gladbach,34439,Konoplya,Abwehr,0,-,-,930000,steigend (Staerke 1)
+Borussia M'gladbach,34470,Leszczyński,Abwehr,0,-,-,1740000,fallend (Staerke 3)
+Borussia M'gladbach,34187,Diks,Abwehr,3,1 (1),"3,00",4500000,unbekannt
+Borussia M'gladbach,34500,Fleck,Mittelfeld,0,-,-,320000,fallend (Staerke 2)
+Borussia M'gladbach,34435,Leopold,Mittelfeld,0,-,-,1930000,fallend (Staerke 4)
+Borussia M'gladbach,34459,Uno,Mittelfeld,0,-,-,720000,fallend (Staerke 2)
+Borussia M'gladbach,34342,Bolin,Mittelfeld,2,1 (1),"2,00",4580000,fallend (Staerke 2)
+Borussia M'gladbach,34270,Mohya,Mittelfeld,1,1 (1),"1,00",4430000,unbekannt
+Borussia M'gladbach,34186,Castrop,Mittelfeld,0,-,-,950000,fallend (Staerke 4)
+Borussia M'gladbach,31985,Stöger,Mittelfeld,-1,1 (1),"-1,00",3400000,fallend (Staerke 4)
+Borussia M'gladbach,32771,Kühn,Mittelfeld,0,-,-,3450000,unbekannt
+Borussia M'gladbach,34501,Nguefack,Mittelfeld,5,1 (1),"5,00",1280000,steigend (Staerke 5)
+Borussia M'gladbach,32931,Neuhaus,Mittelfeld,0,-,-,740000,fallend (Staerke 3)
+Borussia M'gladbach,33978,Sander,Mittelfeld,0,1 (1),"0,00",3470000,fallend (Staerke 2)
+Borussia M'gladbach,33817,Honorat,Sturm,9,1 (1),"9,00",5690000,steigend (Staerke 5)
+Borussia M'gladbach,34447,Lidberg,Sturm,2,1 (1),"2,00",3370000,fallend (Staerke 3)
+Borussia M'gladbach,33819,Čvančara,Sturm,0,-,-,200000,fallend (Staerke 1)
+Borussia M'gladbach,32787,Hack,Sturm,1,1 (1),"1,00",4160000,fallend (Staerke 2)
+Borussia M'gladbach,33938,Machino,Sturm,0,-,-,1120000,fallend (Staerke 5)
+Borussia M'gladbach,32599,Kleindienst,Sturm,-1,1 (1),"-1,00",8640000,fallend (Staerke 4)
+Borussia M'gladbach,34499,Danfa,Sturm,0,-,-,310000,fallend (Staerke 1)
+Borussia M'gladbach,34449,Uwakhonye,Sturm,0,-,-,210000,unbekannt
+Hamburger SV,32629,Heuer Fernandes,Torwart,7,1 (1),"7,00",3080000,unbekannt
+Hamburger SV,34502,Lahti,Torwart,0,-,-,170000,fallend (Staerke 1)
+Hamburger SV,34094,Dickes,Torwart,0,-,-,160000,unbekannt
+Hamburger SV,34334,Tangvik,Torwart,0,-,-,210000,unbekannt
+Hamburger SV,34521,Wolfe,Abwehr,0,-,-,3360000,unbekannt
+Hamburger SV,34233,Capaldo,Abwehr,0,1 (1),"0,00",2650000,fallend (Staerke 2)
+Hamburger SV,34258,Omari,Abwehr,0,-,-,490000,fallend (Staerke 3)
+Hamburger SV,34354,Nandja,Abwehr,0,-,-,550000,unbekannt
+Hamburger SV,34355,Lemke,Abwehr,1,1 (1),"1,00",2260000,steigend (Staerke 5)
+Hamburger SV,34514,El Ouahdi,Abwehr,0,-,-,4490000,unbekannt
+Hamburger SV,34164,Agyekum,Abwehr,0,-,-,190000,unbekannt
+Hamburger SV,33164,Bornauw,Abwehr,0,1 (1),"0,00",3670000,fallend (Staerke 4)
+Hamburger SV,34148,Muheim,Abwehr,0,-,-,1980000,fallend (Staerke 4)
+Hamburger SV,32710,Torunarigha,Abwehr,0,1 (1),"0,00",1970000,fallend (Staerke 2)
+Hamburger SV,34477,Adeline,Mittelfeld,2,1 (1),"2,00",3140000,fallend (Staerke 2)
+Hamburger SV,33254,Pherai,Mittelfeld,0,-,-,260000,fallend (Staerke 1)
+Hamburger SV,34337,Grønbæk,Mittelfeld,3,1 (1),"3,00",5350000,fallend (Staerke 2)
+Hamburger SV,33877,Amoako,Mittelfeld,0,-,-,320000,fallend (Staerke 2)
+Hamburger SV,34296,Fábio Vieira,Mittelfeld,0,-,-,7980000,unbekannt
+Hamburger SV,34290,Sambi Lokonga,Mittelfeld,6,1 (1),"6,00",4700000,steigend (Staerke 2)
+Hamburger SV,33935,Remberg,Mittelfeld,3,1 (1),"3,00",3890000,fallend (Staerke 2)
+Hamburger SV,32630,Jatta,Mittelfeld,3,1 (1),"3,00",1240000,steigend (Staerke 2)
+Hamburger SV,34486,Nadir,Mittelfeld,1,1 (1),"1,00",1480000,fallend (Staerke 2)
+Hamburger SV,34508,Moffi,Sturm,2,1 (1),"2,00",4630000,unbekannt
+Hamburger SV,34483,Daka,Sturm,2,1 (1),"2,00",4830000,fallend (Staerke 3)
+Hamburger SV,34462,Barkowsky,Sturm,0,-,-,180000,unbekannt
+Hamburger SV,34156,Røssing-Lelesiit,Sturm,0,-,-,280000,fallend (Staerke 2)
+Hamburger SV,34249,Stange,Sturm,2,1 (1),"2,00",1570000,fallend (Staerke 1)
+Hamburger SV,32591,Poulsen,Sturm,2,1 (1),"2,00",1310000,steigend (Staerke 1)
+1. FC Köln,31634,Zieler,Torwart,0,-,-,230000,steigend (Staerke 2)
+1. FC Köln,33495,Köbbing,Torwart,0,-,-,160000,unbekannt
+1. FC Köln,32356,Schwäbe,Torwart,4,1 (1),"4,00",2820000,fallend (Staerke 2)
+1. FC Köln,34485,James,Torwart,0,-,-,160000,unbekannt
+1. FC Köln,34135,Schmied,Abwehr,0,1 (0),-,310000,fallend (Staerke 2)
+1. FC Köln,34352,Neumann,Abwehr,0,-,-,190000,unbekannt
+1. FC Köln,34323,Simpson-Pusey,Abwehr,2,1 (1),"2,00",2540000,steigend (Staerke 1)
+1. FC Köln,34287,Castro-Montes,Abwehr,1,1 (1),"1,00",1710000,fallend (Staerke 1)
+1. FC Köln,34267,van den Berg,Abwehr,0,-,-,710000,fallend (Staerke 2)
+1. FC Köln,34444,Voufack,Abwehr,0,-,-,200000,unbekannt
+1. FC Köln,34469,Lochoshvili,Abwehr,4,1 (1),"4,00",3420000,steigend (Staerke 5)
+1. FC Köln,34475,G. Mensah,Abwehr,1,1 (1),"1,00",2090000,steigend (Staerke 2)
+1. FC Köln,34478,Fürst,Abwehr,0,-,-,320000,fallend (Staerke 2)
+1. FC Köln,32919,Sosa,Abwehr,0,-,-,2360000,unbekannt
+1. FC Köln,32744,Hübers,Abwehr,0,-,-,270000,fallend (Staerke 1)
+1. FC Köln,34241,Sebulonsen,Abwehr,0,-,-,650000,fallend (Staerke 1)
+1. FC Köln,34484,Okon-Engstler,Mittelfeld,0,1 (1),"0,00",950000,steigend (Staerke 3)
+1. FC Köln,34497,Neves,Mittelfeld,0,-,-,640000,fallend (Staerke 3)
+1. FC Köln,34225,Kujović,Mittelfeld,0,-,-,170000,unbekannt
+1. FC Köln,34196,Jóhannesson,Mittelfeld,6,1 (1),"6,00",4830000,steigend (Staerke 5)
+1. FC Köln,32881,Maina,Mittelfeld,6,1 (1),"6,00",2720000,steigend (Staerke 5)
+1. FC Köln,33130,Krauß,Mittelfeld,2,1 (1),"2,00",2090000,steigend (Staerke 1)
+1. FC Köln,33157,Skhiri,Mittelfeld,3,1 (1),"3,00",3930000,steigend (Staerke 1)
+1. FC Köln,34138,Harchaoui,Mittelfeld,0,-,-,210000,fallend (Staerke 1)
+1. FC Köln,34512,Moore,Mittelfeld,0,-,-,6140000,unbekannt
+1. FC Köln,34504,Dallinga,Sturm,14,1 (1),"14,00",6660000,steigend (Staerke 5)
+1. FC Köln,32206,Waldschmidt,Sturm,0,-,-,1080000,fallend (Staerke 4)
+1. FC Köln,34141,M. El Mala,Sturm,0,-,-,480000,steigend (Staerke 2)
+1. FC Köln,34140,Rondić,Sturm,0,-,-,190000,unbekannt
+1. FC Köln,34480,Heskey,Sturm,0,-,-,1830000,fallend (Staerke 4)
+1. FC Köln,33139,Bülter,Sturm,0,1 (0),-,2410000,fallend (Staerke 5)
+1. FC Köln,34139,S. El Mala,Sturm,5,1 (1),"5,00",9170000,fallend (Staerke 3)
+1. FC Köln,33185,Thielmann,Sturm,3,1 (1),"3,00",2200000,steigend (Staerke 3)
+1. FC Köln,33263,Ache,Sturm,6,1 (1),"6,00",6080000,steigend (Staerke 1)
+SV Werder Bremen,34274,Hein,Torwart,-1,1 (1),"-1,00",1750000,fallend (Staerke 1)
+SV Werder Bremen,34251,Smarkalev,Torwart,0,-,-,160000,fallend (Staerke 1)
+SV Werder Bremen,33986,Kolke,Torwart,0,-,-,160000,unbekannt
+SV Werder Bremen,34473,Schlager,Torwart,0,-,-,1230000,fallend (Staerke 5)
+SV Werder Bremen,34245,Schmetgens,Abwehr,-1,1 (1),"-1,00",1390000,steigend (Staerke 2)
+SV Werder Bremen,33858,Deman,Abwehr,-1,1 (1),"-1,00",1710000,fallend (Staerke 3)
+SV Werder Bremen,33772,Arthur,Abwehr,0,-,-,2950000,steigend (Staerke 5)
+SV Werder Bremen,34468,Höcker,Abwehr,0,-,-,210000,steigend (Staerke 1)
+SV Werder Bremen,34472,Wójcik,Abwehr,0,-,-,990000,fallend (Staerke 1)
+SV Werder Bremen,34517,Ndiaye,Abwehr,0,-,-,2180000,unbekannt
+SV Werder Bremen,31929,Weiser,Abwehr,0,-,-,2110000,steigend (Staerke 1)
+SV Werder Bremen,33288,Agu,Abwehr,0,-,-,540000,fallend (Staerke 2)
+SV Werder Bremen,33224,Pieper,Abwehr,1,1 (1),"1,00",2250000,fallend (Staerke 3)
+SV Werder Bremen,32120,Stark,Abwehr,0,-,-,510000,fallend (Staerke 1)
+SV Werder Bremen,32754,Friedl,Abwehr,3,1 (1),"3,00",3410000,fallend (Staerke 1)
+SV Werder Bremen,34442,Chuki,Mittelfeld,-2,1 (1),"-2,00",2740000,fallend (Staerke 3)
+SV Werder Bremen,34152,Reis,Mittelfeld,1,1 (1),"1,00",4610000,fallend (Staerke 1)
+SV Werder Bremen,34463,Stalmach,Mittelfeld,13,1 (1),"13,00",1520000,steigend (Staerke 5)
+SV Werder Bremen,33896,Alvero,Mittelfeld,0,-,-,200000,unbekannt
+SV Werder Bremen,34513,Regeer,Mittelfeld,0,-,-,3410000,unbekannt
+SV Werder Bremen,33835,Lynen,Mittelfeld,0,1 (1),"0,00",2140000,fallend (Staerke 2)
+SV Werder Bremen,33640,Stage,Mittelfeld,0,-,-,6740000,fallend (Staerke 4)
+SV Werder Bremen,34471,Erevbenagie,Sturm,0,-,-,1600000,steigend (Staerke 4)
+SV Werder Bremen,34430,Quetant,Sturm,0,-,-,280000,fallend (Staerke 1)
+SV Werder Bremen,34244,Musah,Sturm,2,1 (1),"2,00",1510000,steigend (Staerke 1)
+SV Werder Bremen,33923,Grüll,Sturm,8,1 (1),"8,00",3670000,steigend (Staerke 5)
+SV Werder Bremen,33741,Topp,Sturm,0,-,-,250000,fallend (Staerke 1)
+SV Werder Bremen,33687,Njinmah,Sturm,2,1 (1),"2,00",2350000,fallend (Staerke 3)
+SV Werder Bremen,33520,Itten,Sturm,1,1 (1),"1,00",2030000,fallend (Staerke 2)
+SV Werder Bremen,33364,Dinkçi,Sturm,0,1 (0),-,3630000,steigend (Staerke 1)
+SV Werder Bremen,33030,Kownacki,Sturm,0,-,-,290000,fallend (Staerke 1)
+SV Werder Bremen,31916,Füllkrug,Sturm,-1,1 (1),"-1,00",6940000,fallend (Staerke 1)
+FC Schalke 04,31874,Karius,Torwart,7,1 (1),"7,00",2500000,fallend (Staerke 2)
+FC Schalke 04,32225,K. Müller,Torwart,0,-,-,250000,fallend (Staerke 1)
+FC Schalke 04,34369,Siebeking,Torwart,0,-,-,190000,fallend (Staerke 1)
+FC Schalke 04,34371,Kuruçay,Abwehr,1,1 (1),"1,00",1850000,fallend (Staerke 3)
+FC Schalke 04,33831,Wöber,Abwehr,-5,1 (1),"-5,00",1400000,fallend (Staerke 3)
+FC Schalke 04,33843,Gosens,Abwehr,0,1 (1),"0,00",3780000,fallend (Staerke 2)
+FC Schalke 04,34377,Gantenbein,Abwehr,0,-,-,180000,unbekannt
+FC Schalke 04,34372,Katić,Abwehr,5,1 (1),"5,00",2930000,steigend (Staerke 2)
+FC Schalke 04,34375,Noode,Abwehr,0,-,-,180000,unbekannt
+FC Schalke 04,34376,V. Becker,Abwehr,2,1 (1),"2,00",1250000,steigend (Staerke 1)
+FC Schalke 04,32663,Donkor,Abwehr,0,-,-,190000,unbekannt
+FC Schalke 04,32331,Kalas,Abwehr,0,-,-,190000,unbekannt
+FC Schalke 04,34392,Ayhan,Abwehr,0,1 (0),-,1120000,fallend (Staerke 4)
+FC Schalke 04,33184,T. Becker,Abwehr,0,1 (1),"0,00",2010000,steigend (Staerke 4)
+FC Schalke 04,34434,Vozar,Mittelfeld,0,-,-,850000,steigend (Staerke 3)
+FC Schalke 04,34383,Bachmann,Mittelfeld,0,-,-,170000,unbekannt
+FC Schalke 04,34391,El-Faouzi,Mittelfeld,3,1 (1),"3,00",3590000,fallend (Staerke 1)
+FC Schalke 04,34379,Schallenberg,Mittelfeld,-4,1 (1),"-4,00",1220000,fallend (Staerke 1)
+FC Schalke 04,34380,Grüger,Mittelfeld,0,-,-,250000,steigend (Staerke 3)
+FC Schalke 04,34382,Aouchiche,Mittelfeld,3,1 (1),"3,00",3920000,fallend (Staerke 2)
+FC Schalke 04,34450,Tanaka,Mittelfeld,0,-,-,1890000,fallend (Staerke 2)
+FC Schalke 04,32190,Karaman,Mittelfeld,0,-,-,3020000,fallend (Staerke 4)
+FC Schalke 04,33678,Dina Ebimbe,Mittelfeld,-1,1 (1),"-1,00",2690000,fallend (Staerke 3)
+FC Schalke 04,32490,Porath,Mittelfeld,0,-,-,290000,fallend (Staerke 1)
+FC Schalke 04,33453,D. Ljubičić,Mittelfeld,3,1 (1),"3,00",2920000,steigend (Staerke 2)
+FC Schalke 04,33300,Hwang,Sturm,0,-,-,3590000,unbekannt
+FC Schalke 04,34389,E. Højlund,Sturm,0,-,-,180000,fallend (Staerke 1)
+FC Schalke 04,34387,Sylla,Sturm,2,1 (1),"2,00",2730000,unbekannt
+FC Schalke 04,34386,Tchibara,Sturm,0,-,-,180000,unbekannt
+FC Schalke 04,33465,Lasme,Sturm,0,-,-,380000,fallend (Staerke 2)
+FC Schalke 04,33802,Adamu,Sturm,3,1 (1),"3,00",2190000,steigend (Staerke 1)
+FC Schalke 04,31145,Džeko,Sturm,1,1 (1),"1,00",6180000,fallend (Staerke 1)
+SV Elversberg,34167,Lehmann,Torwart,0,-,-,170000,fallend (Staerke 1)
+SV Elversberg,34445,Etringer,Torwart,0,-,-,160000,fallend (Staerke 1)
+SV Elversberg,34166,Boss,Torwart,0,-,-,170000,fallend (Staerke 1)
+SV Elversberg,34165,Kristof,Torwart,2,1 (1),"2,00",2210000,fallend (Staerke 1)
+SV Elversberg,34169,Le Joncour,Abwehr,1,1 (1),"1,00",740000,unbekannt
+SV Elversberg,34170,Rohr,Abwehr,3,1 (1),"3,00",2380000,fallend (Staerke 1)
+SV Elversberg,34393,Seifert,Abwehr,0,-,-,180000,unbekannt
+SV Elversberg,34394,Mickelson,Abwehr,0,-,-,300000,unbekannt
+SV Elversberg,34395,Gyamerah,Abwehr,6,1 (1),"6,00",1870000,steigend (Staerke 5)
+SV Elversberg,34396,Keidel,Abwehr,0,1 (1),"0,00",1470000,steigend (Staerke 5)
+SV Elversberg,34482,Sirch,Abwehr,0,1 (1),"0,00",860000,fallend (Staerke 1)
+SV Elversberg,34168,Pinckert,Abwehr,3,1 (1),"3,00",1950000,steigend (Staerke 2)
+SV Elversberg,33451,Günther,Abwehr,3,1 (1),"3,00",1900000,steigend (Staerke 3)
+SV Elversberg,34153,Poręba,Mittelfeld,2,1 (1),"2,00",1980000,steigend (Staerke 1)
+SV Elversberg,34427,Onyeka,Mittelfeld,8,1 (1),"8,00",6050000,steigend (Staerke 5)
+SV Elversberg,34397,Condé,Mittelfeld,0,-,-,400000,fallend (Staerke 2)
+SV Elversberg,33996,Krattenmacher,Mittelfeld,1,1 (1),"1,00",1160000,fallend (Staerke 1)
+SV Elversberg,34215,Darvich,Mittelfeld,0,1 (1),"0,00",2670000,fallend (Staerke 4)
+SV Elversberg,34176,Schmahl,Mittelfeld,0,-,-,210000,fallend (Staerke 1)
+SV Elversberg,34016,Campbell,Sturm,9,1 (1),"9,00",4150000,steigend (Staerke 5)
+SV Elversberg,34180,Schnellbacher,Sturm,1,1 (1),"1,00",1210000,steigend (Staerke 1)
+SV Elversberg,33820,Futkeu,Sturm,0,-,-,3720000,fallend (Staerke 2)
+SV Elversberg,34177,Zimmerschied,Sturm,0,-,-,940000,fallend (Staerke 4)
+SV Elversberg,34399,Adam,Sturm,0,-,-,190000,unbekannt
+SV Elversberg,34090,Mokwa,Sturm,8,1 (1),"8,00",3400000,steigend (Staerke 5)
+SV Elversberg,33398,Petkov,Sturm,10,1 (1),"10,00",5610000,steigend (Staerke 5)
+SV Elversberg,33072,Pfeiffer,Sturm,0,-,-,400000,fallend (Staerke 1)
+SC Paderborn,34400,Pruhs,Torwart,0,-,-,160000,unbekannt
+SC Paderborn,33397,Noll,Torwart,8,1 (1),"8,00",2590000,steigend (Staerke 5)
+SC Paderborn,33140,Schubert,Torwart,0,-,-,230000,fallend (Staerke 1)
+SC Paderborn,34440,Lippmann,Abwehr,0,1 (0),-,350000,steigend (Staerke 1)
+SC Paderborn,34405,Zobel,Abwehr,0,-,-,220000,unbekannt
+SC Paderborn,34443,Awortwie-Grant,Abwehr,0,-,-,220000,unbekannt
+SC Paderborn,34403,Hoffmeier,Abwehr,0,-,-,600000,fallend (Staerke 3)
+SC Paderborn,34402,Scheller,Abwehr,6,1 (1),"6,00",1840000,steigend (Staerke 5)
+SC Paderborn,34401,Hansen,Abwehr,2,1 (1),"2,00",940000,steigend (Staerke 5)
+SC Paderborn,31586,F. Götze,Abwehr,0,-,-,1320000,fallend (Staerke 2)
+SC Paderborn,34460,ter Horst,Abwehr,6,1 (1),"6,00",1610000,steigend (Staerke 5)
+SC Paderborn,34456,Obermair,Mittelfeld,4,1 (1),"4,00",2280000,steigend (Staerke 2)
+SC Paderborn,34436,Baack,Mittelfeld,2,1 (1),"2,00",500000,steigend (Staerke 3)
+SC Paderborn,34414,Mohr,Mittelfeld,0,-,-,250000,unbekannt
+SC Paderborn,34412,R. Müller,Mittelfeld,0,-,-,170000,fallend (Staerke 1)
+SC Paderborn,34411,Sticker,Mittelfeld,2,1 (1),"2,00",550000,steigend (Staerke 2)
+SC Paderborn,34410,Curda,Mittelfeld,9,1 (1),"9,00",3410000,steigend (Staerke 5)
+SC Paderborn,34409,Gayret,Mittelfeld,0,-,-,410000,steigend (Staerke 5)
+SC Paderborn,34408,Klaas,Mittelfeld,0,-,-,220000,fallend (Staerke 1)
+SC Paderborn,34406,Castañeda,Mittelfeld,5,1 (1),"5,00",3050000,steigend (Staerke 4)
+SC Paderborn,33666,Ulrich,Mittelfeld,-3,1 (1),"-3,00",1430000,steigend (Staerke 2)
+SC Paderborn,34107,Đurić,Mittelfeld,0,-,-,480000,fallend (Staerke 2)
+SC Paderborn,34232,Zeitler,Sturm,0,-,-,880000,fallend (Staerke 3)
+SC Paderborn,32087,Michel,Sturm,0,-,-,260000,unbekannt
+SC Paderborn,33219,Batista Meier,Sturm,0,-,-,1600000,fallend (Staerke 3)
+SC Paderborn,34419,Marino,Sturm,4,1 (1),"4,00",2050000,steigend (Staerke 5)
+SC Paderborn,34418,Millgramm,Sturm,0,-,-,780000,fallend (Staerke 1)
+SC Paderborn,34416,Eickel,Sturm,0,-,-,230000,fallend (Staerke 2)
+SC Paderborn,33600,Pieringer,Sturm,2,1 (1),"2,00",3780000,fallend (Staerke 3)
+SC Paderborn,33570,Vidović,Sturm,7,1 (1),"7,00",4330000,steigend (Staerke 4)
+SC Paderborn,33365,Tigges,Sturm,2,1 (1),"2,00",890000,steigend (Staerke 3)
+SC Paderborn,34216,Philippe,Sturm,0,1 (0),-,1900000,steigend (Staerke 4)
