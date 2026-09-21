@@ -1,0 +1,517 @@
+spieler_id,name,verein,marktwert,punkte,punkte_pro_spiel,mw_pro_punkt,mw_pro_punkteschnitt
+30755,Neuer,1. FC Bayern München,2340000,16,"5,33",146250,439024
+31216,Ulreich,1. FC Bayern München,160000,0,-,,
+33494,Urbig,1. FC Bayern München,1220000,3,"3,00",406667,406667
+34205,Kiala,1. FC Bayern München,160000,0,-,,
+33975,Brown,1. FC Bayern München,5650000,10,"2,50",565000,2260000
+33894,Boey,1. FC Bayern München,520000,0,-,,
+33823,Kim,1. FC Bayern München,4320000,15,"5,00",288000,864000
+33796,Buchmann,1. FC Bayern München,170000,0,-,,
+33496,Itō,1. FC Bayern München,1090000,0,-,,
+33386,Stanišić,1. FC Bayern München,4170000,8,"2,67",521250,1561798
+33021,Davies,1. FC Bayern München,9130000,34,"8,50",268529,1074118
+32800,Laimer,1. FC Bayern München,4340000,-1,"-0,50",-4340000,-8680000
+32720,Upamecano,1. FC Bayern München,8380000,32,"8,00",261875,1047500
+32157,Tah,1. FC Bayern München,6990000,22,"7,33",317727,953615
+33236,Musiala,1. FC Bayern München,16170000,15,"5,00",1078000,3234000
+34207,Santos Daiber,1. FC Bayern München,160000,0,-,,
+34206,Karl,1. FC Bayern München,8380000,12,"4,00",698333,2095000
+32445,Kimmich,1. FC Bayern München,15970000,34,"8,50",469706,1878824
+34357,Osmani,1. FC Bayern München,300000,0,-,,
+33854,Pavlović,1. FC Bayern München,13050000,38,"9,50",343421,1373684
+34466,Saibari,1. FC Bayern München,15640000,26,"6,50",601538,2406154
+33504,Bischof,1. FC Bayern München,6410000,17,"4,25",377059,1508235
+34321,Sapoko Ndiaye,1. FC Bayern München,1110000,0,-,,
+34350,Cardozo,1. FC Bayern München,350000,0,-,,
+34254,Luis Díaz,1. FC Bayern München,14880000,17,"4,25",875294,3501176
+34014,Olise,1. FC Bayern München,22510000,47,"11,75",478936,1915745
+32696,Gnabry,1. FC Bayern München,8830000,2,"2,00",4415000,4415000
+33838,Kane,1. FC Bayern München,22280000,36,"9,00",618889,2475556
+34524,Binder,1. FC Bayern München,640000,0,-,,
+31988,Drewes,Borussia Dortmund,160000,0,-,,
+33539,Ostrzinski,Borussia Dortmund,160000,0,-,,
+32638,Kobel,Borussia Dortmund,3410000,23,"5,75",148261,593043
+32841,Meyer,Borussia Dortmund,310000,0,-,,
+31935,Can,Borussia Dortmund,410000,0,-,,
+34084,Mané,Borussia Dortmund,1080000,4,"2,00",270000,540000
+34423,Prates,Borussia Dortmund,820000,3,"3,00",273333,273333
+33167,Bensebaini,Borussia Dortmund,3350000,5,"2,50",670000,1340000
+33141,Ryerson,Borussia Dortmund,4800000,13,"3,25",369231,1476923
+33038,N. Schlotterbeck,Borussia Dortmund,11370000,13,"6,50",874615,1749231
+34422,Gadou,Borussia Dortmund,5130000,14,"3,50",366429,1465714
+34346,Reggiani,Borussia Dortmund,920000,2,"2,00",460000,460000
+32452,Anton,Borussia Dortmund,7720000,25,"6,25",308800,1235200
+34114,Svensson,Borussia Dortmund,6770000,25,"6,25",270800,1083200
+34424,Lerma,Borussia Dortmund,310000,0,-,,
+34495,Karetsas,Borussia Dortmund,18210000,15,"5,00",1214000,3642000
+34503,Konstantelias,Borussia Dortmund,10970000,12,"12,00",914167,914167
+34505,Veerman,Borussia Dortmund,10160000,15,"3,75",677333,2709333
+34507,dos Santos,Borussia Dortmund,660000,0,-,,
+34364,Kaba,Borussia Dortmund,210000,0,-,,
+34519,Nwaneri,Borussia Dortmund,10370000,13,"4,33",797692,2394919
+32590,Sabitzer,Borussia Dortmund,3610000,8,"2,67",451250,1352060
+33208,Beier,Borussia Dortmund,6630000,22,"5,50",301364,1205455
+33498,F. Nmecha,Borussia Dortmund,10240000,35,"8,75",292571,1170286
+34117,Chukwuemeka,Borussia Dortmund,1790000,2,"2,00",895000,895000
+34200,Bellingham,Borussia Dortmund,9100000,27,"6,75",337037,1348148
+34283,Fábio Silva,Borussia Dortmund,9920000,19,"6,33",522105,1567141
+32667,Guirassy,Borussia Dortmund,14480000,32,"8,00",452500,1810000
+34347,Inácio,Borussia Dortmund,3190000,-4,"-4,00",-797500,-797500
+34362,Albert,Borussia Dortmund,1250000,0,-,,
+33919,Vandevoordt,RB Leipzig,3050000,23,"5,75",132609,530435
+32267,Zingerle,RB Leipzig,170000,0,-,,
+32481,Nyland,RB Leipzig,630000,0,-,,
+34479,Estève,RB Leipzig,4320000,16,"5,33",270000,810507
+34431,Koné,RB Leipzig,530000,0,-,,
+31846,W. Orbán,RB Leipzig,7170000,33,"8,25",217273,869091
+33848,Finkgräfe,RB Leipzig,500000,2,"2,00",250000,250000
+33837,Lukeba,RB Leipzig,4300000,8,"4,00",537500,1075000
+33436,Raum,RB Leipzig,8920000,21,"5,25",424762,1699048
+32461,Henrichs,RB Leipzig,2900000,8,"4,00",362500,725000
+32581,Klostermann,RB Leipzig,410000,0,-,,
+32889,Baku,RB Leipzig,6940000,31,"7,75",223871,895484
+33353,Reitz,RB Leipzig,5430000,12,"12,00",452500,452500
+34348,Kaltefleiter,RB Leipzig,180000,0,-,,
+34238,Maksimović,RB Leipzig,3190000,10,"5,00",319000,638000
+34185,Banzuzi,RB Leipzig,4250000,8,"2,00",531250,2125000
+34042,Gebel,RB Leipzig,180000,0,-,,
+34518,El Aynaoui,RB Leipzig,6970000,13,"4,33",536154,1609700
+33991,Ouédraogo,RB Leipzig,4030000,6,"6,00",671667,671667
+32977,Baumgartner,RB Leipzig,7070000,0,-,,
+33695,Gruda,RB Leipzig,9210000,13,"4,33",708462,2127021
+33769,Seiwald,RB Leipzig,4060000,10,"3,33",406000,1219219
+34515,Guiu,RB Leipzig,3660000,1,"1,00",3660000,3660000
+33151,Nkunku,RB Leipzig,17770000,24,"6,00",740417,2961667
+34309,Konaté,RB Leipzig,680000,1,"1,00",680000,680000
+34271,Rômulo,RB Leipzig,7200000,11,"5,50",654545,1309091
+34240,Bakayoko,RB Leipzig,1810000,0,"0,00",,
+34116,T. Gomis,RB Leipzig,5380000,16,"4,00",336250,1345000
+34039,Nusa,RB Leipzig,12700000,34,"8,50",373529,1494118
+31827,Blaswich,Bayer 04 Leverkusen,280000,0,-,,
+32007,Lomb,Bayer 04 Leverkusen,160000,0,-,,
+32925,Flekken,Bayer 04 Leverkusen,2090000,15,"3,75",139333,557333
+34498,Medina,Bayer 04 Leverkusen,7040000,24,"6,00",293333,1173333
+34496,Gutiérrez,Bayer 04 Leverkusen,9260000,34,"8,50",272353,1089412
+34277,Lucas Vázquez,Bayer 04 Leverkusen,1580000,3,"1,00",526667,1580000
+34272,Badé,Bayer 04 Leverkusen,2720000,8,"4,00",340000,680000
+34217,Quansah,Bayer 04 Leverkusen,4400000,19,"4,75",231579,926316
+34520,Doué,Bayer 04 Leverkusen,4340000,2,"2,00",2170000,2170000
+33630,Oermann,Bayer 04 Leverkusen,240000,0,-,,
+33207,Tapsoba,Bayer 04 Leverkusen,6110000,16,"4,00",381875,1527500
+33744,Maza,Bayer 04 Leverkusen,10050000,30,"7,50",335000,1340000
+32080,J. Hofmann,Bayer 04 Leverkusen,1610000,4,"4,00",402500,402500
+32129,Andrich,Bayer 04 Leverkusen,1870000,5,"2,50",374000,748000
+34448,Eichhorn,Bayer 04 Leverkusen,2250000,0,-,,
+34289,Fernández,Bayer 04 Leverkusen,7550000,27,"6,75",279630,1118519
+33992,García,Bayer 04 Leverkusen,12360000,31,"7,75",398710,1594839
+33530,Tillman,Bayer 04 Leverkusen,4710000,11,"3,67",428182,1283379
+33853,Tella,Bayer 04 Leverkusen,2350000,0,-,,
+33827,Boniface,Bayer 04 Leverkusen,1790000,3,"3,00",596667,596667
+34461,Moreira,Bayer 04 Leverkusen,6410000,6,"1,50",1068333,4273333
+33179,Schick,Bayer 04 Leverkusen,15400000,38,"9,50",405263,1621053
+34311,Culbreath,Bayer 04 Leverkusen,1130000,0,-,,
+34024,Terrier,Bayer 04 Leverkusen,2070000,2,"2,00",1035000,1035000
+34285,Ben Seghir,Bayer 04 Leverkusen,2040000,0,-,,
+34234,Kofane,Bayer 04 Leverkusen,7490000,17,"4,25",440588,1762353
+33122,Diaby,Bayer 04 Leverkusen,11410000,9,"3,00",1267778,3803333
+33747,Seimen,VfB Stuttgart,2000000,0,-,,
+33401,M. Funk,VfB Stuttgart,160000,0,-,,
+33342,Drljača,VfB Stuttgart,160000,0,-,,
+32891,Bredlow,VfB Stuttgart,2400000,19,"4,75",126316,505263
+34112,Jaquez,VfB Stuttgart,710000,0,-,,
+34050,Al-Dakhil,VfB Stuttgart,370000,0,-,,
+34001,Hendriks,VfB Stuttgart,2690000,9,"3,00",298889,896667
+32509,Mittelstädt,VfB Stuttgart,10270000,38,"9,50",270263,1081053
+32773,Zagadou,VfB Stuttgart,570000,0,-,,
+34115,Jeltsch,VfB Stuttgart,4520000,14,"3,50",322857,1291429
+34197,Assignon,VfB Stuttgart,760000,0,-,,
+33850,Stergiou,VfB Stuttgart,400000,1,"1,00",400000,400000
+32880,Vagnoman,VfB Stuttgart,6900000,34,"8,50",202941,811765
+33552,Chabot,VfB Stuttgart,4940000,18,"4,50",274444,1097778
+34074,Malanga,VfB Stuttgart,170000,0,-,,
+34288,El Khannouss,VfB Stuttgart,8830000,23,"5,75",383913,1535652
+34488,Yigit,VfB Stuttgart,200000,0,-,,
+32492,Prömel,VfB Stuttgart,5360000,10,"2,50",536000,2144000
+34523,Spalt,VfB Stuttgart,1810000,6,"6,00",301667,301667
+32830,Nartey,VfB Stuttgart,2650000,3,"3,00",883333,883333
+33437,Stiller,VfB Stuttgart,8070000,10,"2,50",807000,3228000
+33411,Leweling,VfB Stuttgart,5970000,7,"1,75",852857,3411429
+32858,Führich,VfB Stuttgart,7120000,12,"4,00",593333,1780000
+33085,Karazor,VfB Stuttgart,1740000,0,-,,
+33832,Undav,VfB Stuttgart,9840000,7,"1,75",1405714,5622857
+34491,Sauer,VfB Stuttgart,2200000,4,"1,33",550000,1654135
+33311,Demirović,VfB Stuttgart,8460000,12,"3,00",705000,2820000
+33557,Tiago Tomás,VfB Stuttgart,3090000,2,"2,00",1545000,1545000
+33718,Diehl,VfB Stuttgart,160000,0,-,,
+33657,Pejčinović,VfB Stuttgart,7680000,8,"2,00",960000,3840000
+31489,Baumann,TSG Hoffenheim,2990000,15,"3,75",199333,797333
+33313,Philipp,TSG Hoffenheim,170000,0,-,,
+33913,Petersson,TSG Hoffenheim,160000,0,-,,
+34446,Rots,TSG Hoffenheim,3970000,14,"4,67",283571,850107
+34340,Engelns,TSG Hoffenheim,220000,0,-,,
+34275,Hajdari,TSG Hoffenheim,2520000,6,"1,50",420000,1680000
+34457,Dulic,TSG Hoffenheim,220000,0,-,,
+34257,Coufal,TSG Hoffenheim,5410000,19,"4,75",284737,1138947
+34213,Machida,TSG Hoffenheim,1850000,7,"3,50",264286,528571
+34051,Gendrey,TSG Hoffenheim,780000,4,"4,00",195000,195000
+34048,Hranáč,TSG Hoffenheim,1070000,4,"2,00",267500,535000
+34487,Abraha,TSG Hoffenheim,250000,0,-,,
+32693,Bernardo,TSG Hoffenheim,2110000,4,"4,00",527500,527500
+33026,Kabak,TSG Hoffenheim,5570000,26,"6,50",214231,856923
+34474,De Cat,TSG Hoffenheim,3210000,2,"1,00",1605000,3210000
+34128,Lenz,TSG Hoffenheim,330000,0,-,,
+33857,Conté,TSG Hoffenheim,4550000,15,"3,75",303333,1213333
+32553,Kramarić,TSG Hoffenheim,6330000,4,"1,33",1582500,4759398
+34242,Burger,TSG Hoffenheim,5090000,10,"2,50",509000,2036000
+34034,Prass,TSG Hoffenheim,1490000,0,-,,
+34202,Avdullahu,TSG Hoffenheim,6050000,22,"5,50",275000,1100000
+34294,Daghim,TSG Hoffenheim,7510000,24,"6,00",312917,1251667
+33270,Lemperle,TSG Hoffenheim,9200000,14,"4,67",657143,1970021
+33507,Wimmer,TSG Hoffenheim,5170000,14,"3,50",369286,1477143
+33536,Asllani,TSG Hoffenheim,9100000,7,"3,50",1300000,2600000
+33619,Hložek,TSG Hoffenheim,7030000,25,"6,25",281200,1124800
+33885,Moerstedt,TSG Hoffenheim,1390000,2,"0,67",695000,2074627
+33647,Backhaus,Sport-Club Freiburg,3010000,13,"3,25",231538,926154
+32506,Huth,Sport-Club Freiburg,160000,0,-,,
+32656,F. Müller,Sport-Club Freiburg,180000,0,-,,
+33815,Rosenfelder,Sport-Club Freiburg,1370000,2,"2,00",685000,685000
+33829,Makengo,Sport-Club Freiburg,4400000,21,"5,25",209524,838095
+33947,Treu,Sport-Club Freiburg,4650000,18,"4,50",258333,1033333
+34020,Yılmaz,Sport-Club Freiburg,840000,1,"1,00",840000,840000
+34021,Ogbus,Sport-Club Freiburg,660000,0,-,,
+32807,Lienhart,Sport-Club Freiburg,5380000,22,"5,50",244545,978182
+32597,Kübler,Sport-Club Freiburg,2850000,12,"3,00",237500,950000
+32579,Jung,Sport-Club Freiburg,200000,0,-,,
+32019,Günter,Sport-Club Freiburg,580000,0,-,,
+31910,Ginter,Sport-Club Freiburg,7520000,34,"8,50",221176,884706
+34184,Suzuki,Sport-Club Freiburg,8660000,43,"10,75",201395,805581
+34361,Tarnutzer,Sport-Club Freiburg,230000,0,-,,
+34437,Yamamoto,Sport-Club Freiburg,880000,0,-,,
+32961,Beste,Sport-Club Freiburg,7010000,23,"5,75",304783,1219130
+32071,Grifo,Sport-Club Freiburg,5680000,12,"4,00",473333,1420000
+33603,Y. Engelhardt,Sport-Club Freiburg,5760000,19,"4,75",303158,1212632
+33156,Osterhage,Sport-Club Freiburg,620000,0,-,,
+33008,Muslija,Sport-Club Freiburg,170000,0,-,,
+32398,M. Eggestein,Sport-Club Freiburg,6580000,32,"8,00",205625,822500
+32861,Höler,Sport-Club Freiburg,2060000,6,"3,00",343333,686667
+34183,Irié,Sport-Club Freiburg,1660000,4,"2,00",415000,830000
+33783,Matanović,Sport-Club Freiburg,13030000,40,"10,00",325750,1303000
+33629,Scherhant,Sport-Club Freiburg,5570000,22,"5,50",253182,1012727
+34451,Goto,Sport-Club Freiburg,2840000,9,"3,00",315556,946667
+31458,Grahl,Eintracht Frankfurt,160000,0,-,,
+33439,Atubolu,Eintracht Frankfurt,3740000,19,"4,75",196842,787368
+34073,Siljević,Eintracht Frankfurt,160000,0,-,,
+33855,Kauã Santos,Eintracht Frankfurt,430000,0,-,,
+34313,Kosugi,Eintracht Frankfurt,3090000,10,"2,50",309000,1236000
+34221,Maluze,Eintracht Frankfurt,3620000,13,"6,50",278462,556923
+34490,Otávio,Eintracht Frankfurt,1360000,1,"1,00",1360000,1360000
+34525,Etse,Eintracht Frankfurt,240000,0,-,,
+33869,Baum,Eintracht Frankfurt,4090000,8,"2,00",511250,2045000
+34511,Brassier,Eintracht Frankfurt,4490000,13,"4,33",345385,1036952
+33836,Collins,Eintracht Frankfurt,2780000,2,"2,00",1390000,1390000
+32836,Koch,Eintracht Frankfurt,7200000,27,"6,75",266667,1066667
+33383,Knauff,Eintracht Frankfurt,2630000,3,"3,00",876667,876667
+31572,Götze,Eintracht Frankfurt,2440000,6,"3,00",406667,813333
+34493,Onyedika,Eintracht Frankfurt,4060000,8,"2,00",507500,2030000
+31743,Chandler,Eintracht Frankfurt,340000,0,"0,00",,
+34314,Arrhov,Eintracht Frankfurt,510000,1,"1,00",510000,510000
+33856,Chaïbi,Eintracht Frankfurt,2950000,6,"3,00",491667,983333
+34019,O. Højlund,Eintracht Frankfurt,1130000,0,"0,00",,
+34008,Uzun,Eintracht Frankfurt,10620000,28,"7,00",379286,1517143
+33335,Doan,Eintracht Frankfurt,7220000,9,"3,00",802222,2406667
+33912,Aséko,Eintracht Frankfurt,3740000,4,"2,00",935000,1870000
+32948,Burkardt,Eintracht Frankfurt,12860000,32,"8,00",401875,1607500
+33214,Ngankam,Eintracht Frankfurt,200000,0,-,,
+34316,Ebnoutalib,Eintracht Frankfurt,8300000,33,"8,25",251515,1006061
+34318,Amaimouni-Echghouyab,Eintracht Frankfurt,2290000,6,"3,00",381667,763333
+34465,Pimpong,Eintracht Frankfurt,850000,1,"1,00",850000,850000
+33990,Labrović,FC Augsburg,160000,0,-,,
+32877,Dahmen,FC Augsburg,3690000,26,"6,50",141923,567692
+34363,Wisbereit,FC Augsburg,170000,0,-,,
+34017,N. Banks,FC Augsburg,4590000,19,"4,75",241579,966316
+34057,Matsima,FC Augsburg,5260000,24,"6,00",219167,876667
+34106,Behrens,FC Augsburg,4750000,15,"3,75",316667,1266667
+34351,Schnitzer,FC Augsburg,210000,0,-,,
+34438,Brackelmann,FC Augsburg,3930000,24,"6,00",163750,655000
+34510,Seol,FC Augsburg,1050000,2,"0,67",525000,1567164
+34522,Bah,FC Augsburg,1390000,0,-,,
+33969,Suso,FC Augsburg,310000,0,-,,
+32546,Wolf,FC Augsburg,3890000,20,"5,00",194500,778000
+32549,Gouweleeuw,FC Augsburg,1520000,1,"1,00",1520000,1520000
+33211,Keitel,FC Augsburg,790000,2,"0,67",395000,1179104
+33564,Kade,FC Augsburg,6310000,12,"12,00",525833,525833
+34236,Massengo,FC Augsburg,4840000,16,"4,00",302500,1210000
+34171,Fellhauer,FC Augsburg,4860000,21,"5,25",231429,925714
+33713,Ibrahimović,FC Augsburg,5290000,10,"5,00",529000,1058000
+34069,Sakar,FC Augsburg,160000,0,-,,
+34063,Claude-Maurice,FC Augsburg,5930000,18,"6,00",329444,988333
+33736,Kömür,FC Augsburg,2750000,12,"3,00",229167,916667
+33808,Breithaupt,FC Augsburg,180000,0,-,,
+33997,Rieder,FC Augsburg,8460000,35,"8,75",241714,966857
+34331,Ribeiro,FC Augsburg,3380000,12,"3,00",281667,1126667
+34344,Ogundu,FC Augsburg,570000,0,-,,
+34012,Mounié,FC Augsburg,160000,0,-,,
+31958,Gregoritsch,FC Augsburg,10360000,30,"7,50",345333,1381333
+34464,Kinzig,1. FSV Mainz 05,180000,0,-,,
+31774,Schwolow,1. FSV Mainz 05,1450000,7,"3,50",207143,414286
+32364,Zentner,1. FSV Mainz 05,1900000,6,"3,00",316667,633333
+31666,Bell,1. FSV Mainz 05,460000,0,-,,
+34454,Gruber,1. FSV Mainz 05,3660000,13,"3,25",281538,1126154
+34307,Potulski,1. FSV Mainz 05,2410000,3,"0,75",803333,3213333
+33577,Caci,1. FSV Mainz 05,4460000,20,"5,00",223000,892000
+33478,Widmer,1. FSV Mainz 05,940000,3,"3,00",313333,313333
+34509,Nakuzola,1. FSV Mainz 05,840000,4,"4,00",210000,210000
+31762,da Costa,1. FSV Mainz 05,2460000,20,"5,00",123000,492000
+31959,Kohr,1. FSV Mainz 05,990000,2,"2,00",495000,495000
+32178,Mwene,1. FSV Mainz 05,3790000,23,"5,75",164783,659130
+32786,Posch,1. FSV Mainz 05,3350000,11,"3,67",304545,912807
+33093,Maloney,1. FSV Mainz 05,260000,0,-,,
+34467,Ruoppi,1. FSV Mainz 05,700000,2,"1,00",350000,700000
+34231,Kawasaki,1. FSV Mainz 05,260000,0,-,,
+34009,Sano,1. FSV Mainz 05,8800000,27,"6,75",325926,1303704
+33356,Martel,1. FSV Mainz 05,3340000,9,"9,00",371111,371111
+32395,Amiri,1. FSV Mainz 05,11120000,15,"3,75",741333,2965333
+33477,Lee,1. FSV Mainz 05,4910000,12,"3,00",409167,1636667
+33296,Nebel,1. FSV Mainz 05,4780000,0,-,,
+33135,S. Becker,1. FSV Mainz 05,7160000,28,"7,00",255714,1022857
+33247,Silas,1. FSV Mainz 05,280000,0,-,,
+34429,A. Haidara,1. FSV Mainz 05,330000,0,-,,
+33070,Tietz,1. FSV Mainz 05,9840000,37,"9,25",265946,1063784
+34158,Königsdörffer,1. FSV Mainz 05,4510000,15,"3,75",300667,1202667
+33830,Hollerbach,1. FSV Mainz 05,2170000,2,"2,00",1085000,1085000
+34032,Klaus,1. FC Union Berlin,330000,0,-,,
+34527,Gagzow,1. FC Union Berlin,200000,0,-,,
+34144,Raab,1. FC Union Berlin,460000,-3,"-3,00",-153333,-153333
+32921,Rönnow,1. FC Union Berlin,1810000,10,"3,33",181000,543544
+33995,Querfeld,1. FC Union Berlin,3160000,13,"4,33",243077,729792
+33720,Juranović,1. FC Union Berlin,2310000,10,"3,33",231000,693694
+33669,Nsoki,1. FC Union Berlin,380000,0,-,,
+34214,Markgraf,1. FC Union Berlin,170000,0,-,,
+33567,Rothe,1. FC Union Berlin,1690000,0,"0,00",,
+34061,Köhn,1. FC Union Berlin,1080000,4,"2,00",270000,540000
+34455,Van Den Bosch,1. FC Union Berlin,1300000,1,"0,33",1300000,3939394
+33096,Trimmel,1. FC Union Berlin,940000,-3,"-1,50",-313333,-626667
+32801,Uduokhai,1. FC Union Berlin,2380000,5,"1,67",476000,1425150
+32311,M. Friedrich,1. FC Union Berlin,460000,0,-,,
+34506,Aebischer,1. FC Union Berlin,1610000,-3,"-0,75",-536667,-2146667
+34191,Burcu,1. FC Union Berlin,1220000,6,"1,50",203333,813333
+34516,Imeri,1. FC Union Berlin,2040000,0,-,,
+34358,Güther,1. FC Union Berlin,350000,0,-,,
+34528,Slišković,1. FC Union Berlin,160000,0,-,,
+32310,Haberer,1. FC Union Berlin,1250000,8,"2,00",156250,625000
+32073,Khedira,1. FC Union Berlin,1960000,1,"0,25",1960000,7840000
+33821,Kemlein,1. FC Union Berlin,1470000,4,"1,00",367500,1470000
+33550,Schäfer,1. FC Union Berlin,1640000,4,"1,00",410000,1640000
+33035,Jeong,1. FC Union Berlin,2860000,14,"3,50",204286,817143
+33158,Skov,1. FC Union Berlin,440000,1,"1,00",440000,440000
+32694,Burke,1. FC Union Berlin,920000,0,-,,
+34494,Latte Lath,1. FC Union Berlin,3100000,7,"1,75",442857,1771429
+34452,Gray,1. FC Union Berlin,180000,0,-,,
+34432,J. Friedrich,1. FC Union Berlin,180000,0,-,,
+33616,Skarke,1. FC Union Berlin,3620000,24,"6,00",150833,603333
+34111,M. Ljubičić,1. FC Union Berlin,1390000,1,"0,33",1390000,4212121
+34059,Ilić,1. FC Union Berlin,3560000,0,-,,
+31618,Sippel,Borussia M'gladbach,160000,0,-,,
+33306,Olschowsky,Borussia M'gladbach,160000,0,-,,
+32654,Nicolas,Borussia M'gladbach,3040000,10,"2,50",304000,1216000
+31693,Batz,Borussia M'gladbach,350000,0,-,,
+34492,Hashioka,Borussia M'gladbach,1280000,-1,"-0,50",-1280000,-2560000
+34366,Herold,Borussia M'gladbach,1360000,3,"1,00",453333,1360000
+33778,Ullrich,Borussia M'gladbach,1460000,6,"2,00",243333,730000
+33601,Chiarodia,Borussia M'gladbach,390000,0,-,,
+33592,Itakura,Borussia M'gladbach,2790000,-5,"-1,25",-558000,-2232000
+33258,Scally,Borussia M'gladbach,2290000,15,"3,75",152667,610667
+34439,Konoplya,Borussia M'gladbach,1410000,0,-,,
+34470,Leszczyński,Borussia M'gladbach,1460000,5,"2,50",292000,584000
+34187,Diks,Borussia M'gladbach,3040000,0,"0,00",,
+34459,Uno,Borussia M'gladbach,690000,0,-,,
+34435,Leopold,Borussia M'gladbach,1140000,0,-,,
+34500,Fleck,Borussia M'gladbach,230000,0,-,,
+34342,Bolin,Borussia M'gladbach,5770000,25,"6,25",230800,923200
+34270,Mohya,Borussia M'gladbach,2450000,2,"0,50",1225000,4900000
+34186,Castrop,Borussia M'gladbach,1060000,0,-,,
+31985,Stöger,Borussia M'gladbach,2490000,1,"0,33",2490000,7545455
+32771,Kühn,Borussia M'gladbach,2310000,4,"4,00",577500,577500
+34501,Nguefack,Borussia M'gladbach,1990000,7,"2,33",284286,854077
+32931,Neuhaus,Borussia M'gladbach,1450000,12,"12,00",120833,120833
+33978,Sander,Borussia M'gladbach,2910000,4,"1,00",727500,2910000
+34447,Lidberg,Borussia M'gladbach,4020000,13,"3,25",309231,1236923
+33817,Honorat,Borussia M'gladbach,6200000,20,"5,00",310000,1240000
+33938,Machino,Borussia M'gladbach,1890000,9,"4,50",210000,420000
+32599,Kleindienst,Borussia M'gladbach,6580000,0,"0,00",,
+34499,Danfa,Borussia M'gladbach,310000,0,-,,
+32787,Hack,Borussia M'gladbach,2830000,5,"1,25",566000,2264000
+34334,Tangvik,Hamburger SV,210000,0,-,,
+34094,Dickes,Hamburger SV,160000,0,-,,
+34502,Lahti,Hamburger SV,160000,0,-,,
+32629,Heuer Fernandes,Hamburger SV,2250000,9,"2,25",250000,1000000
+32710,Torunarigha,Hamburger SV,1870000,1,"0,25",1870000,7480000
+34354,Nandja,Hamburger SV,760000,-4,"-2,00",-190000,-380000
+34258,Omari,Hamburger SV,1060000,3,"1,50",353333,706667
+34355,Lemke,Hamburger SV,2600000,2,"1,00",1300000,2600000
+34233,Capaldo,Hamburger SV,2460000,5,"1,25",492000,1968000
+34526,M. Vušković,Hamburger SV,2590000,0,-,,
+34148,Muheim,Hamburger SV,1720000,0,-,,
+34521,Wolfe,Hamburger SV,2200000,0,"0,00",,
+34514,El Ouahdi,Hamburger SV,3530000,3,"1,00",1176667,3530000
+33164,Bornauw,Hamburger SV,2160000,-3,"-1,50",-720000,-1440000
+34486,Nadir,Hamburger SV,1060000,3,"1,50",353333,706667
+34337,Grønbæk,Hamburger SV,4810000,15,"3,75",320667,1282667
+34477,Adeline,Hamburger SV,1660000,2,"1,00",830000,1660000
+34296,Fábio Vieira,Hamburger SV,8970000,10,"3,33",897000,2693694
+32630,Jatta,Hamburger SV,890000,5,"2,50",178000,356000
+33254,Pherai,Hamburger SV,250000,0,-,,
+33877,Amoako,Hamburger SV,240000,0,-,,
+33935,Remberg,Hamburger SV,3260000,8,"2,00",407500,1630000
+34290,Sambi Lokonga,Hamburger SV,4010000,9,"3,00",445556,1336667
+34483,Daka,Hamburger SV,3340000,11,"2,75",303636,1214545
+34156,Røssing-Lelesiit,Hamburger SV,280000,0,-,,
+34508,Moffi,Hamburger SV,2930000,5,"1,25",586000,2344000
+34249,Stange,Hamburger SV,1000000,4,"1,33",250000,751880
+32591,Poulsen,Hamburger SV,1660000,12,"4,00",138333,415000
+31634,Zieler,1. FC Köln,240000,0,-,,
+32356,Schwäbe,1. FC Köln,2620000,16,"4,00",163750,655000
+34485,James,1. FC Köln,160000,0,-,,
+33495,Köbbing,1. FC Köln,160000,0,-,,
+34241,Sebulonsen,1. FC Köln,1520000,1,"1,00",1520000,1520000
+34267,van den Berg,1. FC Köln,520000,0,-,,
+34135,Schmied,1. FC Köln,300000,0,-,,
+34287,Castro-Montes,1. FC Köln,1760000,9,"2,25",195556,782222
+34323,Simpson-Pusey,1. FC Köln,2920000,11,"2,75",265455,1061818
+34469,Lochoshvili,1. FC Köln,2490000,8,"2,00",311250,1245000
+34475,G. Mensah,1. FC Köln,1800000,7,"1,75",257143,1028571
+32919,Sosa,1. FC Köln,2590000,2,"2,00",1295000,1295000
+32744,Hübers,1. FC Köln,280000,0,-,,
+34484,Okon-Engstler,1. FC Köln,1480000,3,"1,50",493333,986667
+34497,Neves,1. FC Köln,420000,0,-,,
+34196,Jóhannesson,1. FC Köln,2420000,10,"2,50",242000,968000
+34512,Moore,1. FC Köln,5990000,6,"2,00",998333,2995000
+32881,Maina,1. FC Köln,5470000,29,"7,25",188621,754483
+33157,Skhiri,1. FC Köln,4700000,15,"3,75",313333,1253333
+33130,Krauß,1. FC Köln,2540000,6,"1,50",423333,1693333
+34141,M. El Mala,1. FC Köln,300000,0,-,,
+34504,Dallinga,1. FC Köln,4970000,16,"5,33",310625,932458
+32206,Waldschmidt,1. FC Köln,750000,2,"2,00",375000,375000
+34480,Heskey,1. FC Köln,1180000,1,"1,00",1180000,1180000
+33139,Bülter,1. FC Köln,2700000,7,"2,33",385714,1158798
+33185,Thielmann,1. FC Köln,1950000,7,"3,50",278571,557143
+33263,Ache,1. FC Köln,4860000,18,"4,50",270000,1080000
+34139,S. El Mala,1. FC Köln,10490000,8,"2,67",1311250,3928839
+34140,Rondić,1. FC Köln,250000,0,-,,
+33986,Kolke,SV Werder Bremen,370000,0,-,,
+34251,Smarkalev,SV Werder Bremen,160000,0,-,,
+34274,Hein,SV Werder Bremen,2780000,18,"4,50",154444,617778
+34473,Schlager,SV Werder Bremen,570000,0,-,,
+34245,Schmetgens,SV Werder Bremen,930000,0,"0,00",,
+33858,Deman,SV Werder Bremen,3720000,17,"4,25",218824,875294
+33772,Arthur,SV Werder Bremen,3780000,14,"4,67",270000,809422
+34517,Ndiaye,SV Werder Bremen,1020000,0,-,,
+34472,Wójcik,SV Werder Bremen,790000,3,"3,00",263333,263333
+33288,Agu,SV Werder Bremen,780000,0,-,,
+33224,Pieper,SV Werder Bremen,4070000,18,"4,50",226111,904444
+32754,Friedl,SV Werder Bremen,3010000,15,"3,75",200667,802667
+32120,Stark,SV Werder Bremen,360000,0,-,,
+31929,Weiser,SV Werder Bremen,4960000,15,"7,50",330667,661333
+34442,Chuki,SV Werder Bremen,5190000,20,"5,00",259500,1038000
+34513,Regeer,SV Werder Bremen,5950000,19,"6,33",313158,939968
+34152,Reis,SV Werder Bremen,4290000,13,"3,25",330000,1320000
+34463,Stalmach,SV Werder Bremen,2830000,16,"5,33",176875,530957
+33896,Alvero,SV Werder Bremen,170000,0,-,,
+33835,Lynen,SV Werder Bremen,1670000,0,"0,00",,
+33640,Stage,SV Werder Bremen,3600000,0,-,,
+33923,Grüll,SV Werder Bremen,7130000,35,"8,75",203714,814857
+33030,Kownacki,SV Werder Bremen,180000,0,-,,
+33364,Dinkçi,SV Werder Bremen,3960000,10,"3,33",396000,1189189
+33520,Itten,SV Werder Bremen,1550000,5,"1,67",310000,928144
+34471,Erevbenagie,SV Werder Bremen,1290000,3,"1,50",430000,860000
+33687,Njinmah,SV Werder Bremen,1320000,2,"2,00",660000,660000
+34430,Quetant,SV Werder Bremen,200000,0,-,,
+33741,Topp,SV Werder Bremen,210000,0,-,,
+34244,Musah,SV Werder Bremen,1050000,5,"1,67",210000,628743
+31916,Füllkrug,SV Werder Bremen,11510000,29,"7,25",396897,1587586
+34369,Siebeking,FC Schalke 04,160000,0,-,,
+31874,Karius,FC Schalke 04,3760000,22,"5,50",170909,683636
+32225,K. Müller,FC Schalke 04,220000,0,-,,
+34371,Kuruçay,FC Schalke 04,3440000,21,"5,25",163810,655238
+34376,V. Becker,FC Schalke 04,1200000,3,"1,00",400000,1200000
+33843,Gosens,FC Schalke 04,6790000,24,"6,00",282917,1131667
+33831,Wöber,FC Schalke 04,2690000,12,"3,00",224167,896667
+34377,Gantenbein,FC Schalke 04,220000,0,-,,
+34372,Katić,FC Schalke 04,4810000,25,"6,25",192400,769600
+33184,T. Becker,FC Schalke 04,2880000,14,"3,50",205714,822857
+34392,Ayhan,FC Schalke 04,770000,0,"0,00",,
+34379,Schallenberg,FC Schalke 04,1290000,-2,"-1,00",-645000,-1290000
+34383,Bachmann,FC Schalke 04,220000,0,-,,
+34391,El-Faouzi,FC Schalke 04,2990000,5,"1,25",598000,2392000
+34434,Vozar,FC Schalke 04,580000,0,"0,00",,
+34382,Aouchiche,FC Schalke 04,6230000,27,"6,75",230741,922963
+34450,Tanaka,FC Schalke 04,3690000,11,"3,67",335455,1005450
+32190,Karaman,FC Schalke 04,7380000,16,"5,33",461250,1384615
+33678,Dina Ebimbe,FC Schalke 04,2750000,10,"2,50",275000,1100000
+32490,Porath,FC Schalke 04,200000,0,-,,
+33453,D. Ljubičić,FC Schalke 04,1690000,5,"1,67",338000,1011976
+33300,Hwang,FC Schalke 04,3940000,7,"3,50",562857,1125714
+34389,E. Højlund,FC Schalke 04,170000,0,-,,
+34387,Sylla,FC Schalke 04,2750000,4,"1,33",687500,2067669
+33465,Lasme,FC Schalke 04,300000,0,-,,
+33802,Adamu,FC Schalke 04,2230000,5,"2,50",446000,892000
+31145,Džeko,FC Schalke 04,3680000,7,"2,33",525714,1579399
+34167,Lehmann,SV Elversberg,160000,0,-,,
+34445,Etringer,SV Elversberg,160000,0,-,,
+34166,Boss,SV Elversberg,170000,0,-,,
+34165,Kristof,SV Elversberg,2210000,15,"3,75",147333,589333
+34169,Le Joncour,SV Elversberg,480000,1,"1,00",480000,480000
+34170,Rohr,SV Elversberg,2930000,17,"4,25",172353,689412
+34393,Seifert,SV Elversberg,230000,0,-,,
+34394,Mickelson,SV Elversberg,690000,6,"3,00",115000,230000
+34395,Gyamerah,SV Elversberg,2170000,9,"2,25",241111,964444
+34396,Keidel,SV Elversberg,3460000,18,"4,50",192222,768889
+34482,Sirch,SV Elversberg,650000,2,"1,00",325000,650000
+34168,Pinckert,SV Elversberg,3010000,17,"4,25",177059,708235
+33451,Günther,SV Elversberg,1170000,1,"0,25",1170000,4680000
+34153,Poręba,SV Elversberg,2450000,10,"2,50",245000,980000
+34427,Onyeka,SV Elversberg,4550000,12,"4,00",379167,1137500
+34397,Condé,SV Elversberg,640000,1,"1,00",640000,640000
+33996,Krattenmacher,SV Elversberg,6720000,28,"7,00",240000,960000
+34215,Darvich,SV Elversberg,2190000,4,"1,33",547500,1646617
+34176,Schmahl,SV Elversberg,200000,0,-,,
+34016,Campbell,SV Elversberg,3700000,14,"3,50",264286,1057143
+34180,Schnellbacher,SV Elversberg,830000,3,"1,50",276667,553333
+33820,Futkeu,SV Elversberg,3950000,9,"3,00",438889,1316667
+34177,Zimmerschied,SV Elversberg,810000,0,-,,
+34399,Adam,SV Elversberg,190000,0,-,,
+34090,Mokwa,SV Elversberg,6570000,23,"5,75",285652,1142609
+33398,Petkov,SV Elversberg,4880000,19,"4,75",256842,1027368
+33072,Pfeiffer,SV Elversberg,280000,0,-,,
+34400,Pruhs,SC Paderborn,160000,0,-,,
+33397,Noll,SC Paderborn,3510000,27,"6,75",130000,520000
+33140,Schubert,SC Paderborn,210000,0,-,,
+34440,Lippmann,SC Paderborn,290000,-1,"-1,00",-290000,-290000
+34405,Zobel,SC Paderborn,190000,0,-,,
+34443,Awortwie-Grant,SC Paderborn,180000,0,-,,
+34403,Hoffmeier,SC Paderborn,360000,0,-,,
+34402,Scheller,SC Paderborn,3080000,19,"4,75",162105,648421
+34401,Hansen,SC Paderborn,3030000,17,"4,25",178235,712941
+31586,F. Götze,SC Paderborn,1110000,4,"4,00",277500,277500
+34460,ter Horst,SC Paderborn,2150000,15,"3,75",143333,573333
+34456,Obermair,SC Paderborn,3140000,12,"3,00",261667,1046667
+34436,Baack,SC Paderborn,530000,5,"2,50",106000,212000
+34414,Mohr,SC Paderborn,190000,0,-,,
+34412,R. Müller,SC Paderborn,170000,0,-,,
+34411,Sticker,SC Paderborn,980000,12,"4,00",81667,245000
+34410,Curda,SC Paderborn,2890000,20,"5,00",144500,578000
+34409,Gayret,SC Paderborn,290000,0,-,,
+34408,Klaas,SC Paderborn,270000,0,-,,
+34406,Castañeda,SC Paderborn,4210000,26,"6,50",161923,647692
+33666,Ulrich,SC Paderborn,2940000,14,"3,50",210000,840000
+34107,Đurić,SC Paderborn,310000,0,"0,00",,
+34232,Zeitler,SC Paderborn,560000,0,-,,
+32087,Michel,SC Paderborn,310000,0,-,,
+33219,Batista Meier,SC Paderborn,1080000,3,"1,50",360000,720000
+34419,Marino,SC Paderborn,2150000,14,"3,50",153571,614286
+34418,Millgramm,SC Paderborn,440000,0,-,,
+34416,Eickel,SC Paderborn,220000,0,-,,
+33600,Pieringer,SC Paderborn,2770000,5,"1,25",554000,2216000
+33570,Vidović,SC Paderborn,3250000,12,"3,00",270833,1083333
+33365,Tigges,SC Paderborn,1610000,15,"3,75",107333,429333
+34216,Philippe,SC Paderborn,2020000,6,"2,00",336667,1010000
